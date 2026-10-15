@@ -1,1 +1,1211 @@
-{ "page": 5, "width": 595, "height": 842, "paths": [], "texts": [], "fields": [], "checks": [], "marks": [], "images": [] }
+{
+ "page": 5,
+ "width": 595.0,
+ "height": 842.0,
+ "paths": [
+  {
+   "d": "M18.0 54.0L577.66 54.0L577.66 761.54L18.0 761.54L18.0 54.0",
+   "fill": "#ffffff"
+  },
+  {
+   "d": "M26.62 67.93L26.62 719.76M203.67 343.12L276.61 343.12M305.79 343.12L377.4 343.12M399.95 343.12L468.25 343.12M25.96 68.59L577.66 68.59M25.96 719.1L577.66 719.1M577.0 67.93L577.0 719.76",
+   "stroke": "#000000",
+   "sw": 1.33
+  },
+  {
+   "d": "M162.56 82.85L204.33 82.85M27.28 705.5L204.33 705.5M162.56 594.1L235.5 594.1M162.56 608.03L235.5 608.03M116.8 621.95L235.5 621.95M234.84 82.85L276.61 82.85M203.67 357.37L276.61 357.37M27.28 677.65L276.61 677.65M203.67 399.15L306.45 399.15M203.67 413.07L306.45 413.07M305.79 357.37L377.4 357.37M275.95 594.1L377.4 594.1M275.95 608.03L377.4 608.03M275.95 621.95L377.4 621.95M234.84 705.5L377.4 705.5M399.95 357.37L468.25 357.37M399.95 621.95L468.25 621.95M436.42 663.73L468.25 663.73M376.74 82.85L572.36 82.85M203.67 273.82L572.36 273.82M545.17 315.6L572.36 315.6M127.41 524.48L572.36 524.48M436.42 594.1L572.36 594.1M467.59 608.03L572.36 608.03M492.12 621.95L572.36 621.95M116.8 635.88L572.36 635.88M492.12 677.65L576.34 677.65M492.12 705.5L576.34 705.5",
+   "stroke": "#000000",
+   "sw": 0.66
+  }
+ ],
+ "texts": [
+  {
+   "t": "DELIVERY OF FETUS:",
+   "x": 29.27,
+   "y": 80.69,
+   "s": 8.62,
+   "b": true
+  },
+  {
+   "t": "DATE:",
+   "x": 130.07,
+   "y": 80.69,
+   "s": 8.62,
+   "b": false
+  },
+  {
+   "t": "TIME:",
+   "x": 206.32,
+   "y": 80.69,
+   "s": 8.62,
+   "b": false
+  },
+  {
+   "t": "Attended by:",
+   "x": 308.44,
+   "y": 80.69,
+   "s": 8.62,
+   "b": false
+  },
+  {
+   "t": "METHOD OF DELIVERY",
+   "x": 29.27,
+   "y": 104.56,
+   "s": 8.62,
+   "b": true
+  },
+  {
+   "t": "Spontaneous",
+   "x": 93.59,
+   "y": 118.48,
+   "s": 8.62,
+   "b": false
+  },
+  {
+   "t": "Assisted vaginal delivery",
+   "x": 93.59,
+   "y": 132.41,
+   "s": 8.62,
+   "b": false
+  },
+  {
+   "t": "Vacuum",
+   "x": 237.49,
+   "y": 132.41,
+   "s": 8.62,
+   "b": false
+  },
+  {
+   "t": "Forceps",
+   "x": 308.44,
+   "y": 132.41,
+   "s": 8.62,
+   "b": false
+  },
+  {
+   "t": "Breech delivery",
+   "x": 93.59,
+   "y": 146.33,
+   "s": 8.62,
+   "b": false
+  },
+  {
+   "t": "Spontaneous",
+   "x": 206.32,
+   "y": 146.33,
+   "s": 8.62,
+   "b": false
+  },
+  {
+   "t": "Partial",
+   "x": 308.44,
+   "y": 146.33,
+   "s": 8.62,
+   "b": false
+  },
+  {
+   "t": "Total",
+   "x": 402.6,
+   "y": 146.33,
+   "s": 8.62,
+   "b": false
+  },
+  {
+   "t": "Vaginal birth after CS",
+   "x": 93.59,
+   "y": 160.26,
+   "s": 8.62,
+   "b": false
+  },
+  {
+   "t": "Anesthesia",
+   "x": 93.59,
+   "y": 174.19,
+   "s": 8.62,
+   "b": false
+  },
+  {
+   "t": "Local",
+   "x": 206.32,
+   "y": 174.19,
+   "s": 8.62,
+   "b": false
+  },
+  {
+   "t": "TIVA",
+   "x": 308.44,
+   "y": 174.19,
+   "s": 8.62,
+   "b": false
+  },
+  {
+   "t": "Regional",
+   "x": 402.6,
+   "y": 174.19,
+   "s": 8.62,
+   "b": false
+  },
+  {
+   "t": "Inhalational",
+   "x": 470.24,
+   "y": 174.19,
+   "s": 8.62,
+   "b": false
+  },
+  {
+   "t": "WITH EPISIOTOMY:",
+   "x": 29.27,
+   "y": 202.04,
+   "s": 8.62,
+   "b": true
+  },
+  {
+   "t": "Median",
+   "x": 165.21,
+   "y": 202.04,
+   "s": 8.62,
+   "b": false
+  },
+  {
+   "t": "Mediolateral",
+   "x": 278.6,
+   "y": 202.04,
+   "s": 8.62,
+   "b": false
+  },
+  {
+   "t": "ABDOMINAL DELIVERY",
+   "x": 29.27,
+   "y": 229.89,
+   "s": 8.62,
+   "b": true
+  },
+  {
+   "t": "Primary CS:",
+   "x": 93.59,
+   "y": 243.81,
+   "s": 8.62,
+   "b": false
+  },
+  {
+   "t": "Low Transverse",
+   "x": 206.32,
+   "y": 243.81,
+   "s": 8.62,
+   "b": false
+  },
+  {
+   "t": "Low Vertical",
+   "x": 308.44,
+   "y": 243.81,
+   "s": 8.62,
+   "b": false
+  },
+  {
+   "t": "Classical",
+   "x": 402.6,
+   "y": 243.81,
+   "s": 8.62,
+   "b": false
+  },
+  {
+   "t": "w/ Tubal Ligation",
+   "x": 470.24,
+   "y": 243.81,
+   "s": 8.62,
+   "b": false
+  },
+  {
+   "t": "INDICATION",
+   "x": 93.59,
+   "y": 271.66,
+   "s": 8.62,
+   "b": false
+  },
+  {
+   "t": "Repeat CS:",
+   "x": 93.59,
+   "y": 285.59,
+   "s": 8.62,
+   "b": false
+  },
+  {
+   "t": "Low Transverse",
+   "x": 206.32,
+   "y": 285.59,
+   "s": 8.62,
+   "b": false
+  },
+  {
+   "t": "Low Vertical",
+   "x": 308.44,
+   "y": 285.59,
+   "s": 8.62,
+   "b": false
+  },
+  {
+   "t": "Classical",
+   "x": 402.6,
+   "y": 285.59,
+   "s": 8.62,
+   "b": false
+  },
+  {
+   "t": "w/ Tubal Ligation",
+   "x": 470.24,
+   "y": 285.59,
+   "s": 8.62,
+   "b": false
+  },
+  {
+   "t": "INDICATION",
+   "x": 93.59,
+   "y": 313.44,
+   "s": 8.62,
+   "b": false
+  },
+  {
+   "t": "CS Hysterectomy",
+   "x": 93.59,
+   "y": 327.36,
+   "s": 8.62,
+   "b": false
+  },
+  {
+   "t": "Total",
+   "x": 308.44,
+   "y": 327.36,
+   "s": 8.62,
+   "b": false
+  },
+  {
+   "t": "Sub-Total",
+   "x": 402.6,
+   "y": 327.36,
+   "s": 8.62,
+   "b": false
+  },
+  {
+   "t": "DELIVERY OF PLACENTA:",
+   "x": 29.27,
+   "y": 355.21,
+   "s": 8.62,
+   "b": true
+  },
+  {
+   "t": "DATE:",
+   "x": 165.21,
+   "y": 355.21,
+   "s": 8.62,
+   "b": false
+  },
+  {
+   "t": "TIME:",
+   "x": 278.6,
+   "y": 355.21,
+   "s": 8.62,
+   "b": false
+  },
+  {
+   "t": "By:",
+   "x": 379.39,
+   "y": 355.21,
+   "s": 8.62,
+   "b": false
+  },
+  {
+   "t": "Spontaneous",
+   "x": 93.59,
+   "y": 369.14,
+   "s": 8.62,
+   "b": false
+  },
+  {
+   "t": "Controlled Cord Traction",
+   "x": 278.6,
+   "y": 369.14,
+   "s": 8.62,
+   "b": false
+  },
+  {
+   "t": "Manual Extraction",
+   "x": 439.07,
+   "y": 369.14,
+   "s": 8.62,
+   "b": false
+  },
+  {
+   "t": "POST PARTUM",
+   "x": 29.27,
+   "y": 396.99,
+   "s": 8.62,
+   "b": true
+  },
+  {
+   "t": "Blood Pressure:",
+   "x": 130.07,
+   "y": 396.99,
+   "s": 8.62,
+   "b": false
+  },
+  {
+   "t": "mmHg",
+   "x": 308.44,
+   "y": 396.99,
+   "s": 8.62,
+   "b": false
+  },
+  {
+   "t": "Blood Loss:",
+   "x": 130.07,
+   "y": 410.91,
+   "s": 8.62,
+   "b": false
+  },
+  {
+   "t": "cc",
+   "x": 308.44,
+   "y": 410.91,
+   "s": 8.62,
+   "b": false
+  },
+  {
+   "t": "PERINEAL REPAIR",
+   "x": 29.27,
+   "y": 438.77,
+   "s": 8.62,
+   "b": true
+  },
+  {
+   "t": "1st Degree",
+   "x": 61.1,
+   "y": 452.69,
+   "s": 8.62,
+   "b": false
+  },
+  {
+   "t": "2nd Degree",
+   "x": 165.21,
+   "y": 452.69,
+   "s": 8.62,
+   "b": false
+  },
+  {
+   "t": "3rd Degree",
+   "x": 278.6,
+   "y": 452.69,
+   "s": 8.62,
+   "b": false
+  },
+  {
+   "t": "4th Degree",
+   "x": 402.6,
+   "y": 452.69,
+   "s": 8.62,
+   "b": false
+  },
+  {
+   "t": "ANESTHESIA :",
+   "x": 29.27,
+   "y": 480.54,
+   "s": 8.62,
+   "b": true
+  },
+  {
+   "t": "Local Infiltration",
+   "x": 119.46,
+   "y": 494.47,
+   "s": 8.62,
+   "b": false
+  },
+  {
+   "t": "Regional",
+   "x": 237.49,
+   "y": 494.47,
+   "s": 8.62,
+   "b": false
+  },
+  {
+   "t": "General",
+   "x": 379.39,
+   "y": 494.47,
+   "s": 8.62,
+   "b": false
+  },
+  {
+   "t": "COMPLICATIONS:",
+   "x": 29.27,
+   "y": 522.32,
+   "s": 8.62,
+   "b": true
+  },
+  {
+   "t": "POST PARTUM CONDITION",
+   "x": 29.27,
+   "y": 550.17,
+   "s": 8.62,
+   "b": true
+  },
+  {
+   "t": "Good",
+   "x": 119.46,
+   "y": 564.09,
+   "s": 8.62,
+   "b": false
+  },
+  {
+   "t": "Fair",
+   "x": 237.49,
+   "y": 564.09,
+   "s": 8.62,
+   "b": false
+  },
+  {
+   "t": "Poor",
+   "x": 379.39,
+   "y": 564.09,
+   "s": 8.62,
+   "b": false
+  },
+  {
+   "t": "FETAL OUTCOME:",
+   "x": 29.27,
+   "y": 591.94,
+   "s": 8.62,
+   "b": true
+  },
+  {
+   "t": "SEX:",
+   "x": 130.07,
+   "y": 591.94,
+   "s": 8.62,
+   "b": false
+  },
+  {
+   "t": "WEIGHT:",
+   "x": 237.49,
+   "y": 591.94,
+   "s": 8.62,
+   "b": false
+  },
+  {
+   "t": "LENGTH:",
+   "x": 397.07,
+   "y": 591.94,
+   "s": 8.62,
+   "b": false
+  },
+  {
+   "t": "APFAG SCORE:",
+   "x": 29.27,
+   "y": 605.87,
+   "s": 8.62,
+   "b": true
+  },
+  {
+   "t": "1 min.",
+   "x": 130.07,
+   "y": 605.87,
+   "s": 8.62,
+   "b": false
+  },
+  {
+   "t": "5 mins",
+   "x": 237.49,
+   "y": 605.87,
+   "s": 8.62,
+   "b": false
+  },
+  {
+   "t": "Pediatric Aging:",
+   "x": 405.7,
+   "y": 605.87,
+   "s": 8.62,
+   "b": false
+  },
+  {
+   "t": "RESUSCITATIONS:",
+   "x": 29.27,
+   "y": 619.79,
+   "s": 8.62,
+   "b": true
+  },
+  {
+   "t": "SGA:",
+   "x": 237.49,
+   "y": 619.79,
+   "s": 8.62,
+   "b": false
+  },
+  {
+   "t": "AGA",
+   "x": 379.39,
+   "y": 619.79,
+   "s": 8.62,
+   "b": false
+  },
+  {
+   "t": "LGA",
+   "x": 470.24,
+   "y": 619.79,
+   "s": 8.62,
+   "b": false
+  },
+  {
+   "t": "ABNORMALITIES:",
+   "x": 29.27,
+   "y": 633.72,
+   "s": 8.62,
+   "b": true
+  },
+  {
+   "t": "Surname",
+   "x": 29.27,
+   "y": 661.57,
+   "s": 8.62,
+   "b": false
+  },
+  {
+   "t": "Age:",
+   "x": 402.6,
+   "y": 661.57,
+   "s": 8.62,
+   "b": false
+  },
+  {
+   "t": "Hospital No:",
+   "x": 494.77,
+   "y": 661.57,
+   "s": 8.62,
+   "b": false
+  },
+  {
+   "t": "Sex:",
+   "x": 402.6,
+   "y": 675.49,
+   "s": 8.62,
+   "b": false
+  },
+  {
+   "t": "Given Name",
+   "x": 29.27,
+   "y": 689.42,
+   "s": 8.62,
+   "b": false
+  },
+  {
+   "t": "M",
+   "x": 439.07,
+   "y": 689.42,
+   "s": 8.62,
+   "b": false
+  },
+  {
+   "t": "Ward/Rm:",
+   "x": 494.77,
+   "y": 689.42,
+   "s": 8.62,
+   "b": false
+  },
+  {
+   "t": "M.I.",
+   "x": 206.32,
+   "y": 703.35,
+   "s": 8.62,
+   "b": false
+  },
+  {
+   "t": "F",
+   "x": 439.07,
+   "y": 703.35,
+   "s": 8.62,
+   "b": false
+  },
+  {
+   "t": "MSD-OB.GYNE-F-1 Rev. 4",
+   "x": 471.23,
+   "y": 731.2,
+   "s": 8.62,
+   "b": false
+  },
+  {
+   "t": "September 1, 2025",
+   "x": 501.69,
+   "y": 745.12,
+   "s": 8.62,
+   "b": false
+  },
+  {
+   "t": "Page 5 of 6",
+   "x": 530.92,
+   "y": 759.05,
+   "s": 8.62,
+   "b": false
+  }
+ ],
+ "fields": [
+  {
+   "k": "page5.fetusDate",
+   "x": 167.2,
+   "y": 81.05,
+   "s": 6.9,
+   "b": true
+  },
+  {
+   "k": "page5.fetusTime",
+   "x": 236.43,
+   "y": 80.69,
+   "s": 8.62,
+   "b": true
+  },
+  {
+   "k": "page5.attendedBy",
+   "x": 379.39,
+   "y": 80.69,
+   "s": 8.62,
+   "b": true
+  },
+  {
+   "k": "page5.repeatCs.indication",
+   "x": 206.32,
+   "y": 313.44,
+   "s": 8.62,
+   "b": true
+  },
+  {
+   "k": "page5.placentaDate",
+   "x": 239.48,
+   "y": 355.58,
+   "s": 6.9,
+   "b": true
+  },
+  {
+   "k": "page5.placentaTime",
+   "x": 337.22,
+   "y": 355.21,
+   "s": 8.62,
+   "b": true
+  },
+  {
+   "k": "page5.placentaBy",
+   "x": 402.6,
+   "y": 355.21,
+   "s": 8.62,
+   "b": true
+  },
+  {
+   "k": "page5.postpartumBp",
+   "x": 241.47,
+   "y": 396.99,
+   "s": 8.62,
+   "b": true
+  },
+  {
+   "k": "page5.bloodLoss",
+   "x": 247.44,
+   "y": 410.91,
+   "s": 8.62,
+   "b": true
+  },
+  {
+   "k": "page5.complications",
+   "x": 130.07,
+   "y": 522.32,
+   "s": 8.62,
+   "b": false
+  },
+  {
+   "k": "page5.babySex",
+   "x": 185.1,
+   "y": 591.94,
+   "s": 8.62,
+   "b": true
+  },
+  {
+   "k": "page5.babyWeight",
+   "x": 314.41,
+   "y": 591.94,
+   "s": 8.62,
+   "b": true
+  },
+  {
+   "k": "page5.babyLength",
+   "x": 437.42,
+   "y": 591.94,
+   "s": 8.62,
+   "b": true
+  },
+  {
+   "k": "page5.apgar1",
+   "x": 196.38,
+   "y": 605.87,
+   "s": 8.62,
+   "b": true
+  },
+  {
+   "k": "page5.apgar5",
+   "x": 323.69,
+   "y": 605.87,
+   "s": 8.62,
+   "b": true
+  },
+  {
+   "k": "page5.pediatricAging",
+   "x": 500.74,
+   "y": 605.87,
+   "s": 8.62,
+   "b": true
+  },
+  {
+   "k": "page5.resuscitations",
+   "x": 117.8,
+   "y": 619.79,
+   "s": 8.62,
+   "b": true
+  },
+  {
+   "k": "page5.sga",
+   "x": 276.95,
+   "y": 619.79,
+   "s": 8.62,
+   "b": true
+  },
+  {
+   "k": "page5.aga",
+   "x": 402.6,
+   "y": 619.79,
+   "s": 8.62,
+   "b": false
+  },
+  {
+   "k": "page5.lga",
+   "x": 493.12,
+   "y": 619.79,
+   "s": 8.62,
+   "b": true
+  },
+  {
+   "k": "page5.abnormalities",
+   "x": 117.8,
+   "y": 633.72,
+   "s": 8.62,
+   "b": true
+  },
+  {
+   "k": "footer.age",
+   "x": 456.01,
+   "y": 661.57,
+   "s": 8.62,
+   "b": false
+  },
+  {
+   "k": "footer.ward",
+   "x": 494.77,
+   "y": 703.35,
+   "s": 8.62,
+   "b": false
+  },
+  {
+   "k": "page5.primaryCs.indication",
+   "x": 206.32,
+   "y": 268.31,
+   "s": 8.62,
+   "b": true
+  },
+  {
+   "k": "footer.surname",
+   "x": 29.27,
+   "y": 675.49,
+   "s": 8.62,
+   "b": false
+  },
+  {
+   "k": "footer.givenName",
+   "x": 29.27,
+   "y": 703.35,
+   "s": 8.62,
+   "b": false
+  },
+  {
+   "k": "footer.mi",
+   "x": 237.49,
+   "y": 703.35,
+   "s": 8.62,
+   "b": false
+  },
+  {
+   "k": "footer.hospNo",
+   "x": 574.33,
+   "y": 675.49,
+   "s": 8.62,
+   "b": false,
+   "al": "r"
+  }
+ ],
+ "checks": [
+  {
+   "k": "page5.vaginalMethod",
+   "v": "Spontaneous",
+   "x": 83.65,
+   "y": 111.03,
+   "w": 6.37,
+   "h": 6.37
+  },
+  {
+   "k": "page5.vaginalMethod",
+   "v": "Assisted vaginal delivery",
+   "x": 83.65,
+   "y": 124.95,
+   "w": 6.37,
+   "h": 6.37
+  },
+  {
+   "k": "page5.vaginalMethod",
+   "v": "Vacuum",
+   "x": 227.54,
+   "y": 124.95,
+   "w": 6.37,
+   "h": 6.37
+  },
+  {
+   "k": "page5.vaginalMethod",
+   "v": "Forceps",
+   "x": 298.49,
+   "y": 124.95,
+   "w": 6.37,
+   "h": 6.37
+  },
+  {
+   "k": "page5.vaginalMethod",
+   "v": "Breech delivery",
+   "x": 83.65,
+   "y": 138.88,
+   "w": 6.37,
+   "h": 6.37
+  },
+  {
+   "k": "page5.vaginalMethod",
+   "v": "Breech Spontaneous",
+   "x": 196.38,
+   "y": 138.88,
+   "w": 6.37,
+   "h": 6.37
+  },
+  {
+   "k": "page5.vaginalMethod",
+   "v": "Breech Partial",
+   "x": 298.49,
+   "y": 138.88,
+   "w": 6.37,
+   "h": 6.37
+  },
+  {
+   "k": "page5.vaginalMethod",
+   "v": "Breech Total",
+   "x": 392.66,
+   "y": 138.88,
+   "w": 6.37,
+   "h": 6.37
+  },
+  {
+   "k": "page5.vaginalMethod",
+   "v": "Vaginal birth after CS",
+   "x": 83.65,
+   "y": 152.8,
+   "w": 6.37,
+   "h": 6.37
+  },
+  {
+   "k": "page5.vaginalMethod",
+   "v": "Anesthesia",
+   "x": 83.65,
+   "y": 166.73,
+   "w": 6.37,
+   "h": 6.37
+  },
+  {
+   "k": "page5.vaginalMethod",
+   "v": "Anesthesia Local",
+   "x": 196.38,
+   "y": 166.73,
+   "w": 6.37,
+   "h": 6.37
+  },
+  {
+   "k": "page5.vaginalMethod",
+   "v": "Anesthesia TIVA",
+   "x": 298.49,
+   "y": 166.73,
+   "w": 6.37,
+   "h": 6.37
+  },
+  {
+   "k": "page5.vaginalMethod",
+   "v": "Anesthesia Regional",
+   "x": 392.66,
+   "y": 166.73,
+   "w": 6.37,
+   "h": 6.37
+  },
+  {
+   "k": "page5.vaginalMethod",
+   "v": "Anesthesia Inhalational/GA",
+   "x": 460.29,
+   "y": 166.73,
+   "w": 6.37,
+   "h": 6.37
+  },
+  {
+   "k": "page5.episiotomy",
+   "v": "Median",
+   "x": 155.26,
+   "y": 194.58,
+   "w": 6.37,
+   "h": 6.37
+  },
+  {
+   "k": "page5.episiotomy",
+   "v": "Mediolateral",
+   "x": 268.65,
+   "y": 194.58,
+   "w": 6.37,
+   "h": 6.37
+  },
+  {
+   "k": "page5.primaryCs.checked",
+   "x": 83.65,
+   "y": 236.35,
+   "w": 6.37,
+   "h": 6.37
+  },
+  {
+   "k": "page5.primaryCs.incision",
+   "v": "Low Transverse",
+   "x": 196.38,
+   "y": 236.35,
+   "w": 6.37,
+   "h": 6.37
+  },
+  {
+   "k": "page5.primaryCs.incision",
+   "v": "Low Vertical",
+   "x": 298.49,
+   "y": 236.35,
+   "w": 6.37,
+   "h": 6.37
+  },
+  {
+   "k": "page5.primaryCs.incision",
+   "v": "Classical",
+   "x": 392.66,
+   "y": 236.35,
+   "w": 6.37,
+   "h": 6.37
+  },
+  {
+   "k": "page5.primaryCs.tubalLigation",
+   "x": 460.29,
+   "y": 236.35,
+   "w": 6.37,
+   "h": 6.37
+  },
+  {
+   "k": "page5.primaryCs.indication",
+   "x": 83.65,
+   "y": 264.21,
+   "w": 6.37,
+   "h": 6.37
+  },
+  {
+   "k": "page5.repeatCs.checked",
+   "x": 83.65,
+   "y": 278.13,
+   "w": 6.37,
+   "h": 6.37
+  },
+  {
+   "k": "page5.repeatCs.incision",
+   "v": "Low Transverse",
+   "x": 196.38,
+   "y": 278.13,
+   "w": 6.37,
+   "h": 6.37
+  },
+  {
+   "k": "page5.repeatCs.incision",
+   "v": "Low Vertical",
+   "x": 298.49,
+   "y": 278.13,
+   "w": 6.37,
+   "h": 6.37
+  },
+  {
+   "k": "page5.repeatCs.incision",
+   "v": "Classical",
+   "x": 392.66,
+   "y": 278.13,
+   "w": 6.37,
+   "h": 6.37
+  },
+  {
+   "k": "page5.repeatCs.tubalLigation",
+   "x": 460.29,
+   "y": 278.13,
+   "w": 6.37,
+   "h": 6.37
+  },
+  {
+   "k": "page5.repeatCs.indication",
+   "x": 83.65,
+   "y": 305.98,
+   "w": 6.37,
+   "h": 6.37
+  },
+  {
+   "k": "page5.csHysterectomy.checked",
+   "x": 83.65,
+   "y": 319.91,
+   "w": 6.37,
+   "h": 6.37
+  },
+  {
+   "k": "page5.csHysterectomy.type",
+   "v": "Total",
+   "x": 298.49,
+   "y": 319.91,
+   "w": 6.37,
+   "h": 6.37
+  },
+  {
+   "k": "page5.csHysterectomy.type",
+   "v": "Sub-Total",
+   "x": 392.66,
+   "y": 319.91,
+   "w": 6.37,
+   "h": 6.37
+  },
+  {
+   "k": "page5.placentaMethod",
+   "v": "Spontaneous",
+   "x": 83.65,
+   "y": 361.68,
+   "w": 6.37,
+   "h": 6.37
+  },
+  {
+   "k": "page5.placentaMethod",
+   "v": "Controlled Cord Traction",
+   "x": 268.65,
+   "y": 361.68,
+   "w": 6.37,
+   "h": 6.37
+  },
+  {
+   "k": "page5.placentaMethod",
+   "v": "Manual Extraction",
+   "x": 429.13,
+   "y": 361.68,
+   "w": 6.37,
+   "h": 6.37
+  },
+  {
+   "k": "page5.perinealRepair",
+   "v": "1st Degree",
+   "x": 51.16,
+   "y": 445.23,
+   "w": 6.37,
+   "h": 6.37
+  },
+  {
+   "k": "page5.perinealRepair",
+   "v": "2nd Degree",
+   "x": 155.26,
+   "y": 445.23,
+   "w": 6.37,
+   "h": 6.37
+  },
+  {
+   "k": "page5.perinealRepair",
+   "v": "3rd Degree",
+   "x": 268.65,
+   "y": 445.23,
+   "w": 6.37,
+   "h": 6.37
+  },
+  {
+   "k": "page5.perinealRepair",
+   "v": "4th Degree",
+   "x": 392.66,
+   "y": 445.23,
+   "w": 6.37,
+   "h": 6.37
+  },
+  {
+   "k": "page5.anesthesia",
+   "v": "Local Infiltration",
+   "x": 109.51,
+   "y": 487.01,
+   "w": 6.37,
+   "h": 6.37
+  },
+  {
+   "k": "page5.anesthesia",
+   "v": "Regional",
+   "x": 227.54,
+   "y": 487.01,
+   "w": 6.37,
+   "h": 6.37
+  },
+  {
+   "k": "page5.anesthesia",
+   "v": "General",
+   "x": 369.45,
+   "y": 487.01,
+   "w": 6.37,
+   "h": 6.37
+  },
+  {
+   "k": "page5.postpartumCondition",
+   "v": "Good",
+   "x": 110.09,
+   "y": 558.53,
+   "w": 6.37,
+   "h": 6.37,
+   "ow": true
+  },
+  {
+   "k": "page5.postpartumCondition",
+   "v": "Fair",
+   "x": 227.54,
+   "y": 556.64,
+   "w": 6.37,
+   "h": 6.37
+  },
+  {
+   "k": "page5.postpartumCondition",
+   "v": "Poor",
+   "x": 369.45,
+   "y": 556.64,
+   "w": 6.37,
+   "h": 6.37
+  },
+  {
+   "k": "footer.sex",
+   "v": "M",
+   "x": 429.13,
+   "y": 681.96,
+   "w": 6.37,
+   "h": 6.37
+  },
+  {
+   "k": "footer.sex",
+   "v": "F",
+   "x": 429.13,
+   "y": 695.89,
+   "w": 6.37,
+   "h": 6.37
+  }
+ ],
+ "marks": [],
+ "images": []
+}
