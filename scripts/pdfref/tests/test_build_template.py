@@ -54,6 +54,25 @@ def test_near_disambiguates():
     assert {f["k"]: round(f["y"]) for f in t["fields"]} == {"a.stis": 100, "a.alcohol": 200}
 
 
+def test_near_prefers_same_line_over_closer_diagonal():
+    # A's own value is far right (+70); B's value (next row) is diagonally closer to A.
+    p = page_with([(50, 100, "Tobacco:", True), (120, 100, "None", False),
+                   (50, 114, "Drug/Allergies:", True), (100, 114, "None", False)])
+    m = {"page": 1, "fields": [{"key": "a.tobacco", "near": "Tobacco:"}, {"key": "a.drug", "near": "Drug/Allergies:"}]}
+    t = build(p, m, {"a.tobacco": "None", "a.drug": "None"})
+    got = {f["k"]: (round(f["x"]), round(f["y"])) for f in t["fields"]}
+    assert got == {"a.tobacco": (120, 100), "a.drug": (100, 114)}
+
+
+def test_check_near_prefers_same_line_label():
+    p = page_with([(50, 100, "Sex:", False), (130, 100, "M", False), (20, 108, "Q:", False), (60, 108, "M", False)],
+                  boxes=[(120, 94), (50, 102)])
+    m = {"page": 1, "checks": [{"key": "s", "value": "M", "label": "M", "near": "Sex:"},
+                               {"key": "s2", "value": "M", "label": "M", "near": "Q:"}]}
+    t = build(p, m, {})
+    assert round(t["checks"][0]["x"]) == 120
+
+
 def test_check_left_of_label_and_unmapped_box_error():
     p = page_with([(40, 98, "Pills", False), (140, 98, "IUD", False)], boxes=[(30, 92), (130, 92)])
     m = {"page": 1, "checks": [{"key": "p.c", "value": "Pills", "label": "Pills"}, {"key": "p.c", "value": "IUD", "label": "IUD"}]}

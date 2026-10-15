@@ -24,14 +24,26 @@ def inside(pt, box):
     return x <= pt[0] <= x + w and y <= pt[1] <= y + h
 
 
+SAME_LINE = 3.0
+
+
+def nearest_to_anchor(cands, anchor):
+    """Pick the candidate belonging to the anchor: same baseline (±3 pt) first, preferring
+    spans starting right of the anchor's start (nearest x); else Euclidean nearest."""
+    ax, ay = span_origin(anchor)
+    x0 = anchor["bbox"][0]
+    same = [s for s in cands if abs(span_origin(s)[1] - ay) <= SAME_LINE]
+    if same:
+        return min(same, key=lambda s: (span_origin(s)[0] < x0 - 1, abs(span_origin(s)[0] - x0)))
+    return min(cands, key=lambda s: math.dist((ax, ay), span_origin(s)))
+
+
 def find_label(spans, label, near=None, what="label"):
     cands = [s for s in spans if not s["used"] and norm(s["text"]) == norm(label)]
     if not cands:
         raise BuildError(f"{what} '{label}' not found")
     if near:
-        a = find_label(spans, near, what="anchor")
-        ax, ay = span_origin(a)
-        return min(cands, key=lambda s: math.dist((ax, ay), span_origin(s)))
+        return nearest_to_anchor(cands, find_label(spans, near, what="anchor"))
     if len(cands) > 1:
         raise BuildError(f"{what} '{label}' is ambiguous ({len(cands)} matches); add 'near'")
     return cands[0]
@@ -115,9 +127,7 @@ def build(page, mapping, view, exclude_keys=frozenset()):
             if not cands:
                 raise BuildError(f"field '{key}': value span not found (claimed by an earlier key? add 'near')")
             if "near" in f:
-                a = find_label(spans, f["near"], what="anchor")
-                ax, ay = span_origin(a)
-                cands = [min(cands, key=lambda s: math.dist((ax, ay), span_origin(s)))]
+                cands = [nearest_to_anchor(cands, find_label(spans, f["near"], what="anchor"))]
             for s in cands:
                 s["used"] = True
                 tpl["fields"].append(field_from_span(key, s, f.get("align"), f.get("size"), f.get("bold")))
