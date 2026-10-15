@@ -97,6 +97,17 @@ def test_box_consumes_spans_and_table_emits_cells():
     assert hpi["ml"] is True and hpi["w"] == 300
 
 
+def test_table_sizes_override_per_column():
+    p = page_with([])
+    m = {"page": 1,
+         "tables": [{"key": "p.mon", "region": [40, 490, 300, 40], "columns": {"dateTime": 45, "bp": 80},
+                     "firstBaseline": 500, "pitch": 10, "rows": 2, "size": 8.36, "sizes": {"dateTime": 6.08}}]}
+    t = build(p, m, {})
+    by = {f["k"]: f["s"] for f in t["fields"]}
+    assert by["p.mon.0.dateTime"] == 6.08 and by["p.mon.1.dateTime"] == 6.08
+    assert by["p.mon.0.bp"] == 8.36 and by["p.mon.1.bp"] == 8.36
+
+
 def test_split_label_value():
     p = page_with([(40, 100, "Others: placenta previa", False)])
     t = build(p, {"page": 1, "splits": [{"label": "Others:", "key": "p.other"}]}, {"p.other": "placenta previa"})

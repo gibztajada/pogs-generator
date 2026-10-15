@@ -144,10 +144,11 @@ def build(page, mapping, view, exclude_keys=frozenset()):
         for s in spans:
             if not s["used"] and inside(center(s["bbox"]), t["region"]):
                 s["used"] = True
+        sizes = t.get("sizes", {})
         for r in range(t["rows"]):
             y = t["firstBaseline"] + r * t["pitch"]
             for col, x in t["columns"].items():
-                tpl["fields"].append({"k": f"{t['key']}.{r}.{col}", "x": r2(x), "y": r2(y), "s": r2(t["size"]), "b": bool(t.get("bold", False))})
+                tpl["fields"].append({"k": f"{t['key']}.{r}.{col}", "x": r2(x), "y": r2(y), "s": r2(sizes.get(col, t["size"])), "b": bool(t.get("bold", False))})
 
     for f in fields:
         if not is_explicit(f):

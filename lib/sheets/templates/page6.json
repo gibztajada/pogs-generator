@@ -396,7 +396,7 @@
    "k": "page6.monitoring.0.dateTime",
    "x": 27.94,
    "y": 205.68,
-   "s": 8.36,
+   "s": 6.08,
    "b": false
   },
   {
@@ -515,7 +515,7 @@
    "k": "page6.monitoring.1.dateTime",
    "x": 27.94,
    "y": 231.41,
-   "s": 8.36,
+   "s": 6.08,
    "b": false
   },
   {
@@ -634,7 +634,7 @@
    "k": "page6.monitoring.2.dateTime",
    "x": 27.94,
    "y": 257.14,
-   "s": 8.36,
+   "s": 6.08,
    "b": false
   },
   {
@@ -753,7 +753,7 @@
    "k": "page6.monitoring.3.dateTime",
    "x": 27.94,
    "y": 282.87,
-   "s": 8.36,
+   "s": 6.08,
    "b": false
   },
   {
@@ -872,7 +872,7 @@
    "k": "page6.monitoring.4.dateTime",
    "x": 27.94,
    "y": 308.6,
-   "s": 8.36,
+   "s": 6.08,
    "b": false
   },
   {
@@ -991,7 +991,7 @@
    "k": "page6.monitoring.5.dateTime",
    "x": 27.94,
    "y": 334.33,
-   "s": 8.36,
+   "s": 6.08,
    "b": false
   },
   {
@@ -1110,7 +1110,7 @@
    "k": "page6.monitoring.6.dateTime",
    "x": 27.94,
    "y": 360.06,
-   "s": 8.36,
+   "s": 6.08,
    "b": false
   },
   {
@@ -1229,7 +1229,7 @@
    "k": "page6.monitoring.7.dateTime",
    "x": 27.94,
    "y": 385.79,
-   "s": 8.36,
+   "s": 6.08,
    "b": false
   },
   {
@@ -1348,7 +1348,7 @@
    "k": "page6.monitoring.8.dateTime",
    "x": 27.94,
    "y": 411.52,
-   "s": 8.36,
+   "s": 6.08,
    "b": false
   },
   {
@@ -1467,7 +1467,7 @@
    "k": "page6.monitoring.9.dateTime",
    "x": 27.94,
    "y": 437.25,
-   "s": 8.36,
+   "s": 6.08,
    "b": false
   },
   {
@@ -1586,7 +1586,7 @@
    "k": "page6.monitoring.10.dateTime",
    "x": 27.94,
    "y": 462.98,
-   "s": 8.36,
+   "s": 6.08,
    "b": false
   },
   {
@@ -1705,7 +1705,7 @@
    "k": "page6.monitoring.11.dateTime",
    "x": 27.94,
    "y": 488.71,
-   "s": 8.36,
+   "s": 6.08,
    "b": false
   },
   {
@@ -1824,7 +1824,7 @@
    "k": "page6.monitoring.12.dateTime",
    "x": 27.94,
    "y": 514.44,
-   "s": 8.36,
+   "s": 6.08,
    "b": false
   },
   {

@@ -18,7 +18,7 @@
         "pres": 404.46, "stn": 434.86, "mem": 462.93, "nstCtg": 500.4,
         "remarks": 533.1
       },
-      "firstBaseline": 205.68, "pitch": 25.73, "rows": 13, "size": 8.36 }
+      "firstBaseline": 205.68, "pitch": 25.73, "rows": 13, "size": 8.36, "sizes": { "dateTime": 6.08 } }
   ],
   "checks": [
     { "key": "footer.sex", "value": "M", "label": "M", "near": "Sex:" },
