@@ -256,7 +256,7 @@ def selection_keys():
 
 def main(n):
     mapping = json.loads((MAPPINGS / f"page{n}.json").read_text(encoding="utf-8"))
-    view = json.loads((ROOT / "fixtures" / "sostino.view.json").read_text(encoding="utf-8"))
+    view = json.loads((ROOT / "fixtures" / "reference.view.json").read_text(encoding="utf-8"))
     tpl = build(ref_page(n), mapping, view, selection_keys())
     out = ROOT / "lib" / "sheets" / "templates" / f"page{n}.json"
     out.parent.mkdir(parents=True, exist_ok=True)

@@ -7,13 +7,13 @@ import json, sys
 from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import fitz
-from common import ROOT, REFS, ZOOM, ref_page
+from common import ROOT, PAGES, ZOOM, ref_page
 
 out = ROOT / "tests" / "fidelity" / "reference"
 out.mkdir(parents=True, exist_ok=True)
 W, H = round(595 * ZOOM), round(842 * ZOOM)
 
-for n in REFS:
+for n in PAGES:
     page = ref_page(n)
     mp = ROOT / "scripts" / "pdfref" / "mappings" / f"page{n}.json"
     fit = json.loads(mp.read_text(encoding="utf-8")).get("fitWidth") if mp.exists() else None

@@ -821,12 +821,12 @@ import fitz
 
 ROOT = Path(__file__).resolve().parents[2]
 REFS = {
-    1: "SOSTINO POGS 2 - Page 1.pdf",
-    2: "SOSTINO POGS 2 - page 2.pdf",
-    3: "SOSTINO POGS 2 - Sheet3.pdf",
-    4: "SOSTINO POGS 2 - Sheet4.pdf",
-    5: "SOSTINO POGS 2 - Sheet5.pdf",
-    6: "SOSTINO POGS 2 - Sheet6.pdf",
+    1: "<reference patient> POGS 2 - Page 1.pdf",
+    2: "<reference patient> POGS 2 - page 2.pdf",
+    3: "<reference patient> POGS 2 - Sheet3.pdf",
+    4: "<reference patient> POGS 2 - Sheet4.pdf",
+    5: "<reference patient> POGS 2 - Sheet5.pdf",
+    6: "<reference patient> POGS 2 - Sheet6.pdf",
 }
 ZOOM = 192 / 72  # same pixel grid as a Playwright screenshot of a 595pt sheet at deviceScaleFactor 2
 
@@ -1062,7 +1062,7 @@ git commit -m "feat: add reference PDF tooling, header assets, checkbox glyphs"
 - Create: `scripts/pdfref/build_template.py`, `scripts/pdfref/tests/test_build_template.py`, `scripts/dump-view.ts`
 
 **Interfaces:**
-- Consumes: `common.py`; mapping files; `fixtures/sostino.view.json` (flat `{ "patient.lastName": "…", "page1.contraception": "Pills, Condom", "page5.primaryCs.checked": "true", … }` — string arrays appear only joined).
+- Consumes: `common.py`; mapping files; `fixtures/reference.view.json` (flat `{ "patient.lastName": "…", "page1.contraception": "Pills, Condom", "page5.primaryCs.checked": "true", … }` — string arrays appear only joined).
 - Produces: `build(page, mapping: dict, view: dict, exclude_keys: set[str] = frozenset()) -> dict`; `BuildError`; CLI `python build_template.py N` → `lib/sheets/templates/pageN.json` + `fixtures/review/pageN.labels.tsv`. Output shape = `Template` TS type (Task 7).
 
 **Mapping format** (`scripts/pdfref/mappings/pageN.json`, committed, no patient data):
@@ -1092,7 +1092,7 @@ import { coerceForm } from '../lib/storage';
 import { buildView } from '../lib/derive';
 
 const root = path.resolve(__dirname, '..');
-const { form, skipped } = coerceForm(JSON.parse(fs.readFileSync(path.join(root, 'fixtures', 'sostino.json'), 'utf8')));
+const { form, skipped } = coerceForm(JSON.parse(fs.readFileSync(path.join(root, 'fixtures', 'reference.json'), 'utf8')));
 if (skipped.length) throw new Error(`fixture has invalid paths: ${skipped.join(', ')}`);
 
 const flat: Record<string, string> = {};
@@ -1104,7 +1104,7 @@ const flat: Record<string, string> = {};
     for (const [k, x] of Object.entries(v)) walk(x, p ? `${p}.${k}` : k);
   } else flat[p] = String(v);
 })(buildView(form), '');
-fs.writeFileSync(path.join(root, 'fixtures', 'sostino.view.json'), JSON.stringify(flat, null, 1));
+fs.writeFileSync(path.join(root, 'fixtures', 'reference.view.json'), JSON.stringify(flat, null, 1));
 console.log(`wrote ${Object.keys(flat).length} view entries`);
 ```
 
@@ -1450,7 +1450,7 @@ def selection_keys():
 
 def main(n):
     mapping = json.loads((MAPPINGS / f"page{n}.json").read_text(encoding="utf-8"))
-    view = json.loads((ROOT / "fixtures" / "sostino.view.json").read_text(encoding="utf-8"))
+    view = json.loads((ROOT / "fixtures" / "reference.view.json").read_text(encoding="utf-8"))
     tpl = build(ref_page(n), mapping, view, selection_keys())
     out = ROOT / "lib" / "sheets" / "templates" / f"page{n}.json"
     out.write_text(json.dumps(tpl, indent=1), encoding="utf-8")
@@ -1480,7 +1480,7 @@ if __name__ == "__main__":
 ### Task 7: Renderer, dev route, fidelity harness, PHI guard
 
 **Files:**
-- Create: `lib/sheets/template.ts`, `view.ts`, `fit.ts`, `TemplatePage.tsx`, `LaborChart.tsx`, `Sheet.tsx`, `assets.ts`, `lib/sheets/templates/index.ts`, `lib/sheets/templates/page{1..6}.json` (stubs), `app/dev/sheet/[page]/page.tsx`, `fixtures/sostino.json` (git-ignored)
+- Create: `lib/sheets/template.ts`, `view.ts`, `fit.ts`, `TemplatePage.tsx`, `LaborChart.tsx`, `Sheet.tsx`, `assets.ts`, `lib/sheets/templates/index.ts`, `lib/sheets/templates/page{1..6}.json` (stubs), `app/dev/sheet/[page]/page.tsx`, `fixtures/reference.json` (git-ignored)
 - Modify: `app/globals.css`
 - Test: `tests/unit/fit.test.ts`, `tests/unit/view.test.ts`, `tests/unit/template-page.test.tsx`, `tests/unit/templates-phi.test.ts`, `tests/fidelity/fidelity.spec.ts`
 
@@ -1588,7 +1588,7 @@ import { expect, test } from 'vitest';
 import * as O from '@/lib/options';
 
 const root = path.resolve(__dirname, '../..');
-const fixture = path.join(root, 'fixtures', 'sostino.json');
+const fixture = path.join(root, 'fixtures', 'reference.json');
 const OPTION_VALUES = new Set(Object.values(O).flat().map((s) => s.toLowerCase()));
 
 test.skipIf(!fs.existsSync(fixture))('no fixture value appears in committed template labels', () => {
@@ -1867,7 +1867,7 @@ export default async function DevSheet({ params, searchParams }: {
   const sp = await searchParams;
   const n = Number(page);
   if (!(n >= 1 && n <= 6)) notFound();
-  const file = path.join(process.cwd(), 'fixtures', 'sostino.json');
+  const file = path.join(process.cwd(), 'fixtures', 'reference.json');
   const form = sp.sample ? sampleForm()
     : sp.empty || !fs.existsSync(file) ? emptyForm()
     : coerceForm(JSON.parse(fs.readFileSync(file, 'utf8'))).form;
@@ -1875,11 +1875,11 @@ export default async function DevSheet({ params, searchParams }: {
 }
 ```
 
-- [ ] **Step 8: Create the git-ignored fixture `fixtures/sostino.json`**
+- [ ] **Step 8: Create the git-ignored fixture `fixtures/reference.json`**
 
 Start from `JSON.stringify(emptyForm(), null, 2)` and transcribe every value visible in the six reference PDFs, exactly as printed (case, punctuation; multi-line blocks joined with `\n`). Checkbox states → option values from `lib/options.ts` for ticked boxes only (e.g. `contraception: ["Pills","Condom"]`, `page2.antenatalRisks: ["Others"]`, `antenatalRisksOther: "placenta previa"`). Page 3 X marks → `position: "Midposition"`, `membranes: "Intact"`; page 3 `bmi: " "` (one space, so the derived BMI does not render — the reference BMI blank is empty). Page 5 `aga: "x"`, `primaryCs: { checked: true, incision: "Low Transverse", tubalLigation: false, indication: "Placenta previa in hemorrhage" }`. Page 4 labor table hour 0 `{ "dilatation": "2", "station": "-3" }`, hour 10 `{ "dilatation": "", "station": "-5" }`, `fullDilatation: "FOR CS"`, `promHours: "13"`. `obHistory`: 11 rows (G11 outcome `current`). Then:
 ```bash
-git check-ignore fixtures/sostino.json   # must print the path
+git check-ignore fixtures/reference.json   # must print the path
 npm run dump-view                         # → "wrote N view entries"
 ```
 
@@ -2998,7 +2998,7 @@ async function downloadPdf() {
 ```
 (import `serializeForm` from `@/lib/storage` and `downloadBlob` from `./form/Toolbar`.)
 
-- [ ] **Step 6: Run** — `npx playwright test --project=api` → PASS. In the UI, Load .json `fixtures/sostino.json`, Download PDF, and open it next to the references to confirm all six pages match.
+- [ ] **Step 6: Run** — `npx playwright test --project=api` → PASS. In the UI, Load .json `fixtures/reference.json`, Download PDF, and open it next to the references to confirm all six pages match.
 
 - [ ] **Step 7: Commit** — `git add lib/pdf pages components tests/api && git commit -m "feat: server PDF endpoint with print fallback"`
 

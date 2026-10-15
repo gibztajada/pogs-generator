@@ -9,7 +9,7 @@ A Next.js web app where a VSMMC clerk/resident fills in one OB patient's data in
 
 **Success criteria**
 
-1. Generated pages visually match the reference files `SOSTINO POGS 2 - Page 1.pdf`, `page 2.pdf`, `Sheet3.pdf` … `Sheet6.pdf` in layout, borders, rule weights, column widths, label positions, font family, font weight, font size, checkbox glyphs, header and footer — verified by pixel-diff (§8.1). Page 4 is the agreed exception (§5.6).
+1. Generated pages visually match the reference patient's files `… POGS 2 - Page 1.pdf`, `page 2.pdf`, `Sheet3.pdf` … `Sheet6.pdf` in layout, borders, rule weights, column widths, label positions, font family, font weight, font size, checkbox glyphs, header and footer — verified by pixel-diff (§8.1). Page 4 is the agreed exception (§5.6).
 2. One patient's data entered once flows to every place it appears on all 6 pages.
 3. Work survives a page refresh and can be saved/resumed as a file.
 
@@ -116,7 +116,7 @@ Browser **Print** renders all six SVG sheets with `@page { size: A4; margin: 0 }
 
 ## 10. Privacy
 
-- SOSTINO data is real patient information: reference PDFs, `fixtures/`, rasterized references and fidelity outputs are git-ignored. Builder output is checked by the PHI guard test.
+- The reference patient's data is real patient information: reference PDFs, `fixtures/`, rasterized references and fidelity outputs are git-ignored. Builder output is checked by the PHI guard test. Reference PDF filenames are never written in code: scripts resolve them from the git-ignored `fixtures/ref-sources.json` (page number → filename).
 - Committed "Load sample" uses fictitious data.
 - Server PDF path transmits patient data to Vercel per request; nothing stored or logged. Browser Print keeps data on-device.
 

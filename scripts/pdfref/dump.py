@@ -2,11 +2,11 @@
 import sys
 from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from common import ROOT, REFS, ref_page, load_spans, span_origin, is_checkbox, hexcolor
+from common import ROOT, PAGES, ref_page, load_spans, span_origin, is_checkbox, hexcolor
 
 out = ROOT / "fixtures" / "ref"
 out.mkdir(parents=True, exist_ok=True)
-for n in REFS:
+for n in PAGES:
     page = ref_page(n)
     with open(out / f"page{n}.spans.tsv", "w", encoding="utf-8") as f:
         f.write("id\tx\ty\tx0\ty0\tx1\ty1\tsize\tfont\ttext\n")

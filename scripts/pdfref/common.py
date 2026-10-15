@@ -1,25 +1,39 @@
 """Shared helpers for reading the reference POGS PDFs with PyMuPDF."""
+import json
 import re
 from pathlib import Path
 
 import fitz
 
 ROOT = Path(__file__).resolve().parents[2]
-REFS = {
-    1: "SOSTINO POGS 2 - Page 1.pdf",
-    2: "SOSTINO POGS 2 - page 2.pdf",
-    3: "SOSTINO POGS 2 - Sheet3.pdf",
-    4: "SOSTINO POGS 2 - Sheet4.pdf",
-    5: "SOSTINO POGS 2 - Sheet5.pdf",
-    6: "SOSTINO POGS 2 - Sheet6.pdf",
-}
+# Git-ignored local config: {"1": "<page 1 reference PDF filename>", ..., "6": "..."}, paths relative to ROOT.
+REF_SOURCES = ROOT / "fixtures" / "ref-sources.json"
+PAGES = range(1, 7)
 ZOOM = 192 / 72  # same pixel grid as a Playwright screenshot of a 595pt sheet at deviceScaleFactor 2
 
 _open = []
 
 
+def refs():
+    """Page number -> reference PDF path, read from the git-ignored fixtures/ref-sources.json."""
+    if not REF_SOURCES.exists():
+        raise SystemExit(f"missing {REF_SOURCES}: create it locally as a JSON object mapping page number "
+                         '("1".."6") to the reference PDF filename (relative to the project root)')
+    raw = json.loads(REF_SOURCES.read_text(encoding="utf-8"))
+    out = {}
+    for n in PAGES:
+        name = raw.get(str(n))
+        if not name:
+            raise SystemExit(f"{REF_SOURCES}: no entry for page {n}")
+        p = ROOT / name
+        if not p.exists():
+            raise SystemExit(f"{REF_SOURCES}: page {n} file not found: {name}")
+        out[n] = p
+    return out
+
+
 def ref_page(n):
-    doc = fitz.open(str(ROOT / REFS[n]))
+    doc = fitz.open(str(refs()[n]))
     _open.append(doc)
     return doc[0]
 

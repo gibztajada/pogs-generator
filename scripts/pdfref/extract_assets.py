@@ -3,9 +3,9 @@ import sys
 from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import fitz
-from common import ROOT, REFS
+from common import ROOT, refs
 
-doc = fitz.open(str(ROOT / REFS[1]))
+doc = fitz.open(str(refs()[1]))
 page = doc[0]
 imgs = sorted(page.get_images(full=True), key=lambda im: -im[2])  # widest first: text block, then seal
 out = ROOT / "public" / "sheet-assets"

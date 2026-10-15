@@ -4,7 +4,7 @@ import { expect, test } from 'vitest';
 import * as O from '@/lib/options';
 
 const root = path.resolve(__dirname, '../..');
-const fixture = path.join(root, 'fixtures', 'sostino.json');
+const fixture = path.join(root, 'fixtures', 'reference.json');
 const OPTION_VALUES = new Set(Object.values(O).flat().map((s) => s.toLowerCase()));
 
 // Two classes of fixture values:

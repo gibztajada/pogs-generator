@@ -16,7 +16,7 @@ export default async function DevSheet({ params, searchParams }: {
   const sp = await searchParams;
   const n = Number(page);
   if (!(n >= 1 && n <= 6)) notFound();
-  const file = path.join(process.cwd(), 'fixtures', 'sostino.json');
+  const file = path.join(process.cwd(), 'fixtures', 'reference.json');
   const form = sp.sample ? sampleForm()
     : sp.empty || !fs.existsSync(file) ? emptyForm()
     : coerceForm(JSON.parse(fs.readFileSync(file, 'utf8'))).form;
