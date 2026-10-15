@@ -14,7 +14,9 @@ test('typing updates preview', async ({ page }) => {
 
 test('autosave survives reload', async ({ page }) => {
   await page.getByLabel('Last name').fill('PERSIST');
-  await page.waitForTimeout(800);
+  await expect
+    .poll(() => page.evaluate(() => localStorage.getItem('pogs:draft:v1') ?? ''))
+    .toContain('PERSIST');
   await page.reload();
   await expect(page.getByLabel('Last name')).toHaveValue('PERSIST');
 });
@@ -36,6 +38,16 @@ test('invalid file shows error and keeps form', async ({ page }) => {
   await page.getByTestId('load-input').setInputFiles({ name: 'x.json', mimeType: 'application/json', buffer: Buffer.from('nope') });
   await expect(page.getByRole('status')).toContainText('Not a valid JSON file');
   await expect(page.getByLabel('Last name')).toHaveValue('KEEP');
+});
+
+test('partially valid file loads valid fields and reports skipped', async ({ page }) => {
+  await page.getByTestId('load-input').setInputFiles({
+    name: 'p.json',
+    mimeType: 'application/json',
+    buffer: Buffer.from('{"patient":{"lastName":"OKAY"},"bogus":1}'),
+  });
+  await expect(page.getByRole('status')).toContainText('skipped field(s)');
+  await expect(page.getByLabel('Last name')).toHaveValue('OKAY');
 });
 
 test('page tabs switch the editor', async ({ page }) => {
