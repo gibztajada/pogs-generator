@@ -8,8 +8,13 @@ const LOCAL_CHROME = process.platform === 'win32'
 
 async function launch(): Promise<Browser> {
   if (process.env.VERCEL) {
+    // Launch as documented in the @sparticuz/chromium README for this version (headless shell build).
     const chromium = (await import('@sparticuz/chromium')).default;
-    return puppeteer.launch({ args: chromium.args, executablePath: await chromium.executablePath(), headless: true });
+    return puppeteer.launch({
+      args: await puppeteer.defaultArgs({ args: chromium.args, headless: 'shell' }),
+      executablePath: await chromium.executablePath(),
+      headless: 'shell',
+    });
   }
   return puppeteer.launch({ executablePath: process.env.CHROME_PATH || LOCAL_CHROME, headless: true });
 }
