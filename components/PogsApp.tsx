@@ -9,6 +9,8 @@ import { AllSheets } from '@/lib/sheets/Sheet';
 import { APP_ASSETS } from '@/lib/sheets/assets';
 import { FormEditor } from './form/FormEditor';
 import { Preview } from './form/Preview';
+import { Toolbar } from './form/Toolbar';
+import { Toast, type ToastMsg } from './Toast';
 
 export function PogsApp() {
   const { control, register, reset, getValues, setValue } = useForm<PogsForm>({ defaultValues: emptyForm() });
@@ -16,7 +18,10 @@ export function PogsApp() {
   const [page, setPage] = useState(1);
   const [showPreview, setShowPreview] = useState(false);
   const [autosave, setAutosave] = useState(true);
+  const [toast, setToast] = useState<ToastMsg | null>(null);
   const loaded = useRef(false);
+  // Temporary: replaced by the server PDF download in Task 16.
+  const downloadPdf = async () => window.print();
 
   useEffect(() => {
     // Storage exists only on the client; probing it after mount avoids a hydration mismatch.
@@ -54,6 +59,7 @@ export function PogsApp() {
             {showPreview ? 'Form' : 'Preview'}
           </button>
         </header>
+        <div className="border-b px-4 py-2"><Toolbar getValues={getValues} reset={(f) => reset(f)} notify={setToast} onDownload={downloadPdf} /></div>
         <main className="grid min-h-0 flex-1 lg:grid-cols-2">
           <div className={`overflow-y-auto p-4 ${showPreview ? 'hidden lg:block' : ''}`}>
             <FormEditor page={page} control={control} register={register} />
@@ -62,6 +68,7 @@ export function PogsApp() {
             <Preview form={form} page={page} />
           </div>
         </main>
+        <Toast msg={toast} onClose={() => setToast(null)} />
       </div>
       <div className="print-only"><AllSheets form={form} assets={APP_ASSETS} /></div>
     </>
