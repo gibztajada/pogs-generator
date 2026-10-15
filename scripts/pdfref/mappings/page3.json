@@ -22,7 +22,7 @@
   "labelTexts": ["Clear"],
   "splits": [ { "label": "Breast:", "key": "page3.breast" } ],
   "marks": [
-    { "key": "page3.position", "value": "Anterior", "at": [355.66, 383.37], "size": 7.33 },
+    { "key": "page3.position", "value": "Anterior", "at": [257.85, 383.37], "size": 7.33 },
     { "key": "page3.position", "value": "Midposition", "near": "Midposition:" },
     { "key": "page3.position", "value": "Posterior", "at": [507.0, 383.37], "size": 7.33 },
     { "key": "page3.membranes", "value": "Intact", "near": "Membranes" },
