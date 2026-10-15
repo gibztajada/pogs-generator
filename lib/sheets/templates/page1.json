@@ -859,14 +859,16 @@
    "x": 195.56,
    "y": 159.55,
    "s": 7.53,
-   "b": false
+   "b": false,
+   "w": 18.49
   },
   {
    "k": "patient.room",
    "x": 469.85,
    "y": 159.55,
    "s": 7.53,
-   "b": false
+   "b": false,
+   "w": 94.3
   },
   {
    "k": "page1.admittingImpression",
@@ -893,959 +895,1096 @@
    "x": 413.65,
    "y": 263.83,
    "s": 7.53,
-   "b": true
+   "b": true,
+   "w": 84.36
   },
   {
    "k": "page1.rh",
    "x": 515.61,
    "y": 263.83,
    "s": 7.53,
-   "b": true
+   "b": true,
+   "w": 48.54
   },
   {
    "k": "page1.vdrl",
    "x": 413.65,
    "y": 275.99,
    "s": 7.53,
-   "b": true
+   "b": true,
+   "w": 150.5
   },
   {
    "k": "page1.hbsag",
    "x": 413.65,
    "y": 288.16,
    "s": 7.53,
-   "b": true
+   "b": true,
+   "w": 55.2
   },
   {
    "k": "page1.antibodies",
    "x": 515.61,
    "y": 288.16,
    "s": 7.53,
-   "b": true
+   "b": true,
+   "w": 48.54
   },
   {
    "k": "page1.obScore.g",
    "x": 195.98,
    "y": 331.61,
    "s": 7.53,
-   "b": true
+   "b": true,
+   "w": 19.32
   },
   {
    "k": "page1.obScore.p",
    "x": 259.87,
    "y": 331.61,
    "s": 7.53,
-   "b": true
+   "b": true,
+   "w": 24.43
   },
   {
    "k": "page1.obScore.ft",
    "x": 314.46,
    "y": 331.61,
    "s": 7.53,
-   "b": true
+   "b": true,
+   "w": 30.41
   },
   {
    "k": "page1.obScore.pr",
    "x": 381.08,
    "y": 331.61,
    "s": 7.53,
-   "b": true
+   "b": true,
+   "w": 18.31
   },
   {
    "k": "page1.obScore.ab",
    "x": 435.53,
    "y": 331.61,
    "s": 7.53,
-   "b": true
+   "b": true,
+   "w": 25.07
   },
   {
    "k": "page1.obScore.l",
    "x": 507.37,
    "y": 331.61,
    "s": 7.53,
-   "b": true
+   "b": true,
+   "w": 56.78
   },
   {
    "k": "page1.edc",
    "x": 296.05,
    "y": 600.41,
    "s": 7.53,
-   "b": true
+   "b": true,
+   "w": 268.1
   },
   {
    "k": "page1.pmp",
    "x": 225.37,
    "y": 612.58,
    "s": 7.53,
-   "b": true
+   "b": true,
+   "w": 45.93
   },
   {
    "k": "page1.aog",
    "x": 296.05,
    "y": 612.58,
    "s": 7.53,
-   "b": true
+   "b": true,
+   "w": 268.1
   },
   {
    "k": "page1.adjustedEdc",
    "x": 207.99,
    "y": 636.91,
    "s": 7.53,
-   "b": true
+   "b": true,
+   "w": 63.31
   },
   {
    "k": "page1.quickeningDate",
    "x": 357.46,
    "y": 624.74,
    "s": 7.53,
-   "b": true
+   "b": true,
+   "w": 206.69
   },
   {
    "k": "page1.menarche",
    "x": 131.09,
    "y": 657.19,
    "s": 7.53,
-   "b": true
+   "b": true,
+   "w": 11.02
   },
   {
    "k": "page1.interval",
    "x": 181.93,
    "y": 657.19,
    "s": 7.53,
-   "b": true
+   "b": true,
+   "w": 42.44
   },
   {
    "k": "page1.duration",
    "x": 272.3,
    "y": 657.19,
    "s": 7.53,
-   "b": true
+   "b": true,
+   "w": 49.4
   },
   {
    "k": "page1.amount",
    "x": 357.46,
    "y": 657.19,
    "s": 7.53,
-   "b": true
+   "b": true,
+   "w": 30.86
   },
   {
    "k": "page1.dysmenorrhea",
    "x": 443.78,
    "y": 657.19,
    "s": 7.53,
-   "b": true
+   "b": true,
+   "w": 120.37
   },
   {
    "k": "page1.coitarche",
    "x": 130.68,
    "y": 669.35,
    "s": 7.53,
-   "b": true
+   "b": true,
+   "w": 11.43
   },
   {
    "k": "page1.sexualPartners",
    "x": 264.06,
    "y": 669.35,
    "s": 7.53,
-   "b": true
+   "b": true,
+   "w": 7.24
   },
   {
    "k": "page1.stis",
    "x": 296.05,
    "y": 669.35,
    "s": 7.53,
-   "b": true
+   "b": true,
+   "w": 60.41
   },
   {
    "k": "page1.papsmear",
    "x": 413.65,
    "y": 669.09,
    "s": 6.02,
-   "b": true
+   "b": true,
+   "w": 150.5
   },
   {
    "k": "page1.totalWeightGain",
    "x": 115.3,
    "y": 720.78,
    "s": 7.53,
-   "b": true
+   "b": true,
+   "w": 26.81
   },
   {
    "k": "page1.usualBp",
    "x": 181.93,
    "y": 720.91,
    "s": 7.53,
-   "b": true
+   "b": true,
+   "w": 25.06
   },
   {
    "k": "page1.hb",
    "x": 225.37,
    "y": 720.91,
    "s": 7.53,
-   "b": true
+   "b": true,
+   "w": 45.93
   },
   {
    "k": "page1.hct",
    "x": 296.05,
    "y": 720.91,
    "s": 7.53,
-   "b": true
+   "b": true,
+   "w": 60.41
   },
   {
    "k": "page1.urineChon",
    "x": 357.46,
    "y": 720.91,
    "s": 7.53,
-   "b": true
+   "b": true,
+   "w": 30.86
   },
   {
    "k": "page1.fbs",
    "x": 413.65,
    "y": 720.91,
    "s": 7.53,
-   "b": true
+   "b": true,
+   "w": 29.13
   },
   {
    "k": "page1.ogtt",
    "x": 469.85,
    "y": 720.91,
    "s": 7.53,
-   "b": true
+   "b": true,
+   "w": 94.3
   },
   {
    "k": "page1.supplementsOther",
    "x": 413.65,
    "y": 735.71,
    "s": 6.02,
-   "b": false
+   "b": false,
+   "w": 150.5
   },
   {
    "k": "page1.obHistory.0.order",
    "x": 37.67,
    "y": 369.26,
    "s": 7.53,
-   "b": false
+   "b": false,
+   "w": 74.61
   },
   {
    "k": "page1.obHistory.0.outcome",
    "x": 115.3,
    "y": 369.26,
    "s": 7.53,
-   "b": false
+   "b": false,
+   "w": 63.6
   },
   {
    "k": "page1.obHistory.0.year",
    "x": 181.93,
    "y": 369.26,
    "s": 7.53,
-   "b": false
+   "b": false,
+   "w": 40.42
   },
   {
    "k": "page1.obHistory.0.gestation",
    "x": 225.37,
    "y": 369.26,
    "s": 7.53,
-   "b": false
+   "b": false,
+   "w": 67.65
   },
   {
    "k": "page1.obHistory.0.sex",
    "x": 296.05,
    "y": 369.26,
    "s": 7.53,
-   "b": false
+   "b": false,
+   "w": 58.38
   },
   {
    "k": "page1.obHistory.0.birthWeight",
    "x": 357.46,
    "y": 369.26,
    "s": 7.53,
-   "b": false
+   "b": false,
+   "w": 53.17
   },
   {
    "k": "page1.obHistory.0.status",
    "x": 413.65,
    "y": 369.26,
    "s": 7.53,
-   "b": false
+   "b": false,
+   "w": 53.17
   },
   {
    "k": "page1.obHistory.0.complications",
    "x": 469.85,
    "y": 369.26,
    "s": 7.53,
-   "b": false
+   "b": false,
+   "w": 90.24
   },
   {
    "k": "page1.obHistory.1.order",
    "x": 37.67,
    "y": 381.43,
    "s": 7.53,
-   "b": false
+   "b": false,
+   "w": 74.61
   },
   {
    "k": "page1.obHistory.1.outcome",
    "x": 115.3,
    "y": 381.43,
    "s": 7.53,
-   "b": false
+   "b": false,
+   "w": 63.6
   },
   {
    "k": "page1.obHistory.1.year",
    "x": 181.93,
    "y": 381.43,
    "s": 7.53,
-   "b": false
+   "b": false,
+   "w": 40.42
   },
   {
    "k": "page1.obHistory.1.gestation",
    "x": 225.37,
    "y": 381.43,
    "s": 7.53,
-   "b": false
+   "b": false,
+   "w": 67.65
   },
   {
    "k": "page1.obHistory.1.sex",
    "x": 296.05,
    "y": 381.43,
    "s": 7.53,
-   "b": false
+   "b": false,
+   "w": 58.38
   },
   {
    "k": "page1.obHistory.1.birthWeight",
    "x": 357.46,
    "y": 381.43,
    "s": 7.53,
-   "b": false
+   "b": false,
+   "w": 53.17
   },
   {
    "k": "page1.obHistory.1.status",
    "x": 413.65,
    "y": 381.43,
    "s": 7.53,
-   "b": false
+   "b": false,
+   "w": 53.17
   },
   {
    "k": "page1.obHistory.1.complications",
    "x": 469.85,
    "y": 381.43,
    "s": 7.53,
-   "b": false
+   "b": false,
+   "w": 90.24
   },
   {
    "k": "page1.obHistory.2.order",
    "x": 37.67,
    "y": 393.59,
    "s": 7.53,
-   "b": false
+   "b": false,
+   "w": 74.61
   },
   {
    "k": "page1.obHistory.2.outcome",
    "x": 115.3,
    "y": 393.59,
    "s": 7.53,
-   "b": false
+   "b": false,
+   "w": 63.6
   },
   {
    "k": "page1.obHistory.2.year",
    "x": 181.93,
    "y": 393.59,
    "s": 7.53,
-   "b": false
+   "b": false,
+   "w": 40.42
   },
   {
    "k": "page1.obHistory.2.gestation",
    "x": 225.37,
    "y": 393.59,
    "s": 7.53,
-   "b": false
+   "b": false,
+   "w": 67.65
   },
   {
    "k": "page1.obHistory.2.sex",
    "x": 296.05,
    "y": 393.59,
    "s": 7.53,
-   "b": false
+   "b": false,
+   "w": 58.38
   },
   {
    "k": "page1.obHistory.2.birthWeight",
    "x": 357.46,
    "y": 393.59,
    "s": 7.53,
-   "b": false
+   "b": false,
+   "w": 53.17
   },
   {
    "k": "page1.obHistory.2.status",
    "x": 413.65,
    "y": 393.59,
    "s": 7.53,
-   "b": false
+   "b": false,
+   "w": 53.17
   },
   {
    "k": "page1.obHistory.2.complications",
    "x": 469.85,
    "y": 393.59,
    "s": 7.53,
-   "b": false
+   "b": false,
+   "w": 90.24
   },
   {
    "k": "page1.obHistory.3.order",
    "x": 37.67,
    "y": 405.76,
    "s": 7.53,
-   "b": false
+   "b": false,
+   "w": 74.61
   },
   {
    "k": "page1.obHistory.3.outcome",
    "x": 115.3,
    "y": 405.76,
    "s": 7.53,
-   "b": false
+   "b": false,
+   "w": 63.6
   },
   {
    "k": "page1.obHistory.3.year",
    "x": 181.93,
    "y": 405.76,
    "s": 7.53,
-   "b": false
+   "b": false,
+   "w": 40.42
   },
   {
    "k": "page1.obHistory.3.gestation",
    "x": 225.37,
    "y": 405.76,
    "s": 7.53,
-   "b": false
+   "b": false,
+   "w": 67.65
   },
   {
    "k": "page1.obHistory.3.sex",
    "x": 296.05,
    "y": 405.76,
    "s": 7.53,
-   "b": false
+   "b": false,
+   "w": 58.38
   },
   {
    "k": "page1.obHistory.3.birthWeight",
    "x": 357.46,
    "y": 405.76,
    "s": 7.53,
-   "b": false
+   "b": false,
+   "w": 53.17
   },
   {
    "k": "page1.obHistory.3.status",
    "x": 413.65,
    "y": 405.76,
    "s": 7.53,
-   "b": false
+   "b": false,
+   "w": 53.17
   },
   {
    "k": "page1.obHistory.3.complications",
    "x": 469.85,
    "y": 405.76,
    "s": 7.53,
-   "b": false
+   "b": false,
+   "w": 90.24
   },
   {
    "k": "page1.obHistory.4.order",
    "x": 37.67,
    "y": 417.92,
    "s": 7.53,
-   "b": false
+   "b": false,
+   "w": 74.61
   },
   {
    "k": "page1.obHistory.4.outcome",
    "x": 115.3,
    "y": 417.92,
    "s": 7.53,
-   "b": false
+   "b": false,
+   "w": 63.6
   },
   {
    "k": "page1.obHistory.4.year",
    "x": 181.93,
    "y": 417.92,
    "s": 7.53,
-   "b": false
+   "b": false,
+   "w": 40.42
   },
   {
    "k": "page1.obHistory.4.gestation",
    "x": 225.37,
    "y": 417.92,
    "s": 7.53,
-   "b": false
+   "b": false,
+   "w": 67.65
   },
   {
    "k": "page1.obHistory.4.sex",
    "x": 296.05,
    "y": 417.92,
    "s": 7.53,
-   "b": false
+   "b": false,
+   "w": 58.38
   },
   {
    "k": "page1.obHistory.4.birthWeight",
    "x": 357.46,
    "y": 417.92,
    "s": 7.53,
-   "b": false
+   "b": false,
+   "w": 53.17
   },
   {
    "k": "page1.obHistory.4.status",
    "x": 413.65,
    "y": 417.92,
    "s": 7.53,
-   "b": false
+   "b": false,
+   "w": 53.17
   },
   {
    "k": "page1.obHistory.4.complications",
    "x": 469.85,
    "y": 417.92,
    "s": 7.53,
-   "b": false
+   "b": false,
+   "w": 90.24
   },
   {
    "k": "page1.obHistory.5.order",
    "x": 37.67,
    "y": 430.09,
    "s": 7.53,
-   "b": false
+   "b": false,
+   "w": 74.61
   },
   {
    "k": "page1.obHistory.5.outcome",
    "x": 115.3,
    "y": 430.09,
    "s": 7.53,
-   "b": false
+   "b": false,
+   "w": 63.6
   },
   {
    "k": "page1.obHistory.5.year",
    "x": 181.93,
    "y": 430.09,
    "s": 7.53,
-   "b": false
+   "b": false,
+   "w": 40.42
   },
   {
    "k": "page1.obHistory.5.gestation",
    "x": 225.37,
    "y": 430.09,
    "s": 7.53,
-   "b": false
+   "b": false,
+   "w": 67.65
   },
   {
    "k": "page1.obHistory.5.sex",
    "x": 296.05,
    "y": 430.09,
    "s": 7.53,
-   "b": false
+   "b": false,
+   "w": 58.38
   },
   {
    "k": "page1.obHistory.5.birthWeight",
    "x": 357.46,
    "y": 430.09,
    "s": 7.53,
-   "b": false
+   "b": false,
+   "w": 53.17
   },
   {
    "k": "page1.obHistory.5.status",
    "x": 413.65,
    "y": 430.09,
    "s": 7.53,
-   "b": false
+   "b": false,
+   "w": 53.17
   },
   {
    "k": "page1.obHistory.5.complications",
    "x": 469.85,
    "y": 430.09,
    "s": 7.53,
-   "b": false
+   "b": false,
+   "w": 90.24
   },
   {
    "k": "page1.obHistory.6.order",
    "x": 37.67,
    "y": 442.26,
    "s": 7.53,
-   "b": false
+   "b": false,
+   "w": 74.61
   },
   {
    "k": "page1.obHistory.6.outcome",
    "x": 115.3,
    "y": 442.26,
    "s": 7.53,
-   "b": false
+   "b": false,
+   "w": 63.6
   },
   {
    "k": "page1.obHistory.6.year",
    "x": 181.93,
    "y": 442.26,
    "s": 7.53,
-   "b": false
+   "b": false,
+   "w": 40.42
   },
   {
    "k": "page1.obHistory.6.gestation",
    "x": 225.37,
    "y": 442.26,
    "s": 7.53,
-   "b": false
+   "b": false,
+   "w": 67.65
   },
   {
    "k": "page1.obHistory.6.sex",
    "x": 296.05,
    "y": 442.26,
    "s": 7.53,
-   "b": false
+   "b": false,
+   "w": 58.38
   },
   {
    "k": "page1.obHistory.6.birthWeight",
    "x": 357.46,
    "y": 442.26,
    "s": 7.53,
-   "b": false
+   "b": false,
+   "w": 53.17
   },
   {
    "k": "page1.obHistory.6.status",
    "x": 413.65,
    "y": 442.26,
    "s": 7.53,
-   "b": false
+   "b": false,
+   "w": 53.17
   },
   {
    "k": "page1.obHistory.6.complications",
    "x": 469.85,
    "y": 442.26,
    "s": 7.53,
-   "b": false
+   "b": false,
+   "w": 90.24
   },
   {
    "k": "page1.obHistory.7.order",
    "x": 37.67,
    "y": 454.42,
    "s": 7.53,
-   "b": false
+   "b": false,
+   "w": 74.61
   },
   {
    "k": "page1.obHistory.7.outcome",
    "x": 115.3,
    "y": 454.42,
    "s": 7.53,
-   "b": false
+   "b": false,
+   "w": 63.6
   },
   {
    "k": "page1.obHistory.7.year",
    "x": 181.93,
    "y": 454.42,
    "s": 7.53,
-   "b": false
+   "b": false,
+   "w": 40.42
   },
   {
    "k": "page1.obHistory.7.gestation",
    "x": 225.37,
    "y": 454.42,
    "s": 7.53,
-   "b": false
+   "b": false,
+   "w": 67.65
   },
   {
    "k": "page1.obHistory.7.sex",
    "x": 296.05,
    "y": 454.42,
    "s": 7.53,
-   "b": false
+   "b": false,
+   "w": 58.38
   },
   {
    "k": "page1.obHistory.7.birthWeight",
    "x": 357.46,
    "y": 454.42,
    "s": 7.53,
-   "b": false
+   "b": false,
+   "w": 53.17
   },
   {
    "k": "page1.obHistory.7.status",
    "x": 413.65,
    "y": 454.42,
    "s": 7.53,
-   "b": false
+   "b": false,
+   "w": 53.17
   },
   {
    "k": "page1.obHistory.7.complications",
    "x": 469.85,
    "y": 454.42,
    "s": 7.53,
-   "b": false
+   "b": false,
+   "w": 90.24
   },
   {
    "k": "page1.obHistory.8.order",
    "x": 37.67,
    "y": 466.59,
    "s": 7.53,
-   "b": false
+   "b": false,
+   "w": 74.61
   },
   {
    "k": "page1.obHistory.8.outcome",
    "x": 115.3,
    "y": 466.59,
    "s": 7.53,
-   "b": false
+   "b": false,
+   "w": 63.6
   },
   {
    "k": "page1.obHistory.8.year",
    "x": 181.93,
    "y": 466.59,
    "s": 7.53,
-   "b": false
+   "b": false,
+   "w": 40.42
   },
   {
    "k": "page1.obHistory.8.gestation",
    "x": 225.37,
    "y": 466.59,
    "s": 7.53,
-   "b": false
+   "b": false,
+   "w": 67.65
   },
   {
    "k": "page1.obHistory.8.sex",
    "x": 296.05,
    "y": 466.59,
    "s": 7.53,
-   "b": false
+   "b": false,
+   "w": 58.38
   },
   {
    "k": "page1.obHistory.8.birthWeight",
    "x": 357.46,
    "y": 466.59,
    "s": 7.53,
-   "b": false
+   "b": false,
+   "w": 53.17
   },
   {
    "k": "page1.obHistory.8.status",
    "x": 413.65,
    "y": 466.59,
    "s": 7.53,
-   "b": false
+   "b": false,
+   "w": 53.17
   },
   {
    "k": "page1.obHistory.8.complications",
    "x": 469.85,
    "y": 466.59,
    "s": 7.53,
-   "b": false
+   "b": false,
+   "w": 90.24
   },
   {
    "k": "page1.obHistory.9.order",
    "x": 37.67,
    "y": 478.75,
    "s": 7.53,
-   "b": false
+   "b": false,
+   "w": 74.61
   },
   {
    "k": "page1.obHistory.9.outcome",
    "x": 115.3,
    "y": 478.75,
    "s": 7.53,
-   "b": false
+   "b": false,
+   "w": 63.6
   },
   {
    "k": "page1.obHistory.9.year",
    "x": 181.93,
    "y": 478.75,
    "s": 7.53,
-   "b": false
+   "b": false,
+   "w": 40.42
   },
   {
    "k": "page1.obHistory.9.gestation",
    "x": 225.37,
    "y": 478.75,
    "s": 7.53,
-   "b": false
+   "b": false,
+   "w": 67.65
   },
   {
    "k": "page1.obHistory.9.sex",
    "x": 296.05,
    "y": 478.75,
    "s": 7.53,
-   "b": false
+   "b": false,
+   "w": 58.38
   },
   {
    "k": "page1.obHistory.9.birthWeight",
    "x": 357.46,
    "y": 478.75,
    "s": 7.53,
-   "b": false
+   "b": false,
+   "w": 53.17
   },
   {
    "k": "page1.obHistory.9.status",
    "x": 413.65,
    "y": 478.75,
    "s": 7.53,
-   "b": false
+   "b": false,
+   "w": 53.17
   },
   {
    "k": "page1.obHistory.9.complications",
    "x": 469.85,
    "y": 478.75,
    "s": 7.53,
-   "b": false
+   "b": false,
+   "w": 90.24
   },
   {
    "k": "page1.obHistory.10.order",
    "x": 37.67,
    "y": 490.92,
    "s": 7.53,
-   "b": false
+   "b": false,
+   "w": 74.61
   },
   {
    "k": "page1.obHistory.10.outcome",
    "x": 115.3,
    "y": 490.92,
    "s": 7.53,
-   "b": false
+   "b": false,
+   "w": 63.6
   },
   {
    "k": "page1.obHistory.10.year",
    "x": 181.93,
    "y": 490.92,
    "s": 7.53,
-   "b": false
+   "b": false,
+   "w": 40.42
   },
   {
    "k": "page1.obHistory.10.gestation",
    "x": 225.37,
    "y": 490.92,
    "s": 7.53,
-   "b": false
+   "b": false,
+   "w": 67.65
   },
   {
    "k": "page1.obHistory.10.sex",
    "x": 296.05,
    "y": 490.92,
    "s": 7.53,
-   "b": false
+   "b": false,
+   "w": 58.38
   },
   {
    "k": "page1.obHistory.10.birthWeight",
    "x": 357.46,
    "y": 490.92,
    "s": 7.53,
-   "b": false
+   "b": false,
+   "w": 53.17
   },
   {
    "k": "page1.obHistory.10.status",
    "x": 413.65,
    "y": 490.92,
    "s": 7.53,
-   "b": false
+   "b": false,
+   "w": 53.17
   },
   {
    "k": "page1.obHistory.10.complications",
    "x": 469.85,
    "y": 490.92,
    "s": 7.53,
-   "b": false
+   "b": false,
+   "w": 90.24
   },
   {
    "k": "page1.obHistory.11.order",
    "x": 37.67,
    "y": 503.09,
    "s": 7.53,
-   "b": false
+   "b": false,
+   "w": 74.61
   },
   {
    "k": "page1.obHistory.11.outcome",
    "x": 115.3,
    "y": 503.09,
    "s": 7.53,
-   "b": false
+   "b": false,
+   "w": 63.6
   },
   {
    "k": "page1.obHistory.11.year",
    "x": 181.93,
    "y": 503.09,
    "s": 7.53,
-   "b": false
+   "b": false,
+   "w": 40.42
   },
   {
    "k": "page1.obHistory.11.gestation",
    "x": 225.37,
    "y": 503.09,
    "s": 7.53,
-   "b": false
+   "b": false,
+   "w": 67.65
   },
   {
    "k": "page1.obHistory.11.sex",
    "x": 296.05,
    "y": 503.09,
    "s": 7.53,
-   "b": false
+   "b": false,
+   "w": 58.38
   },
   {
    "k": "page1.obHistory.11.birthWeight",
    "x": 357.46,
    "y": 503.09,
    "s": 7.53,
-   "b": false
+   "b": false,
+   "w": 53.17
   },
   {
    "k": "page1.obHistory.11.status",
    "x": 413.65,
    "y": 503.09,
    "s": 7.53,
-   "b": false
+   "b": false,
+   "w": 53.17
   },
   {
    "k": "page1.obHistory.11.complications",
    "x": 469.85,
    "y": 503.09,
    "s": 7.53,
-   "b": false
+   "b": false,
+   "w": 90.24
   },
   {
    "k": "page1.obHistory.12.order",
    "x": 37.67,
    "y": 515.25,
    "s": 7.53,
-   "b": false
+   "b": false,
+   "w": 74.61
   },
   {
    "k": "page1.obHistory.12.outcome",
    "x": 115.3,
    "y": 515.25,
    "s": 7.53,
-   "b": false
+   "b": false,
+   "w": 63.6
   },
   {
    "k": "page1.obHistory.12.year",
    "x": 181.93,
    "y": 515.25,
    "s": 7.53,
-   "b": false
+   "b": false,
+   "w": 40.42
   },
   {
    "k": "page1.obHistory.12.gestation",
    "x": 225.37,
    "y": 515.25,
    "s": 7.53,
-   "b": false
+   "b": false,
+   "w": 67.65
   },
   {
    "k": "page1.obHistory.12.sex",
    "x": 296.05,
    "y": 515.25,
    "s": 7.53,
-   "b": false
+   "b": false,
+   "w": 58.38
   },
   {
    "k": "page1.obHistory.12.birthWeight",
    "x": 357.46,
    "y": 515.25,
    "s": 7.53,
-   "b": false
+   "b": false,
+   "w": 53.17
   },
   {
    "k": "page1.obHistory.12.status",
    "x": 413.65,
    "y": 515.25,
    "s": 7.53,
-   "b": false
+   "b": false,
+   "w": 53.17
   },
   {
    "k": "page1.obHistory.12.complications",
    "x": 469.85,
    "y": 515.25,
    "s": 7.53,
-   "b": false
+   "b": false,
+   "w": 90.24
   },
   {
    "k": "patient.hospNo",
@@ -1853,7 +1992,8 @@
    "y": 135.22,
    "s": 7.53,
    "b": false,
-   "al": "r"
+   "al": "r",
+   "w": 58.07
   },
   {
    "k": "patient.caseNo",
@@ -1861,70 +2001,80 @@
    "y": 146.8,
    "s": 7.53,
    "b": false,
-   "al": "r"
+   "al": "r",
+   "w": 58.5
   },
   {
    "k": "patient.lastName",
    "x": 75.91,
    "y": 148.57,
    "s": 7.53,
-   "b": false
+   "b": false,
+   "w": 105.02
   },
   {
    "k": "patient.firstName",
    "x": 181.93,
    "y": 148.57,
    "s": 7.53,
-   "b": false
+   "b": false,
+   "w": 174.53
   },
   {
    "k": "patient.middleName",
    "x": 357.46,
    "y": 148.57,
    "s": 7.53,
-   "b": false
+   "b": false,
+   "w": 111.39
   },
   {
    "k": "patient.address",
    "x": 75.91,
    "y": 176.35,
    "s": 7.53,
-   "b": true
+   "b": true,
+   "w": 488.24
   },
   {
    "k": "patient.admissionDateTime",
    "x": 143.11,
    "y": 186.78,
    "s": 7.53,
-   "b": true
+   "b": true,
+   "w": 421.04
   },
   {
    "k": "page1.chiefComplaint",
    "x": 143.11,
    "y": 312.49,
    "s": 7.53,
-   "b": true
+   "b": true,
+   "w": 421.04
   },
   {
    "k": "page1.lmp",
    "x": 225.37,
    "y": 600.41,
    "s": 7.53,
-   "b": true
+   "b": true,
+   "w": 45.93
   },
   {
    "k": "page1.ultrasoundDate",
    "x": 207.99,
    "y": 624.74,
    "s": 7.53,
-   "b": true
+   "b": true,
+   "w": 63.31
   },
   {
    "k": "page1.aogByUltrasound",
    "x": 357.46,
    "y": 636.91,
    "s": 7.53,
-   "b": true
+   "b": true,
+   "w": 206.69
   }
  ],
  "checks": [

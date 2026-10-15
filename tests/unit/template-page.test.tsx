@@ -48,3 +48,22 @@ test('clip reference matches its clipPath id, and two sheets of one page have di
   expect(refs).toEqual(ids);
   for (const id of ids) expect(id).toMatch(/^[a-zA-Z0-9_-]+$/);
 });
+
+test('single-line slot compresses with textLength only when the text is wider than w', () => {
+  const t: Template = {
+    ...tpl, texts: [], checks: [], marks: [], images: [], paths: [],
+    fields: [
+      { k: 'patient.address', x: 50, y: 20, s: 8, w: 60 },
+      { k: 'patient.caseNo', x: 500, y: 40, s: 8, w: 60, al: 'r' },
+      { k: 'patient.lastName', x: 50, y: 60, s: 8, w: 60 },
+    ],
+  };
+  const v = { patient: { address: 'A VERY LONG STREET ADDRESS, BARANGAY, CITY', caseNo: 'CASE-0000000000000001', lastName: 'DOE' } };
+  const html = renderToStaticMarkup(<TemplatePage template={t} view={v} assets={{}} />);
+  const tag = (s: string) => html.match(new RegExp(`<text[^>]*>${s}</text>`))![0];
+  expect(tag('A VERY LONG STREET ADDRESS, BARANGAY, CITY')).toMatch(/textLength="60"[^>]*lengthAdjust="spacingAndGlyphs"|lengthAdjust="spacingAndGlyphs"[^>]*textLength="60"/);
+  expect(tag('CASE-0000000000000001')).toContain('textLength="60"');
+  expect(tag('CASE-0000000000000001')).toContain('text-anchor="end"');
+  expect(tag('DOE')).not.toContain('textLength');
+  expect(tag('DOE')).not.toContain('lengthAdjust');
+});

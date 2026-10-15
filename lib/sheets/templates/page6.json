@@ -322,21 +322,24 @@
    "x": 27.94,
    "y": 100.43,
    "s": 8.36,
-   "b": true
+   "b": true,
+   "w": 88.46
   },
   {
    "k": "patient.firstName",
    "x": 117.4,
    "y": 100.43,
    "s": 8.36,
-   "b": true
+   "b": true,
+   "w": 126.47
   },
   {
    "k": "patient.middleName",
    "x": 244.87,
    "y": 100.43,
    "s": 8.36,
-   "b": true
+   "b": true,
+   "w": 92.27
   },
   {
    "k": "page1.admittingImpression",
@@ -354,28 +357,32 @@
    "y": 150.26,
    "s": 9.12,
    "b": true,
-   "al": "r"
+   "al": "r",
+   "w": 229.68
   },
   {
    "k": "footer.surname",
    "x": 27.94,
    "y": 557.56,
    "s": 7.6,
-   "b": false
+   "b": false,
+   "w": 346.33
   },
   {
    "k": "footer.givenName",
    "x": 27.94,
    "y": 582.12,
    "s": 7.6,
-   "b": false
+   "b": false,
+   "w": 188.45
   },
   {
    "k": "footer.age",
    "x": 422.36,
    "y": 545.28,
    "s": 7.6,
-   "b": false
+   "b": false,
+   "w": 39.62
   },
   {
    "k": "footer.hospNo",
@@ -383,1582 +390,1808 @@
    "y": 557.56,
    "s": 7.6,
    "b": false,
-   "al": "r"
+   "al": "r",
+   "w": 183.17
   },
   {
    "k": "footer.ward",
    "x": 462.98,
    "y": 582.12,
    "s": 7.6,
-   "b": false
+   "b": false,
+   "w": 113.02
   },
   {
    "k": "page6.monitoring.0.dateTime",
    "x": 27.94,
    "y": 205.68,
    "s": 6.08,
-   "b": false
+   "b": false,
+   "w": 30.43
   },
   {
    "k": "page6.monitoring.0.bp",
    "x": 60.1,
    "y": 205.68,
    "s": 8.36,
-   "b": false
+   "b": false,
+   "w": 26.77
   },
   {
    "k": "page6.monitoring.0.hr",
    "x": 89.88,
    "y": 205.68,
    "s": 8.36,
-   "b": false
+   "b": false,
+   "w": 24.48
   },
   {
    "k": "page6.monitoring.0.rr",
    "x": 117.36,
    "y": 205.68,
    "s": 8.36,
-   "b": false
+   "b": false,
+   "w": 28.57
   },
   {
    "k": "page6.monitoring.0.temp",
    "x": 148.93,
    "y": 205.68,
    "s": 8.36,
-   "b": false
+   "b": false,
+   "w": 32.09
   },
   {
    "k": "page6.monitoring.0.uo",
    "x": 184.06,
    "y": 205.68,
    "s": 8.36,
-   "b": false
+   "b": false,
+   "w": 30.29
   },
   {
    "k": "page6.monitoring.0.fht",
    "x": 217.39,
    "y": 205.68,
    "s": 8.36,
-   "b": false
+   "b": false,
+   "w": 24.44
   },
   {
    "k": "page6.monitoring.0.intv",
    "x": 244.87,
    "y": 205.68,
    "s": 8.36,
-   "b": false
+   "b": false,
+   "w": 28.78
   },
   {
    "k": "page6.monitoring.0.dur",
    "x": 274.65,
    "y": 205.68,
    "s": 8.36,
-   "b": false
+   "b": false,
+   "w": 31.74
   },
   {
    "k": "page6.monitoring.0.int",
    "x": 307.39,
    "y": 205.68,
    "s": 8.36,
-   "b": false
+   "b": false,
+   "w": 29.75
   },
   {
    "k": "page6.monitoring.0.dil",
    "x": 340.19,
    "y": 205.68,
    "s": 8.36,
-   "b": false
+   "b": false,
+   "w": 95.96
   },
   {
    "k": "page6.monitoring.0.eff",
    "x": 375.22,
    "y": 205.68,
    "s": 8.36,
-   "b": false
+   "b": false,
+   "w": 28.24
   },
   {
    "k": "page6.monitoring.0.pres",
    "x": 404.46,
    "y": 205.68,
    "s": 8.36,
-   "b": false
+   "b": false,
+   "w": 29.4
   },
   {
    "k": "page6.monitoring.0.stn",
    "x": 434.86,
    "y": 205.68,
    "s": 8.36,
-   "b": false
+   "b": false,
+   "w": 27.07
   },
   {
    "k": "page6.monitoring.0.mem",
    "x": 462.93,
    "y": 205.68,
    "s": 8.36,
-   "b": false
+   "b": false,
+   "w": 34.42
   },
   {
    "k": "page6.monitoring.0.nstCtg",
    "x": 500.4,
    "y": 205.68,
    "s": 8.36,
-   "b": false
+   "b": false,
+   "w": 29.7
   },
   {
    "k": "page6.monitoring.0.remarks",
    "x": 533.1,
    "y": 205.68,
    "s": 8.36,
-   "b": false
+   "b": false,
+   "w": 36.76
   },
   {
    "k": "page6.monitoring.1.dateTime",
    "x": 27.94,
    "y": 231.41,
    "s": 6.08,
-   "b": false
+   "b": false,
+   "w": 29.11
   },
   {
    "k": "page6.monitoring.1.bp",
    "x": 60.1,
    "y": 231.41,
    "s": 8.36,
-   "b": false
+   "b": false,
+   "w": 26.77
   },
   {
    "k": "page6.monitoring.1.hr",
    "x": 89.88,
    "y": 231.41,
    "s": 8.36,
-   "b": false
+   "b": false,
+   "w": 24.48
   },
   {
    "k": "page6.monitoring.1.rr",
    "x": 117.36,
    "y": 231.41,
    "s": 8.36,
-   "b": false
+   "b": false,
+   "w": 28.57
   },
   {
    "k": "page6.monitoring.1.temp",
    "x": 148.93,
    "y": 231.41,
    "s": 8.36,
-   "b": false
+   "b": false,
+   "w": 32.09
   },
   {
    "k": "page6.monitoring.1.uo",
    "x": 184.06,
    "y": 231.41,
    "s": 8.36,
-   "b": false
+   "b": false,
+   "w": 30.29
   },
   {
    "k": "page6.monitoring.1.fht",
    "x": 217.39,
    "y": 231.41,
    "s": 8.36,
-   "b": false
+   "b": false,
+   "w": 24.44
   },
   {
    "k": "page6.monitoring.1.intv",
    "x": 244.87,
    "y": 231.41,
    "s": 8.36,
-   "b": false
+   "b": false,
+   "w": 28.78
   },
   {
    "k": "page6.monitoring.1.dur",
    "x": 274.65,
    "y": 231.41,
    "s": 8.36,
-   "b": false
+   "b": false,
+   "w": 31.74
   },
   {
    "k": "page6.monitoring.1.int",
    "x": 307.39,
    "y": 231.41,
    "s": 8.36,
-   "b": false
+   "b": false,
+   "w": 29.75
   },
   {
    "k": "page6.monitoring.1.dil",
    "x": 340.19,
    "y": 231.41,
    "s": 8.36,
-   "b": false
+   "b": false,
+   "w": 34.03
   },
   {
    "k": "page6.monitoring.1.eff",
    "x": 375.22,
    "y": 231.41,
    "s": 8.36,
-   "b": false
+   "b": false,
+   "w": 28.24
   },
   {
    "k": "page6.monitoring.1.pres",
    "x": 404.46,
    "y": 231.41,
    "s": 8.36,
-   "b": false
+   "b": false,
+   "w": 29.4
   },
   {
    "k": "page6.monitoring.1.stn",
    "x": 434.86,
    "y": 231.41,
    "s": 8.36,
-   "b": false
+   "b": false,
+   "w": 27.07
   },
   {
    "k": "page6.monitoring.1.mem",
    "x": 462.93,
    "y": 231.41,
    "s": 8.36,
-   "b": false
+   "b": false,
+   "w": 34.42
   },
   {
    "k": "page6.monitoring.1.nstCtg",
    "x": 500.4,
    "y": 231.41,
    "s": 8.36,
-   "b": false
+   "b": false,
+   "w": 29.7
   },
   {
    "k": "page6.monitoring.1.remarks",
    "x": 533.1,
    "y": 231.41,
    "s": 8.36,
-   "b": false
+   "b": false,
+   "w": 36.76
   },
   {
    "k": "page6.monitoring.2.dateTime",
    "x": 27.94,
    "y": 257.14,
    "s": 6.08,
-   "b": false
+   "b": false,
+   "w": 29.11
   },
   {
    "k": "page6.monitoring.2.bp",
    "x": 60.1,
    "y": 257.14,
    "s": 8.36,
-   "b": false
+   "b": false,
+   "w": 26.77
   },
   {
    "k": "page6.monitoring.2.hr",
    "x": 89.88,
    "y": 257.14,
    "s": 8.36,
-   "b": false
+   "b": false,
+   "w": 24.48
   },
   {
    "k": "page6.monitoring.2.rr",
    "x": 117.36,
    "y": 257.14,
    "s": 8.36,
-   "b": false
+   "b": false,
+   "w": 28.57
   },
   {
    "k": "page6.monitoring.2.temp",
    "x": 148.93,
    "y": 257.14,
    "s": 8.36,
-   "b": false
+   "b": false,
+   "w": 32.09
   },
   {
    "k": "page6.monitoring.2.uo",
    "x": 184.06,
    "y": 257.14,
    "s": 8.36,
-   "b": false
+   "b": false,
+   "w": 30.29
   },
   {
    "k": "page6.monitoring.2.fht",
    "x": 217.39,
    "y": 257.14,
    "s": 8.36,
-   "b": false
+   "b": false,
+   "w": 24.44
   },
   {
    "k": "page6.monitoring.2.intv",
    "x": 244.87,
    "y": 257.14,
    "s": 8.36,
-   "b": false
+   "b": false,
+   "w": 28.78
   },
   {
    "k": "page6.monitoring.2.dur",
    "x": 274.65,
    "y": 257.14,
    "s": 8.36,
-   "b": false
+   "b": false,
+   "w": 31.74
   },
   {
    "k": "page6.monitoring.2.int",
    "x": 307.39,
    "y": 257.14,
    "s": 8.36,
-   "b": false
+   "b": false,
+   "w": 29.75
   },
   {
    "k": "page6.monitoring.2.dil",
    "x": 340.19,
    "y": 257.14,
    "s": 8.36,
-   "b": false
+   "b": false,
+   "w": 34.03
   },
   {
    "k": "page6.monitoring.2.eff",
    "x": 375.22,
    "y": 257.14,
    "s": 8.36,
-   "b": false
+   "b": false,
+   "w": 28.24
   },
   {
    "k": "page6.monitoring.2.pres",
    "x": 404.46,
    "y": 257.14,
    "s": 8.36,
-   "b": false
+   "b": false,
+   "w": 29.4
   },
   {
    "k": "page6.monitoring.2.stn",
    "x": 434.86,
    "y": 257.14,
    "s": 8.36,
-   "b": false
+   "b": false,
+   "w": 27.07
   },
   {
    "k": "page6.monitoring.2.mem",
    "x": 462.93,
    "y": 257.14,
    "s": 8.36,
-   "b": false
+   "b": false,
+   "w": 34.42
   },
   {
    "k": "page6.monitoring.2.nstCtg",
    "x": 500.4,
    "y": 257.14,
    "s": 8.36,
-   "b": false
+   "b": false,
+   "w": 29.7
   },
   {
    "k": "page6.monitoring.2.remarks",
    "x": 533.1,
    "y": 257.14,
    "s": 8.36,
-   "b": false
+   "b": false,
+   "w": 36.76
   },
   {
    "k": "page6.monitoring.3.dateTime",
    "x": 27.94,
    "y": 282.87,
    "s": 6.08,
-   "b": false
+   "b": false,
+   "w": 29.11
   },
   {
    "k": "page6.monitoring.3.bp",
    "x": 60.1,
    "y": 282.87,
    "s": 8.36,
-   "b": false
+   "b": false,
+   "w": 26.77
   },
   {
    "k": "page6.monitoring.3.hr",
    "x": 89.88,
    "y": 282.87,
    "s": 8.36,
-   "b": false
+   "b": false,
+   "w": 24.48
   },
   {
    "k": "page6.monitoring.3.rr",
    "x": 117.36,
    "y": 282.87,
    "s": 8.36,
-   "b": false
+   "b": false,
+   "w": 28.57
   },
   {
    "k": "page6.monitoring.3.temp",
    "x": 148.93,
    "y": 282.87,
    "s": 8.36,
-   "b": false
+   "b": false,
+   "w": 32.09
   },
   {
    "k": "page6.monitoring.3.uo",
    "x": 184.06,
    "y": 282.87,
    "s": 8.36,
-   "b": false
+   "b": false,
+   "w": 30.29
   },
   {
    "k": "page6.monitoring.3.fht",
    "x": 217.39,
    "y": 282.87,
    "s": 8.36,
-   "b": false
+   "b": false,
+   "w": 24.44
   },
   {
    "k": "page6.monitoring.3.intv",
    "x": 244.87,
    "y": 282.87,
    "s": 8.36,
-   "b": false
+   "b": false,
+   "w": 28.78
   },
   {
    "k": "page6.monitoring.3.dur",
    "x": 274.65,
    "y": 282.87,
    "s": 8.36,
-   "b": false
+   "b": false,
+   "w": 31.74
   },
   {
    "k": "page6.monitoring.3.int",
    "x": 307.39,
    "y": 282.87,
    "s": 8.36,
-   "b": false
+   "b": false,
+   "w": 29.75
   },
   {
    "k": "page6.monitoring.3.dil",
    "x": 340.19,
    "y": 282.87,
    "s": 8.36,
-   "b": false
+   "b": false,
+   "w": 34.03
   },
   {
    "k": "page6.monitoring.3.eff",
    "x": 375.22,
    "y": 282.87,
    "s": 8.36,
-   "b": false
+   "b": false,
+   "w": 28.24
   },
   {
    "k": "page6.monitoring.3.pres",
    "x": 404.46,
    "y": 282.87,
    "s": 8.36,
-   "b": false
+   "b": false,
+   "w": 29.4
   },
   {
    "k": "page6.monitoring.3.stn",
    "x": 434.86,
    "y": 282.87,
    "s": 8.36,
-   "b": false
+   "b": false,
+   "w": 27.07
   },
   {
    "k": "page6.monitoring.3.mem",
    "x": 462.93,
    "y": 282.87,
    "s": 8.36,
-   "b": false
+   "b": false,
+   "w": 34.42
   },
   {
    "k": "page6.monitoring.3.nstCtg",
    "x": 500.4,
    "y": 282.87,
    "s": 8.36,
-   "b": false
+   "b": false,
+   "w": 29.7
   },
   {
    "k": "page6.monitoring.3.remarks",
    "x": 533.1,
    "y": 282.87,
    "s": 8.36,
-   "b": false
+   "b": false,
+   "w": 36.76
   },
   {
    "k": "page6.monitoring.4.dateTime",
    "x": 27.94,
    "y": 308.6,
    "s": 6.08,
-   "b": false
+   "b": false,
+   "w": 29.11
   },
   {
    "k": "page6.monitoring.4.bp",
    "x": 60.1,
    "y": 308.6,
    "s": 8.36,
-   "b": false
+   "b": false,
+   "w": 26.77
   },
   {
    "k": "page6.monitoring.4.hr",
    "x": 89.88,
    "y": 308.6,
    "s": 8.36,
-   "b": false
+   "b": false,
+   "w": 24.48
   },
   {
    "k": "page6.monitoring.4.rr",
    "x": 117.36,
    "y": 308.6,
    "s": 8.36,
-   "b": false
+   "b": false,
+   "w": 28.57
   },
   {
    "k": "page6.monitoring.4.temp",
    "x": 148.93,
    "y": 308.6,
    "s": 8.36,
-   "b": false
+   "b": false,
+   "w": 32.09
   },
   {
    "k": "page6.monitoring.4.uo",
    "x": 184.06,
    "y": 308.6,
    "s": 8.36,
-   "b": false
+   "b": false,
+   "w": 30.29
   },
   {
    "k": "page6.monitoring.4.fht",
    "x": 217.39,
    "y": 308.6,
    "s": 8.36,
-   "b": false
+   "b": false,
+   "w": 24.44
   },
   {
    "k": "page6.monitoring.4.intv",
    "x": 244.87,
    "y": 308.6,
    "s": 8.36,
-   "b": false
+   "b": false,
+   "w": 28.78
   },
   {
    "k": "page6.monitoring.4.dur",
    "x": 274.65,
    "y": 308.6,
    "s": 8.36,
-   "b": false
+   "b": false,
+   "w": 31.74
   },
   {
    "k": "page6.monitoring.4.int",
    "x": 307.39,
    "y": 308.6,
    "s": 8.36,
-   "b": false
+   "b": false,
+   "w": 29.75
   },
   {
    "k": "page6.monitoring.4.dil",
    "x": 340.19,
    "y": 308.6,
    "s": 8.36,
-   "b": false
+   "b": false,
+   "w": 34.03
   },
   {
    "k": "page6.monitoring.4.eff",
    "x": 375.22,
    "y": 308.6,
    "s": 8.36,
-   "b": false
+   "b": false,
+   "w": 28.24
   },
   {
    "k": "page6.monitoring.4.pres",
    "x": 404.46,
    "y": 308.6,
    "s": 8.36,
-   "b": false
+   "b": false,
+   "w": 29.4
   },
   {
    "k": "page6.monitoring.4.stn",
    "x": 434.86,
    "y": 308.6,
    "s": 8.36,
-   "b": false
+   "b": false,
+   "w": 27.07
   },
   {
    "k": "page6.monitoring.4.mem",
    "x": 462.93,
    "y": 308.6,
    "s": 8.36,
-   "b": false
+   "b": false,
+   "w": 34.42
   },
   {
    "k": "page6.monitoring.4.nstCtg",
    "x": 500.4,
    "y": 308.6,
    "s": 8.36,
-   "b": false
+   "b": false,
+   "w": 29.7
   },
   {
    "k": "page6.monitoring.4.remarks",
    "x": 533.1,
    "y": 308.6,
    "s": 8.36,
-   "b": false
+   "b": false,
+   "w": 36.76
   },
   {
    "k": "page6.monitoring.5.dateTime",
    "x": 27.94,
    "y": 334.33,
    "s": 6.08,
-   "b": false
+   "b": false,
+   "w": 29.11
   },
   {
    "k": "page6.monitoring.5.bp",
    "x": 60.1,
    "y": 334.33,
    "s": 8.36,
-   "b": false
+   "b": false,
+   "w": 26.77
   },
   {
    "k": "page6.monitoring.5.hr",
    "x": 89.88,
    "y": 334.33,
    "s": 8.36,
-   "b": false
+   "b": false,
+   "w": 24.48
   },
   {
    "k": "page6.monitoring.5.rr",
    "x": 117.36,
    "y": 334.33,
    "s": 8.36,
-   "b": false
+   "b": false,
+   "w": 28.57
   },
   {
    "k": "page6.monitoring.5.temp",
    "x": 148.93,
    "y": 334.33,
    "s": 8.36,
-   "b": false
+   "b": false,
+   "w": 32.09
   },
   {
    "k": "page6.monitoring.5.uo",
    "x": 184.06,
    "y": 334.33,
    "s": 8.36,
-   "b": false
+   "b": false,
+   "w": 30.29
   },
   {
    "k": "page6.monitoring.5.fht",
    "x": 217.39,
    "y": 334.33,
    "s": 8.36,
-   "b": false
+   "b": false,
+   "w": 24.44
   },
   {
    "k": "page6.monitoring.5.intv",
    "x": 244.87,
    "y": 334.33,
    "s": 8.36,
-   "b": false
+   "b": false,
+   "w": 28.78
   },
   {
    "k": "page6.monitoring.5.dur",
    "x": 274.65,
    "y": 334.33,
    "s": 8.36,
-   "b": false
+   "b": false,
+   "w": 31.74
   },
   {
    "k": "page6.monitoring.5.int",
    "x": 307.39,
    "y": 334.33,
    "s": 8.36,
-   "b": false
+   "b": false,
+   "w": 29.75
   },
   {
    "k": "page6.monitoring.5.dil",
    "x": 340.19,
    "y": 334.33,
    "s": 8.36,
-   "b": false
+   "b": false,
+   "w": 34.03
   },
   {
    "k": "page6.monitoring.5.eff",
    "x": 375.22,
    "y": 334.33,
    "s": 8.36,
-   "b": false
+   "b": false,
+   "w": 28.24
   },
   {
    "k": "page6.monitoring.5.pres",
    "x": 404.46,
    "y": 334.33,
    "s": 8.36,
-   "b": false
+   "b": false,
+   "w": 29.4
   },
   {
    "k": "page6.monitoring.5.stn",
    "x": 434.86,
    "y": 334.33,
    "s": 8.36,
-   "b": false
+   "b": false,
+   "w": 27.07
   },
   {
    "k": "page6.monitoring.5.mem",
    "x": 462.93,
    "y": 334.33,
    "s": 8.36,
-   "b": false
+   "b": false,
+   "w": 34.42
   },
   {
    "k": "page6.monitoring.5.nstCtg",
    "x": 500.4,
    "y": 334.33,
    "s": 8.36,
-   "b": false
+   "b": false,
+   "w": 29.7
   },
   {
    "k": "page6.monitoring.5.remarks",
    "x": 533.1,
    "y": 334.33,
    "s": 8.36,
-   "b": false
+   "b": false,
+   "w": 36.76
   },
   {
    "k": "page6.monitoring.6.dateTime",
    "x": 27.94,
    "y": 360.06,
    "s": 6.08,
-   "b": false
+   "b": false,
+   "w": 29.11
   },
   {
    "k": "page6.monitoring.6.bp",
    "x": 60.1,
    "y": 360.06,
    "s": 8.36,
-   "b": false
+   "b": false,
+   "w": 26.77
   },
   {
    "k": "page6.monitoring.6.hr",
    "x": 89.88,
    "y": 360.06,
    "s": 8.36,
-   "b": false
+   "b": false,
+   "w": 24.48
   },
   {
    "k": "page6.monitoring.6.rr",
    "x": 117.36,
    "y": 360.06,
    "s": 8.36,
-   "b": false
+   "b": false,
+   "w": 28.57
   },
   {
    "k": "page6.monitoring.6.temp",
    "x": 148.93,
    "y": 360.06,
    "s": 8.36,
-   "b": false
+   "b": false,
+   "w": 32.09
   },
   {
    "k": "page6.monitoring.6.uo",
    "x": 184.06,
    "y": 360.06,
    "s": 8.36,
-   "b": false
+   "b": false,
+   "w": 30.29
   },
   {
    "k": "page6.monitoring.6.fht",
    "x": 217.39,
    "y": 360.06,
    "s": 8.36,
-   "b": false
+   "b": false,
+   "w": 24.44
   },
   {
    "k": "page6.monitoring.6.intv",
    "x": 244.87,
    "y": 360.06,
    "s": 8.36,
-   "b": false
+   "b": false,
+   "w": 28.78
   },
   {
    "k": "page6.monitoring.6.dur",
    "x": 274.65,
    "y": 360.06,
    "s": 8.36,
-   "b": false
+   "b": false,
+   "w": 31.74
   },
   {
    "k": "page6.monitoring.6.int",
    "x": 307.39,
    "y": 360.06,
    "s": 8.36,
-   "b": false
+   "b": false,
+   "w": 29.75
   },
   {
    "k": "page6.monitoring.6.dil",
    "x": 340.19,
    "y": 360.06,
    "s": 8.36,
-   "b": false
+   "b": false,
+   "w": 34.03
   },
   {
    "k": "page6.monitoring.6.eff",
    "x": 375.22,
    "y": 360.06,
    "s": 8.36,
-   "b": false
+   "b": false,
+   "w": 28.24
   },
   {
    "k": "page6.monitoring.6.pres",
    "x": 404.46,
    "y": 360.06,
    "s": 8.36,
-   "b": false
+   "b": false,
+   "w": 29.4
   },
   {
    "k": "page6.monitoring.6.stn",
    "x": 434.86,
    "y": 360.06,
    "s": 8.36,
-   "b": false
+   "b": false,
+   "w": 27.07
   },
   {
    "k": "page6.monitoring.6.mem",
    "x": 462.93,
    "y": 360.06,
    "s": 8.36,
-   "b": false
+   "b": false,
+   "w": 34.42
   },
   {
    "k": "page6.monitoring.6.nstCtg",
    "x": 500.4,
    "y": 360.06,
    "s": 8.36,
-   "b": false
+   "b": false,
+   "w": 29.7
   },
   {
    "k": "page6.monitoring.6.remarks",
    "x": 533.1,
    "y": 360.06,
    "s": 8.36,
-   "b": false
+   "b": false,
+   "w": 36.76
   },
   {
    "k": "page6.monitoring.7.dateTime",
    "x": 27.94,
    "y": 385.79,
    "s": 6.08,
-   "b": false
+   "b": false,
+   "w": 29.11
   },
   {
    "k": "page6.monitoring.7.bp",
    "x": 60.1,
    "y": 385.79,
    "s": 8.36,
-   "b": false
+   "b": false,
+   "w": 26.77
   },
   {
    "k": "page6.monitoring.7.hr",
    "x": 89.88,
    "y": 385.79,
    "s": 8.36,
-   "b": false
+   "b": false,
+   "w": 24.48
   },
   {
    "k": "page6.monitoring.7.rr",
    "x": 117.36,
    "y": 385.79,
    "s": 8.36,
-   "b": false
+   "b": false,
+   "w": 28.57
   },
   {
    "k": "page6.monitoring.7.temp",
    "x": 148.93,
    "y": 385.79,
    "s": 8.36,
-   "b": false
+   "b": false,
+   "w": 32.09
   },
   {
    "k": "page6.monitoring.7.uo",
    "x": 184.06,
    "y": 385.79,
    "s": 8.36,
-   "b": false
+   "b": false,
+   "w": 30.29
   },
   {
    "k": "page6.monitoring.7.fht",
    "x": 217.39,
    "y": 385.79,
    "s": 8.36,
-   "b": false
+   "b": false,
+   "w": 24.44
   },
   {
    "k": "page6.monitoring.7.intv",
    "x": 244.87,
    "y": 385.79,
    "s": 8.36,
-   "b": false
+   "b": false,
+   "w": 28.78
   },
   {
    "k": "page6.monitoring.7.dur",
    "x": 274.65,
    "y": 385.79,
    "s": 8.36,
-   "b": false
+   "b": false,
+   "w": 31.74
   },
   {
    "k": "page6.monitoring.7.int",
    "x": 307.39,
    "y": 385.79,
    "s": 8.36,
-   "b": false
+   "b": false,
+   "w": 29.75
   },
   {
    "k": "page6.monitoring.7.dil",
    "x": 340.19,
    "y": 385.79,
    "s": 8.36,
-   "b": false
+   "b": false,
+   "w": 34.03
   },
   {
    "k": "page6.monitoring.7.eff",
    "x": 375.22,
    "y": 385.79,
    "s": 8.36,
-   "b": false
+   "b": false,
+   "w": 28.24
   },
   {
    "k": "page6.monitoring.7.pres",
    "x": 404.46,
    "y": 385.79,
    "s": 8.36,
-   "b": false
+   "b": false,
+   "w": 29.4
   },
   {
    "k": "page6.monitoring.7.stn",
    "x": 434.86,
    "y": 385.79,
    "s": 8.36,
-   "b": false
+   "b": false,
+   "w": 27.07
   },
   {
    "k": "page6.monitoring.7.mem",
    "x": 462.93,
    "y": 385.79,
    "s": 8.36,
-   "b": false
+   "b": false,
+   "w": 34.42
   },
   {
    "k": "page6.monitoring.7.nstCtg",
    "x": 500.4,
    "y": 385.79,
    "s": 8.36,
-   "b": false
+   "b": false,
+   "w": 29.7
   },
   {
    "k": "page6.monitoring.7.remarks",
    "x": 533.1,
    "y": 385.79,
    "s": 8.36,
-   "b": false
+   "b": false,
+   "w": 36.76
   },
   {
    "k": "page6.monitoring.8.dateTime",
    "x": 27.94,
    "y": 411.52,
    "s": 6.08,
-   "b": false
+   "b": false,
+   "w": 29.11
   },
   {
    "k": "page6.monitoring.8.bp",
    "x": 60.1,
    "y": 411.52,
    "s": 8.36,
-   "b": false
+   "b": false,
+   "w": 26.77
   },
   {
    "k": "page6.monitoring.8.hr",
    "x": 89.88,
    "y": 411.52,
    "s": 8.36,
-   "b": false
+   "b": false,
+   "w": 24.48
   },
   {
    "k": "page6.monitoring.8.rr",
    "x": 117.36,
    "y": 411.52,
    "s": 8.36,
-   "b": false
+   "b": false,
+   "w": 28.57
   },
   {
    "k": "page6.monitoring.8.temp",
    "x": 148.93,
    "y": 411.52,
    "s": 8.36,
-   "b": false
+   "b": false,
+   "w": 32.09
   },
   {
    "k": "page6.monitoring.8.uo",
    "x": 184.06,
    "y": 411.52,
    "s": 8.36,
-   "b": false
+   "b": false,
+   "w": 30.29
   },
   {
    "k": "page6.monitoring.8.fht",
    "x": 217.39,
    "y": 411.52,
    "s": 8.36,
-   "b": false
+   "b": false,
+   "w": 24.44
   },
   {
    "k": "page6.monitoring.8.intv",
    "x": 244.87,
    "y": 411.52,
    "s": 8.36,
-   "b": false
+   "b": false,
+   "w": 28.78
   },
   {
    "k": "page6.monitoring.8.dur",
    "x": 274.65,
    "y": 411.52,
    "s": 8.36,
-   "b": false
+   "b": false,
+   "w": 31.74
   },
   {
    "k": "page6.monitoring.8.int",
    "x": 307.39,
    "y": 411.52,
    "s": 8.36,
-   "b": false
+   "b": false,
+   "w": 29.75
   },
   {
    "k": "page6.monitoring.8.dil",
    "x": 340.19,
    "y": 411.52,
    "s": 8.36,
-   "b": false
+   "b": false,
+   "w": 34.03
   },
   {
    "k": "page6.monitoring.8.eff",
    "x": 375.22,
    "y": 411.52,
    "s": 8.36,
-   "b": false
+   "b": false,
+   "w": 28.24
   },
   {
    "k": "page6.monitoring.8.pres",
    "x": 404.46,
    "y": 411.52,
    "s": 8.36,
-   "b": false
+   "b": false,
+   "w": 29.4
   },
   {
    "k": "page6.monitoring.8.stn",
    "x": 434.86,
    "y": 411.52,
    "s": 8.36,
-   "b": false
+   "b": false,
+   "w": 27.07
   },
   {
    "k": "page6.monitoring.8.mem",
    "x": 462.93,
    "y": 411.52,
    "s": 8.36,
-   "b": false
+   "b": false,
+   "w": 34.42
   },
   {
    "k": "page6.monitoring.8.nstCtg",
    "x": 500.4,
    "y": 411.52,
    "s": 8.36,
-   "b": false
+   "b": false,
+   "w": 29.7
   },
   {
    "k": "page6.monitoring.8.remarks",
    "x": 533.1,
    "y": 411.52,
    "s": 8.36,
-   "b": false
+   "b": false,
+   "w": 36.76
   },
   {
    "k": "page6.monitoring.9.dateTime",
    "x": 27.94,
    "y": 437.25,
    "s": 6.08,
-   "b": false
+   "b": false,
+   "w": 29.11
   },
   {
    "k": "page6.monitoring.9.bp",
    "x": 60.1,
    "y": 437.25,
    "s": 8.36,
-   "b": false
+   "b": false,
+   "w": 26.77
   },
   {
    "k": "page6.monitoring.9.hr",
    "x": 89.88,
    "y": 437.25,
    "s": 8.36,
-   "b": false
+   "b": false,
+   "w": 24.48
   },
   {
    "k": "page6.monitoring.9.rr",
    "x": 117.36,
    "y": 437.25,
    "s": 8.36,
-   "b": false
+   "b": false,
+   "w": 28.57
   },
   {
    "k": "page6.monitoring.9.temp",
    "x": 148.93,
    "y": 437.25,
    "s": 8.36,
-   "b": false
+   "b": false,
+   "w": 32.09
   },
   {
    "k": "page6.monitoring.9.uo",
    "x": 184.06,
    "y": 437.25,
    "s": 8.36,
-   "b": false
+   "b": false,
+   "w": 30.29
   },
   {
    "k": "page6.monitoring.9.fht",
    "x": 217.39,
    "y": 437.25,
    "s": 8.36,
-   "b": false
+   "b": false,
+   "w": 24.44
   },
   {
    "k": "page6.monitoring.9.intv",
    "x": 244.87,
    "y": 437.25,
    "s": 8.36,
-   "b": false
+   "b": false,
+   "w": 28.78
   },
   {
    "k": "page6.monitoring.9.dur",
    "x": 274.65,
    "y": 437.25,
    "s": 8.36,
-   "b": false
+   "b": false,
+   "w": 31.74
   },
   {
    "k": "page6.monitoring.9.int",
    "x": 307.39,
    "y": 437.25,
    "s": 8.36,
-   "b": false
+   "b": false,
+   "w": 29.75
   },
   {
    "k": "page6.monitoring.9.dil",
    "x": 340.19,
    "y": 437.25,
    "s": 8.36,
-   "b": false
+   "b": false,
+   "w": 34.03
   },
   {
    "k": "page6.monitoring.9.eff",
    "x": 375.22,
    "y": 437.25,
    "s": 8.36,
-   "b": false
+   "b": false,
+   "w": 28.24
   },
   {
    "k": "page6.monitoring.9.pres",
    "x": 404.46,
    "y": 437.25,
    "s": 8.36,
-   "b": false
+   "b": false,
+   "w": 29.4
   },
   {
    "k": "page6.monitoring.9.stn",
    "x": 434.86,
    "y": 437.25,
    "s": 8.36,
-   "b": false
+   "b": false,
+   "w": 27.07
   },
   {
    "k": "page6.monitoring.9.mem",
    "x": 462.93,
    "y": 437.25,
    "s": 8.36,
-   "b": false
+   "b": false,
+   "w": 34.42
   },
   {
    "k": "page6.monitoring.9.nstCtg",
    "x": 500.4,
    "y": 437.25,
    "s": 8.36,
-   "b": false
+   "b": false,
+   "w": 29.7
   },
   {
    "k": "page6.monitoring.9.remarks",
    "x": 533.1,
    "y": 437.25,
    "s": 8.36,
-   "b": false
+   "b": false,
+   "w": 36.76
   },
   {
    "k": "page6.monitoring.10.dateTime",
    "x": 27.94,
    "y": 462.98,
    "s": 6.08,
-   "b": false
+   "b": false,
+   "w": 29.11
   },
   {
    "k": "page6.monitoring.10.bp",
    "x": 60.1,
    "y": 462.98,
    "s": 8.36,
-   "b": false
+   "b": false,
+   "w": 26.77
   },
   {
    "k": "page6.monitoring.10.hr",
    "x": 89.88,
    "y": 462.98,
    "s": 8.36,
-   "b": false
+   "b": false,
+   "w": 24.48
   },
   {
    "k": "page6.monitoring.10.rr",
    "x": 117.36,
    "y": 462.98,
    "s": 8.36,
-   "b": false
+   "b": false,
+   "w": 28.57
   },
   {
    "k": "page6.monitoring.10.temp",
    "x": 148.93,
    "y": 462.98,
    "s": 8.36,
-   "b": false
+   "b": false,
+   "w": 32.09
   },
   {
    "k": "page6.monitoring.10.uo",
    "x": 184.06,
    "y": 462.98,
    "s": 8.36,
-   "b": false
+   "b": false,
+   "w": 30.29
   },
   {
    "k": "page6.monitoring.10.fht",
    "x": 217.39,
    "y": 462.98,
    "s": 8.36,
-   "b": false
+   "b": false,
+   "w": 24.44
   },
   {
    "k": "page6.monitoring.10.intv",
    "x": 244.87,
    "y": 462.98,
    "s": 8.36,
-   "b": false
+   "b": false,
+   "w": 28.78
   },
   {
    "k": "page6.monitoring.10.dur",
    "x": 274.65,
    "y": 462.98,
    "s": 8.36,
-   "b": false
+   "b": false,
+   "w": 31.74
   },
   {
    "k": "page6.monitoring.10.int",
    "x": 307.39,
    "y": 462.98,
    "s": 8.36,
-   "b": false
+   "b": false,
+   "w": 29.75
   },
   {
    "k": "page6.monitoring.10.dil",
    "x": 340.19,
    "y": 462.98,
    "s": 8.36,
-   "b": false
+   "b": false,
+   "w": 34.03
   },
   {
    "k": "page6.monitoring.10.eff",
    "x": 375.22,
    "y": 462.98,
    "s": 8.36,
-   "b": false
+   "b": false,
+   "w": 28.24
   },
   {
    "k": "page6.monitoring.10.pres",
    "x": 404.46,
    "y": 462.98,
    "s": 8.36,
-   "b": false
+   "b": false,
+   "w": 29.4
   },
   {
    "k": "page6.monitoring.10.stn",
    "x": 434.86,
    "y": 462.98,
    "s": 8.36,
-   "b": false
+   "b": false,
+   "w": 27.07
   },
   {
    "k": "page6.monitoring.10.mem",
    "x": 462.93,
    "y": 462.98,
    "s": 8.36,
-   "b": false
+   "b": false,
+   "w": 34.42
   },
   {
    "k": "page6.monitoring.10.nstCtg",
    "x": 500.4,
    "y": 462.98,
    "s": 8.36,
-   "b": false
+   "b": false,
+   "w": 29.7
   },
   {
    "k": "page6.monitoring.10.remarks",
    "x": 533.1,
    "y": 462.98,
    "s": 8.36,
-   "b": false
+   "b": false,
+   "w": 36.76
   },
   {
    "k": "page6.monitoring.11.dateTime",
    "x": 27.94,
    "y": 488.71,
    "s": 6.08,
-   "b": false
+   "b": false,
+   "w": 29.11
   },
   {
    "k": "page6.monitoring.11.bp",
    "x": 60.1,
    "y": 488.71,
    "s": 8.36,
-   "b": false
+   "b": false,
+   "w": 26.77
   },
   {
    "k": "page6.monitoring.11.hr",
    "x": 89.88,
    "y": 488.71,
    "s": 8.36,
-   "b": false
+   "b": false,
+   "w": 24.48
   },
   {
    "k": "page6.monitoring.11.rr",
    "x": 117.36,
    "y": 488.71,
    "s": 8.36,
-   "b": false
+   "b": false,
+   "w": 28.57
   },
   {
    "k": "page6.monitoring.11.temp",
    "x": 148.93,
    "y": 488.71,
    "s": 8.36,
-   "b": false
+   "b": false,
+   "w": 32.09
   },
   {
    "k": "page6.monitoring.11.uo",
    "x": 184.06,
    "y": 488.71,
    "s": 8.36,
-   "b": false
+   "b": false,
+   "w": 30.29
   },
   {
    "k": "page6.monitoring.11.fht",
    "x": 217.39,
    "y": 488.71,
    "s": 8.36,
-   "b": false
+   "b": false,
+   "w": 24.44
   },
   {
    "k": "page6.monitoring.11.intv",
    "x": 244.87,
    "y": 488.71,
    "s": 8.36,
-   "b": false
+   "b": false,
+   "w": 28.78
   },
   {
    "k": "page6.monitoring.11.dur",
    "x": 274.65,
    "y": 488.71,
    "s": 8.36,
-   "b": false
+   "b": false,
+   "w": 31.74
   },
   {
    "k": "page6.monitoring.11.int",
    "x": 307.39,
    "y": 488.71,
    "s": 8.36,
-   "b": false
+   "b": false,
+   "w": 29.75
   },
   {
    "k": "page6.monitoring.11.dil",
    "x": 340.19,
    "y": 488.71,
    "s": 8.36,
-   "b": false
+   "b": false,
+   "w": 34.03
   },
   {
    "k": "page6.monitoring.11.eff",
    "x": 375.22,
    "y": 488.71,
    "s": 8.36,
-   "b": false
+   "b": false,
+   "w": 28.24
   },
   {
    "k": "page6.monitoring.11.pres",
    "x": 404.46,
    "y": 488.71,
    "s": 8.36,
-   "b": false
+   "b": false,
+   "w": 29.4
   },
   {
    "k": "page6.monitoring.11.stn",
    "x": 434.86,
    "y": 488.71,
    "s": 8.36,
-   "b": false
+   "b": false,
+   "w": 27.07
   },
   {
    "k": "page6.monitoring.11.mem",
    "x": 462.93,
    "y": 488.71,
    "s": 8.36,
-   "b": false
+   "b": false,
+   "w": 34.42
   },
   {
    "k": "page6.monitoring.11.nstCtg",
    "x": 500.4,
    "y": 488.71,
    "s": 8.36,
-   "b": false
+   "b": false,
+   "w": 29.7
   },
   {
    "k": "page6.monitoring.11.remarks",
    "x": 533.1,
    "y": 488.71,
    "s": 8.36,
-   "b": false
+   "b": false,
+   "w": 36.76
   },
   {
    "k": "page6.monitoring.12.dateTime",
    "x": 27.94,
    "y": 514.44,
    "s": 6.08,
-   "b": false
+   "b": false,
+   "w": 29.11
   },
   {
    "k": "page6.monitoring.12.bp",
    "x": 60.1,
    "y": 514.44,
    "s": 8.36,
-   "b": false
+   "b": false,
+   "w": 26.77
   },
   {
    "k": "page6.monitoring.12.hr",
    "x": 89.88,
    "y": 514.44,
    "s": 8.36,
-   "b": false
+   "b": false,
+   "w": 24.48
   },
   {
    "k": "page6.monitoring.12.rr",
    "x": 117.36,
    "y": 514.44,
    "s": 8.36,
-   "b": false
+   "b": false,
+   "w": 28.57
   },
   {
    "k": "page6.monitoring.12.temp",
    "x": 148.93,
    "y": 514.44,
    "s": 8.36,
-   "b": false
+   "b": false,
+   "w": 32.09
   },
   {
    "k": "page6.monitoring.12.uo",
    "x": 184.06,
    "y": 514.44,
    "s": 8.36,
-   "b": false
+   "b": false,
+   "w": 30.29
   },
   {
    "k": "page6.monitoring.12.fht",
    "x": 217.39,
    "y": 514.44,
    "s": 8.36,
-   "b": false
+   "b": false,
+   "w": 24.44
   },
   {
    "k": "page6.monitoring.12.intv",
    "x": 244.87,
    "y": 514.44,
    "s": 8.36,
-   "b": false
+   "b": false,
+   "w": 28.78
   },
   {
    "k": "page6.monitoring.12.dur",
    "x": 274.65,
    "y": 514.44,
    "s": 8.36,
-   "b": false
+   "b": false,
+   "w": 31.74
   },
   {
    "k": "page6.monitoring.12.int",
    "x": 307.39,
    "y": 514.44,
    "s": 8.36,
-   "b": false
+   "b": false,
+   "w": 29.75
   },
   {
    "k": "page6.monitoring.12.dil",
    "x": 340.19,
    "y": 514.44,
    "s": 8.36,
-   "b": false
+   "b": false,
+   "w": 34.03
   },
   {
    "k": "page6.monitoring.12.eff",
    "x": 375.22,
    "y": 514.44,
    "s": 8.36,
-   "b": false
+   "b": false,
+   "w": 28.24
   },
   {
    "k": "page6.monitoring.12.pres",
    "x": 404.46,
    "y": 514.44,
    "s": 8.36,
-   "b": false
+   "b": false,
+   "w": 29.4
   },
   {
    "k": "page6.monitoring.12.stn",
    "x": 434.86,
    "y": 514.44,
    "s": 8.36,
-   "b": false
+   "b": false,
+   "w": 27.07
   },
   {
    "k": "page6.monitoring.12.mem",
    "x": 462.93,
    "y": 514.44,
    "s": 8.36,
-   "b": false
+   "b": false,
+   "w": 34.42
   },
   {
    "k": "page6.monitoring.12.nstCtg",
    "x": 500.4,
    "y": 514.44,
    "s": 8.36,
-   "b": false
+   "b": false,
+   "w": 29.7
   },
   {
    "k": "page6.monitoring.12.remarks",
    "x": 533.1,
    "y": 514.44,
    "s": 8.36,
-   "b": false
+   "b": false,
+   "w": 36.76
   },
   {
    "k": "patient.admissionDateTime",
    "x": 340.19,
    "y": 100.56,
    "s": 9.12,
-   "b": true
+   "b": true,
+   "w": 229.67
   },
   {
    "k": "page6.attendingPhysicians",
    "x": 340.19,
    "y": 124.99,
    "s": 8.36,
-   "b": true
+   "b": true,
+   "w": 229.67
   },
   {
    "k": "footer.mi",
    "x": 244.87,
    "y": 582.12,
    "s": 7.6,
-   "b": false
+   "b": false,
+   "w": 149.86
   }
  ],
  "checks": [

@@ -1,6 +1,8 @@
 """Build lib/sheets/templates/pageN.json from a reference page, its mapping and the fixture view."""
 import json, math, sys
 from pathlib import Path
+
+import fitz
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from common import ROOT, ref_page, norm, hexcolor, path_d, load_spans, span_origin, span_bold, is_checkbox
 
@@ -58,6 +60,96 @@ def field_from_span(key, s, align=None, size=None, bold=None):
     return f
 
 
+def with_w(slot, m):
+    """Mapping-level width override for a single-line slot."""
+    if "w" in m:
+        slot["w"] = r2(m["w"])
+    return slot
+
+
+GAP = 1.0  # clearance kept before the next obstacle on a single-line slot's baseline
+_FONTS = {}
+
+
+def text_width(text, size, bold):
+    """Helvetica advance width: the same metrics lib/sheets/metrics.ts is generated from."""
+    name = "hebo" if bold else "helv"
+    if name not in _FONTS:
+        _FONTS[name] = fitz.Font(name)
+    return _FONTS[name].text_length(text, size)
+
+
+def vertical_rules(drawings):
+    """(x, y0, y1) of every vertical edge in the kept drawings: lines, and both sides of rects/quads."""
+    out = []
+    for d in drawings:
+        for it in d["items"]:
+            if it[0] == "l":
+                a, b = it[1], it[2]
+                if abs(a.x - b.x) < 0.6 and abs(a.y - b.y) > 2:
+                    out.append(((a.x + b.x) / 2, min(a.y, b.y), max(a.y, b.y)))
+            elif it[0] in ("re", "qu"):
+                r = it[1] if it[0] == "re" else it[1].rect
+                if r.height > 2:
+                    out.append((r.x0, r.y0, r.y1))
+                    out.append((r.x1, r.y0, r.y1))
+    return out
+
+
+def derive_widths(tpl, drawings, view):
+    """Give every single-line field slot a width `w`: the free run along its baseline from the slot to the
+    next obstacle (printed label, another slot, check box, mark, image, vertical rule), minus GAP.
+    Right-aligned slots measure leftwards. A mapping-level `w` is kept as is. If the reference value itself
+    is wider than the run (it overprints in the reference), the run is widened to it so the reference
+    renders unchanged."""
+    rules = vertical_rules(drawings)
+    # Obstacles as (x_start, x_end, test) where test(y_mid, y_base, size) says whether it sits on the line.
+    obs = []
+
+    def spans_mid(y0, y1):
+        return lambda ym, yb, s: y0 <= ym <= y1
+
+    def on_line(ty, ts):
+        return lambda ym, yb, s: abs(ty - yb) <= 0.5 * max(s, ts)
+
+    for x, y0, y1 in rules:
+        obs.append((x, x, spans_mid(y0, y1)))
+    for t in tpl["texts"]:
+        obs.append((t["x"], t["x"] + text_width(t["t"], t["s"], t.get("b", False)), on_line(t["y"], t["s"])))
+    for c in tpl["checks"]:
+        obs.append((c["x"], c["x"] + c["w"], spans_mid(c["y"], c["y"] + c["h"])))
+    for m in tpl["marks"]:
+        obs.append((m["x"], m["x"] + text_width("X", m["s"], m.get("b", True)), on_line(m["y"], m["s"])))
+    for im in tpl["images"]:
+        obs.append((im["x"], im["x"] + im["w"], spans_mid(im["y"], im["y"] + im["h"])))
+    for f in tpl["fields"]:
+        if f.get("ml"):
+            obs.append((f["x"], f["x"] + f["w"], spans_mid(f["y"], f["y"] + f["h"])))
+        else:
+            obs.append((f["x"], f["x"], on_line(f["y"], f["s"])))
+
+    widened = []
+    for f in tpl["fields"]:
+        if f.get("ml") or "w" in f:
+            continue
+        x, yb, s = f["x"], f["y"], f["s"]
+        ym = yb - 0.35 * s
+        hits = [o for o in obs if o[2](ym, yb, s)]
+        if f.get("al") == "r":
+            left = [o[1] for o in hits if o[1] < x - 0.5]
+            w = x - (max(left) if left else 0) - GAP
+        else:
+            right = [o[0] for o in hits if o[0] > x + 0.5]
+            w = (min(right) if right else tpl["width"]) - x - GAP
+        val = str(view.get(f["k"], "")).strip()
+        need = text_width(val, s, f.get("b", False)) if val and "\n" not in val else 0
+        if need > w:
+            widened.append(f["k"])
+            w = math.ceil(need * 100) / 100
+        f["w"] = r2(max(w, 1))
+    return widened
+
+
 def build(page, mapping, view, exclude_keys=frozenset()):
     spans = load_spans(page)
     drawings = page.get_drawings()
@@ -95,7 +187,7 @@ def build(page, mapping, view, exclude_keys=frozenset()):
         spans.append(dict(hit, text="".join(c["c"] for c in chars[:n]), chars=chars[:n], used=False))
         hit["used"] = True
         c = chars[k]
-        tpl["fields"].append({"k": sp["key"], "x": r2(c["origin"][0]), "y": r2(c["origin"][1]), "s": r2(hit["size"]), "b": span_bold(hit)})
+        tpl["fields"].append(with_w({"k": sp["key"], "x": r2(c["origin"][0]), "y": r2(c["origin"][1]), "s": r2(hit["size"]), "b": span_bold(hit)}, sp))
 
     def place_field(f):
         key = f["key"]
@@ -119,7 +211,7 @@ def build(page, mapping, view, exclude_keys=frozenset()):
             slot = {"k": key, "x": r2(x), "y": r2(y), "s": r2(f["size"]), "b": bool(f.get("bold", False))}
             if f.get("align") == "r":
                 slot["al"] = "r"
-            tpl["fields"].append(slot)
+            tpl["fields"].append(with_w(slot, f))
         else:
             if not val.strip():
                 raise BuildError(f"field '{key}' is empty in fixture; give 'at' + 'size'")
@@ -130,7 +222,7 @@ def build(page, mapping, view, exclude_keys=frozenset()):
                 cands = [nearest_to_anchor(cands, find_label(spans, f["near"], what="anchor"))]
             for s in cands:
                 s["used"] = True
-                tpl["fields"].append(field_from_span(key, s, f.get("align"), f.get("size"), f.get("bold")))
+                tpl["fields"].append(with_w(field_from_span(key, s, f.get("align"), f.get("size"), f.get("bold")), f))
 
     def is_explicit(f):
         return "box" in f or "at" in f or "near" in f
@@ -144,11 +236,14 @@ def build(page, mapping, view, exclude_keys=frozenset()):
         for s in spans:
             if not s["used"] and inside(center(s["bbox"]), t["region"]):
                 s["used"] = True
-        sizes = t.get("sizes", {})
+        sizes, widths = t.get("sizes", {}), t.get("widths", {})
         for r in range(t["rows"]):
             y = t["firstBaseline"] + r * t["pitch"]
             for col, x in t["columns"].items():
-                tpl["fields"].append({"k": f"{t['key']}.{r}.{col}", "x": r2(x), "y": r2(y), "s": r2(sizes.get(col, t["size"])), "b": bool(t.get("bold", False))})
+                cell = {"k": f"{t['key']}.{r}.{col}", "x": r2(x), "y": r2(y), "s": r2(sizes.get(col, t["size"])), "b": bool(t.get("bold", False))}
+                if col in widths:
+                    cell["w"] = r2(widths[col])
+                tpl["fields"].append(cell)
 
     for f in fields:
         if not is_explicit(f):
@@ -205,6 +300,7 @@ def build(page, mapping, view, exclude_keys=frozenset()):
     if left:
         raise BuildError("unmapped checkbox(es) at " + ", ".join(f"({d['rect'].x0:.1f},{d['rect'].y0:.1f})" for d in left))
 
+    kept = []
     for d in drawings:
         if is_checkbox(d):
             continue
@@ -212,6 +308,7 @@ def build(page, mapping, view, exclude_keys=frozenset()):
             continue
         if any(inside(center(tuple(d["rect"])), r) for r in drop_regions):
             continue
+        kept.append(d)
         p = {"d": path_d(d["items"])}
         if d.get("fill") is not None and d["type"] in ("f", "fs"):
             p["fill"] = hexcolor(d["fill"])
@@ -242,6 +339,7 @@ def build(page, mapping, view, exclude_keys=frozenset()):
         if col != "#000000":
             t["c"] = col
         tpl["texts"].append(t)
+    tpl["_widened"] = derive_widths(tpl, kept, view)
     return tpl
 
 
@@ -258,6 +356,7 @@ def main(n):
     mapping = json.loads((MAPPINGS / f"page{n}.json").read_text(encoding="utf-8"))
     view = json.loads((ROOT / "fixtures" / "reference.view.json").read_text(encoding="utf-8"))
     tpl = build(ref_page(n), mapping, view, selection_keys())
+    widened = tpl.pop("_widened")
     out = ROOT / "lib" / "sheets" / "templates" / f"page{n}.json"
     out.parent.mkdir(parents=True, exist_ok=True)
     out.write_text(json.dumps(tpl, indent=1), encoding="utf-8")
@@ -268,6 +367,8 @@ def main(n):
             f.write(f"{t['x']}\t{t['y']}\t{t['s']}\t{'B' if t['b'] else ''}\t{t['t']}\n")
     print(f"page {n}: {len(tpl['paths'])} paths, {len(tpl['texts'])} labels, {len(tpl['fields'])} fields, "
           f"{len(tpl['checks'])} checks, {len(tpl['marks'])} marks")
+    if widened:
+        print(f"  widened to the reference value: {', '.join(widened)}")
 
 
 if __name__ == "__main__":

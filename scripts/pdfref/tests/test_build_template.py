@@ -151,3 +151,69 @@ def test_explicit_near_field_claims_span_inside_table_region():
     assert [x["t"] for x in t["texts"]] == ["Anchor:"]
     keys = [f["k"] for f in t["fields"]]
     assert "p.v" in keys and "p.ob.0.order" in keys
+
+
+def page_with_rules(texts, vlines):
+    """A page with labels and vertical rules (x, y0, y1)."""
+    p = page_with(texts)
+    shp = p.new_shape()
+    for (x, y0, y1) in vlines:
+        shp.draw_line((x, y0), (x, y1))
+    shp.finish(color=(0, 0, 0), width=0.5)
+    shp.commit()
+    return p
+
+
+def by_key(t):
+    return {f["k"]: f for f in t["fields"]}
+
+
+def test_single_line_width_runs_to_next_label():
+    p = page_with([(50, 100, "NAME:", True), (90, 100, "SECRETNAME", False), (250, 100, "AGE:", True)])
+    t = build(p, {"page": 1, "fields": [{"key": "p.name"}]}, {"p.name": "SECRETNAME"})
+    f = by_key(t)["p.name"]
+    assert abs(f["w"] - (250 - f["x"] - 1)) < 0.05
+
+
+def test_single_line_width_stops_at_vertical_rule_before_label():
+    p = page_with_rules([(50, 100, "NAME:", True), (90, 100, "SECRETNAME", False), (250, 100, "AGE:", True)],
+                        [(200, 80, 120), (150, 200, 260)])  # the second rule is off this line and is ignored
+    t = build(p, {"page": 1, "fields": [{"key": "p.name"}]}, {"p.name": "SECRETNAME"})
+    f = by_key(t)["p.name"]
+    assert abs(f["w"] - (200 - f["x"] - 1)) < 0.05
+
+
+def test_single_line_width_falls_back_to_page_edge_and_honours_override():
+    p = page_with([(50, 100, "A:", True), (50, 200, "B:", True)])
+    m = {"page": 1, "fields": [{"key": "p.a", "at": [70, 100], "size": 8},
+                               {"key": "p.b", "at": [70, 200], "size": 8, "w": 42}]}
+    t = build(p, m, {})
+    assert abs(by_key(t)["p.a"]["w"] - (595 - 70 - 1)) < 0.05
+    assert by_key(t)["p.b"]["w"] == 42
+
+
+def test_right_aligned_width_runs_left_to_label_end():
+    p = page_with([(400, 100, "HOSP #:", True), (520, 100, "12345", False)])
+    t = build(p, {"page": 1, "fields": [{"key": "p.no", "align": "r"}]}, {"p.no": "12345"})
+    f = by_key(t)["p.no"]
+    label_end = 400 + fitz.get_text_length("HOSP #:", fontname="hebo", fontsize=8)
+    assert f["al"] == "r" and abs(f["w"] - (f["x"] - label_end - 1)) < 0.05
+
+
+def test_table_cells_get_column_widths():
+    p = page_with_rules([], [(40, 490, 530), (100, 490, 530), (300, 490, 530)])
+    m = {"page": 1,
+         "tables": [{"key": "p.ob", "region": [40, 490, 260, 40], "columns": {"order": 45, "year": 105, "note": 160},
+                     "firstBaseline": 500, "pitch": 10, "rows": 2, "size": 8, "widths": {"note": 30}}]}
+    t = build(p, m, {})
+    f = by_key(t)
+    assert abs(f["p.ob.1.order"]["w"] - (100 - 45 - 1)) < 0.05  # to the column rule
+    assert abs(f["p.ob.0.year"]["w"] - (160 - 105 - 1)) < 0.05  # to the next column's x
+    assert f["p.ob.0.note"]["w"] == 30  # mapping override
+
+
+def test_reference_value_wider_than_run_widens_slot():
+    p = page_with([(50, 100, "N:", True), (70, 100, "AVERYLONGVALUE", False), (100, 100, "Z:", True)])
+    t = build(p, {"page": 1, "fields": [{"key": "p.v"}]}, {"p.v": "AVERYLONGVALUE"})
+    need = fitz.get_text_length("AVERYLONGVALUE", fontname="helv", fontsize=8)
+    assert by_key(t)["p.v"]["w"] >= need and t["_widened"] == ["p.v"]

@@ -292,7 +292,8 @@
    "x": 427.15,
    "y": 149.56,
    "s": 6.86,
-   "b": false
+   "b": false,
+   "w": 149.18
   },
   {
    "k": "page2.hpi",
@@ -349,70 +350,80 @@
    "x": 350.63,
    "y": 507.57,
    "s": 8.58,
-   "b": false
+   "b": false,
+   "w": 225.7
   },
   {
    "k": "page2.tobacco",
    "x": 402.77,
    "y": 535.28,
    "s": 8.58,
-   "b": false
+   "b": false,
+   "w": 173.56
   },
   {
    "k": "page2.drugAllergies",
    "x": 378.35,
    "y": 549.14,
    "s": 8.58,
-   "b": false
+   "b": false,
+   "w": 197.98
   },
   {
    "k": "page2.drugTherapy",
    "x": 111.06,
    "y": 576.86,
    "s": 8.58,
-   "b": false
+   "b": false,
+   "w": 201.61
   },
   {
    "k": "page2.otherAllergies",
    "x": 402.77,
    "y": 576.86,
    "s": 8.58,
-   "b": false
+   "b": false,
+   "w": 173.56
   },
   {
    "k": "footer.age",
    "x": 415.66,
    "y": 618.44,
    "s": 8.58,
-   "b": false
+   "b": false,
+   "w": 48.14
   },
   {
    "k": "footer.ward",
    "x": 464.8,
    "y": 660.02,
    "s": 8.58,
-   "b": false
+   "b": false,
+   "w": 111.53
   },
   {
    "k": "footer.surname",
    "x": 29.22,
    "y": 632.12,
    "s": 9.44,
-   "b": true
+   "b": true,
+   "w": 348.13
   },
   {
    "k": "footer.givenName",
    "x": 29.22,
    "y": 659.84,
    "s": 9.44,
-   "b": true
+   "b": true,
+   "w": 188.41
   },
   {
    "k": "footer.mi",
    "x": 233.81,
    "y": 659.84,
    "s": 9.44,
-   "b": true
+   "b": true,
+   "w": 158.06
   },
   {
    "k": "footer.hospNo",
@@ -420,7 +431,8 @@
    "y": 632.3,
    "s": 8.58,
    "b": false,
-   "al": "r"
+   "al": "r",
+   "w": 171.89
   }
  ],
  "checks": [

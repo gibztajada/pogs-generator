@@ -649,189 +649,216 @@
    "x": 167.2,
    "y": 81.05,
    "s": 6.9,
-   "b": true
+   "b": true,
+   "w": 38.12
   },
   {
    "k": "page5.fetusTime",
    "x": 236.43,
    "y": 80.69,
    "s": 8.62,
-   "b": true
+   "b": true,
+   "w": 71.01
   },
   {
    "k": "page5.attendedBy",
    "x": 379.39,
    "y": 80.69,
    "s": 8.62,
-   "b": true
+   "b": true,
+   "w": 196.61
   },
   {
    "k": "page5.repeatCs.indication",
    "x": 206.32,
    "y": 313.44,
    "s": 8.62,
-   "b": true
+   "b": true,
+   "w": 369.68
   },
   {
    "k": "page5.placentaDate",
    "x": 239.48,
    "y": 355.58,
    "s": 6.9,
-   "b": true
+   "b": true,
+   "w": 38.12
   },
   {
    "k": "page5.placentaTime",
    "x": 337.22,
    "y": 355.21,
    "s": 8.62,
-   "b": true
+   "b": true,
+   "w": 41.17
   },
   {
    "k": "page5.placentaBy",
    "x": 402.6,
    "y": 355.21,
    "s": 8.62,
-   "b": true
+   "b": true,
+   "w": 173.4
   },
   {
    "k": "page5.postpartumBp",
    "x": 241.47,
    "y": 396.99,
    "s": 8.62,
-   "b": true
+   "b": true,
+   "w": 65.97
   },
   {
    "k": "page5.bloodLoss",
    "x": 247.44,
    "y": 410.91,
    "s": 8.62,
-   "b": true
+   "b": true,
+   "w": 60.0
   },
   {
    "k": "page5.complications",
    "x": 130.07,
    "y": 522.32,
    "s": 8.62,
-   "b": false
+   "b": false,
+   "w": 445.93
   },
   {
    "k": "page5.babySex",
    "x": 185.1,
    "y": 591.94,
    "s": 8.62,
-   "b": true
+   "b": true,
+   "w": 51.39
   },
   {
    "k": "page5.babyWeight",
    "x": 314.41,
    "y": 591.94,
    "s": 8.62,
-   "b": true
+   "b": true,
+   "w": 81.66
   },
   {
    "k": "page5.babyLength",
    "x": 437.42,
    "y": 591.94,
    "s": 8.62,
-   "b": true
+   "b": true,
+   "w": 138.58
   },
   {
    "k": "page5.apgar1",
    "x": 196.38,
    "y": 605.87,
    "s": 8.62,
-   "b": true
+   "b": true,
+   "w": 40.11
   },
   {
    "k": "page5.apgar5",
    "x": 323.69,
    "y": 605.87,
    "s": 8.62,
-   "b": true
+   "b": true,
+   "w": 81.01
   },
   {
    "k": "page5.pediatricAging",
    "x": 500.74,
    "y": 605.87,
    "s": 8.62,
-   "b": true
+   "b": true,
+   "w": 75.26
   },
   {
    "k": "page5.resuscitations",
    "x": 117.8,
    "y": 619.79,
    "s": 8.62,
-   "b": true
+   "b": true,
+   "w": 118.69
   },
   {
    "k": "page5.sga",
    "x": 276.95,
    "y": 619.79,
    "s": 8.62,
-   "b": true
+   "b": true,
+   "w": 101.44
   },
   {
    "k": "page5.aga",
    "x": 402.6,
    "y": 619.79,
    "s": 8.62,
-   "b": false
+   "b": false,
+   "w": 66.64
   },
   {
    "k": "page5.lga",
    "x": 493.12,
    "y": 619.79,
    "s": 8.62,
-   "b": true
+   "b": true,
+   "w": 82.88
   },
   {
    "k": "page5.abnormalities",
    "x": 117.8,
    "y": 633.72,
    "s": 8.62,
-   "b": true
+   "b": true,
+   "w": 458.2
   },
   {
    "k": "footer.age",
    "x": 456.01,
    "y": 661.57,
    "s": 8.62,
-   "b": false
+   "b": false,
+   "w": 37.76
   },
   {
    "k": "footer.ward",
    "x": 494.77,
    "y": 703.35,
    "s": 8.62,
-   "b": false
+   "b": false,
+   "w": 81.23
   },
   {
    "k": "page5.primaryCs.indication",
    "x": 206.32,
    "y": 268.31,
    "s": 8.62,
-   "b": true
+   "b": true,
+   "w": 369.68
   },
   {
    "k": "footer.surname",
    "x": 29.27,
    "y": 675.49,
    "s": 8.62,
-   "b": false
+   "b": false,
+   "w": 372.33
   },
   {
    "k": "footer.givenName",
    "x": 29.27,
    "y": 703.35,
    "s": 8.62,
-   "b": false
+   "b": false,
+   "w": 176.05
   },
   {
    "k": "footer.mi",
    "x": 237.49,
    "y": 703.35,
    "s": 8.62,
-   "b": false
+   "b": false,
+   "w": 190.64
   },
   {
    "k": "footer.hospNo",
@@ -839,7 +866,8 @@
    "y": 675.49,
    "s": 8.62,
    "b": false,
-   "al": "r"
+   "al": "r",
+   "w": 153.48
   }
  ],
  "checks": [

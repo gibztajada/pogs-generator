@@ -635,105 +635,120 @@
    "x": 96.81,
    "y": 193.95,
    "s": 7.33,
-   "b": true
+   "b": true,
+   "w": 435.34
   },
   {
    "k": "page3.examTime",
    "x": 255.22,
    "y": 87.4,
    "s": 7.33,
-   "b": true
+   "b": true,
+   "w": 33.39
   },
   {
    "k": "page3.bp",
    "x": 121.61,
    "y": 99.24,
    "s": 7.33,
-   "b": true
+   "b": true,
+   "w": 53.47
   },
   {
    "k": "page3.hr",
    "x": 207.3,
    "y": 99.24,
    "s": 7.33,
-   "b": true
+   "b": true,
+   "w": 32.04
   },
   {
    "k": "page3.rr",
    "x": 267.06,
    "y": 99.24,
    "s": 7.33,
-   "b": true
+   "b": true,
+   "w": 18.5
   },
   {
    "k": "page3.temp",
    "x": 316.1,
    "y": 99.24,
    "s": 7.33,
-   "b": true
+   "b": true,
+   "w": 25.79
   },
   {
    "k": "page3.wt",
    "x": 362.33,
    "y": 99.24,
    "s": 7.33,
-   "b": true
+   "b": true,
+   "w": 17.26
   },
   {
    "k": "page3.ht",
    "x": 395.03,
    "y": 99.24,
    "s": 7.33,
-   "b": true
+   "b": true,
+   "w": 16.41
   },
   {
    "k": "page3.bmi",
    "x": 428.16,
    "y": 99.24,
    "s": 7.33,
-   "b": true
+   "b": true,
+   "w": 30.51
   },
   {
    "k": "page3.ps",
    "x": 472.13,
    "y": 99.24,
    "s": 7.33,
-   "b": true
+   "b": true,
+   "w": 23.94
   },
   {
    "k": "page3.gcs",
    "x": 514.98,
    "y": 99.24,
    "s": 7.33,
-   "b": true
+   "b": true,
+   "w": 17.17
   },
   {
    "k": "page3.abdomen",
    "x": 172.91,
    "y": 229.46,
    "s": 7.33,
-   "b": true
+   "b": true,
+   "w": 359.24
   },
   {
    "k": "page3.uterus",
    "x": 379.24,
    "y": 336.01,
    "s": 7.33,
-   "b": true
+   "b": true,
+   "w": 152.91
   },
   {
    "k": "page3.dilatation",
    "x": 258.04,
    "y": 359.69,
    "s": 7.33,
-   "b": true
+   "b": true,
+   "w": 30.57
   },
   {
    "k": "page3.station",
    "x": 256.91,
    "y": 430.72,
    "s": 7.33,
-   "b": true
+   "b": true,
+   "w": 275.24
   },
   {
    "k": "page1.admittingImpression",
@@ -760,189 +775,216 @@
    "x": 172.91,
    "y": 644.38,
    "s": 7.33,
-   "b": false
+   "b": false,
+   "w": 359.24
   },
   {
    "k": "footer.age",
    "x": 417.32,
    "y": 703.58,
    "s": 7.33,
-   "b": false
+   "b": false,
+   "w": 32.52
   },
   {
    "k": "footer.ward",
    "x": 450.84,
    "y": 739.09,
    "s": 7.33,
-   "b": false
+   "b": false,
+   "w": 81.31
   },
   {
    "k": "page3.examDate",
    "x": 193.21,
    "y": 87.4,
    "s": 7.33,
-   "b": true
+   "b": true,
+   "w": 40.71
   },
   {
    "k": "page3.examiner",
    "x": 429.42,
    "y": 85.68,
    "s": 7.33,
-   "b": true
+   "b": true,
+   "w": 102.73
   },
   {
    "k": "page3.heent",
    "x": 96.81,
    "y": 182.11,
    "s": 7.33,
-   "b": false
+   "b": false,
+   "w": 435.34
   },
   {
    "k": "page3.chestLungs",
    "x": 172.91,
    "y": 205.79,
    "s": 7.33,
-   "b": false
+   "b": false,
+   "w": 359.24
   },
   {
    "k": "page3.cardiovascular",
    "x": 172.91,
    "y": 217.63,
    "s": 7.33,
-   "b": false
+   "b": false,
+   "w": 359.24
   },
   {
    "k": "page3.fh",
    "x": 172.91,
    "y": 241.3,
    "s": 7.33,
-   "b": true
+   "b": true,
+   "w": 61.01
   },
   {
    "k": "page3.efw",
    "x": 256.91,
    "y": 241.3,
    "s": 7.33,
-   "b": true
+   "b": true,
+   "w": 63.58
   },
   {
    "k": "page3.fht",
    "x": 340.91,
    "y": 241.3,
    "s": 7.33,
-   "b": true
+   "b": true,
+   "w": 191.24
   },
   {
    "k": "page3.l1",
    "x": 172.91,
    "y": 253.14,
    "s": 7.33,
-   "b": true
+   "b": true,
+   "w": 61.01
   },
   {
    "k": "page3.l2",
    "x": 256.91,
    "y": 253.14,
    "s": 7.33,
-   "b": true
+   "b": true,
+   "w": 68.86
   },
   {
    "k": "page3.l3",
    "x": 340.91,
    "y": 253.14,
    "s": 7.33,
-   "b": true
+   "b": true,
+   "w": 94.8
   },
   {
    "k": "page3.l4",
    "x": 450.84,
    "y": 253.14,
    "s": 7.33,
-   "b": true
+   "b": true,
+   "w": 81.31
   },
   {
    "k": "page3.genitourinary",
    "x": 172.91,
    "y": 264.98,
    "s": 7.33,
-   "b": true
+   "b": true,
+   "w": 359.24
   },
   {
    "k": "page3.musculoskeletal",
    "x": 172.91,
    "y": 276.82,
    "s": 7.33,
-   "b": true
+   "b": true,
+   "w": 359.24
   },
   {
    "k": "page3.extremities",
    "x": 172.91,
    "y": 288.66,
    "s": 7.33,
-   "b": true
+   "b": true,
+   "w": 359.24
   },
   {
    "k": "page3.cns",
    "x": 96.81,
    "y": 300.5,
    "s": 7.33,
-   "b": true
+   "b": true,
+   "w": 435.34
   },
   {
    "k": "page3.externalGenitals",
    "x": 172.91,
    "y": 336.01,
    "s": 7.33,
-   "b": true
+   "b": true,
+   "w": 167.0
   },
   {
    "k": "page3.vagina",
    "x": 172.91,
    "y": 347.85,
    "s": 7.33,
-   "b": true
+   "b": true,
+   "w": 359.24
   },
   {
    "k": "page3.effacement",
    "x": 242.25,
    "y": 371.53,
    "s": 7.33,
-   "b": true
+   "b": true,
+   "w": 46.36
   },
   {
    "k": "page3.referredFromTo",
    "x": 172.91,
    "y": 620.7,
    "s": 7.33,
-   "b": false
+   "b": false,
+   "w": 359.24
   },
   {
    "k": "page3.doneOn",
    "x": 172.91,
    "y": 665.21,
    "s": 7.33,
-   "b": false
+   "b": false,
+   "w": 359.24
   },
   {
    "k": "footer.surname",
    "x": 70.31,
    "y": 715.41,
    "s": 7.33,
-   "b": false
+   "b": false,
+   "w": 322.59
   },
   {
    "k": "footer.givenName",
    "x": 70.31,
    "y": 739.09,
    "s": 7.33,
-   "b": false
+   "b": false,
+   "w": 218.3
   },
   {
    "k": "footer.mi",
    "x": 310.47,
    "y": 737.96,
    "s": 7.33,
-   "b": false
+   "b": false,
+   "w": 93.14
   },
   {
    "k": "footer.hospNo",
@@ -950,7 +992,8 @@
    "y": 715.41,
    "s": 7.33,
    "b": false,
-   "al": "r"
+   "al": "r",
+   "w": 121.31
   }
  ],
  "checks": [

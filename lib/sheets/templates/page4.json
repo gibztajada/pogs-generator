@@ -669,105 +669,120 @@
    "x": 89.91,
    "y": 69.85,
    "s": 4.88,
-   "b": true
+   "b": true,
+   "w": 28.01
   },
   {
    "k": "page4.onsetTime",
    "x": 139.43,
    "y": 69.85,
    "s": 4.88,
-   "b": true
+   "b": true,
+   "w": 60.65
   },
   {
    "k": "page4.delivery",
    "x": 89.91,
    "y": 91.23,
    "s": 5.36,
-   "b": true
+   "b": true,
+   "w": 110.17
   },
   {
    "k": "page4.placenta",
    "x": 89.91,
    "y": 99.11,
    "s": 5.36,
-   "b": true
+   "b": true,
+   "w": 110.17
   },
   {
    "k": "page4.totalDuration",
    "x": 247.1,
    "y": 69.85,
    "s": 4.88,
-   "b": true
+   "b": true,
+   "w": 94.8
   },
   {
    "k": "page4.firstStage",
    "x": 247.1,
    "y": 83.36,
    "s": 4.88,
-   "b": true
+   "b": true,
+   "w": 94.8
   },
   {
    "k": "page4.secondStage",
    "x": 247.1,
    "y": 91.23,
    "s": 4.88,
-   "b": true
+   "b": true,
+   "w": 94.8
   },
   {
    "k": "page4.thirdStage",
    "x": 247.1,
    "y": 99.11,
    "s": 4.88,
-   "b": true
+   "b": true,
+   "w": 94.8
   },
   {
    "k": "page4.promHours",
    "x": 131.88,
    "y": 296.08,
    "s": 4.88,
-   "b": false
+   "b": false,
+   "w": 7.05
   },
   {
    "k": "footer.age",
    "x": 274.82,
    "y": 445.77,
    "s": 4.88,
-   "b": false
+   "b": false,
+   "w": 19.43
   },
   {
    "k": "footer.ward",
    "x": 295.25,
    "y": 469.4,
    "s": 4.88,
-   "b": false
+   "b": false,
+   "w": 63.15
   },
   {
    "k": "page4.fullDilatation",
    "x": 90.41,
    "y": 83.25,
    "s": 5.36,
-   "b": true
+   "b": true,
+   "w": 109.67
   },
   {
    "k": "footer.surname",
    "x": 25.13,
    "y": 453.65,
    "s": 4.88,
-   "b": false
+   "b": false,
+   "w": 221.47
   },
   {
    "k": "footer.givenName",
    "x": 25.13,
    "y": 469.4,
    "s": 4.88,
-   "b": false
+   "b": false,
+   "w": 113.8
   },
   {
    "k": "footer.mi",
    "x": 156.81,
    "y": 468.65,
    "s": 4.88,
-   "b": false
+   "b": false,
+   "w": 98.8
   },
   {
    "k": "footer.hospNo",
@@ -775,7 +790,8 @@
    "y": 453.65,
    "s": 4.88,
    "b": false,
-   "al": "r"
+   "al": "r",
+   "w": 99.53
   }
  ],
  "checks": [
