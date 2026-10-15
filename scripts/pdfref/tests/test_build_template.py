@@ -97,3 +97,15 @@ def test_fit_width_sets_transform_and_drops_outside():
     t = build(p, {"page": 4, "fitWidth": {"frame": [18, 54, 318, 500], "targetRight": 578.3}}, {})
     assert [x["t"] for x in t["texts"]] == ["IN"]
     assert abs(t["transform"]["k"] - (578.3 - 18) / 300) < 1e-3
+
+
+def test_table_consumes_region_before_auto_field_can_claim():
+    p = page_with([(60, 500, "1", False), (200, 200, "1", False)])
+    m = {"page": 1,
+         "fields": [{"key": "p.num"}],
+         "tables": [{"key": "p.ob", "region": [40, 490, 300, 20], "columns": {"order": 60},
+                     "firstBaseline": 500, "pitch": 10, "rows": 1, "size": 8}]}
+    t = build(p, m, {"p.num": "1"})
+    assert t["texts"] == []
+    num = [f for f in t["fields"] if f["k"] == "p.num"]
+    assert len(num) == 1 and abs(num[0]["y"] - 200) < 0.5

@@ -85,6 +85,15 @@ def build(page, mapping, view, exclude_keys=frozenset()):
         c = chars[k]
         tpl["fields"].append({"k": sp["key"], "x": r2(c["origin"][0]), "y": r2(c["origin"][1]), "s": r2(hit["size"]), "b": span_bold(hit)})
 
+    for t in mapping.get("tables", []):
+        for s in spans:
+            if not s["used"] and inside(center(s["bbox"]), t["region"]):
+                s["used"] = True
+        for r in range(t["rows"]):
+            y = t["firstBaseline"] + r * t["pitch"]
+            for col, x in t["columns"].items():
+                tpl["fields"].append({"k": f"{t['key']}.{r}.{col}", "x": r2(x), "y": r2(y), "s": r2(t["size"]), "b": bool(t.get("bold", False))})
+
     fields = mapping.get("fields", [])
     for f in sorted(fields, key=lambda f: 0 if ("box" in f or "at" in f or "near" in f) else 1):
         key = f["key"]
@@ -122,15 +131,6 @@ def build(page, mapping, view, exclude_keys=frozenset()):
             for s in cands:
                 s["used"] = True
                 tpl["fields"].append(field_from_span(key, s, f.get("align"), f.get("size"), f.get("bold")))
-
-    for t in mapping.get("tables", []):
-        for s in spans:
-            if not s["used"] and inside(center(s["bbox"]), t["region"]):
-                s["used"] = True
-        for r in range(t["rows"]):
-            y = t["firstBaseline"] + r * t["pitch"]
-            for col, x in t["columns"].items():
-                tpl["fields"].append({"k": f"{t['key']}.{r}.{col}", "x": r2(x), "y": r2(y), "s": r2(t["size"]), "b": bool(t.get("bold", False))})
 
     for m in mapping.get("marks", []):
         if "at" in m:
@@ -237,6 +237,7 @@ def main(n):
     view = json.loads((ROOT / "fixtures" / "sostino.view.json").read_text(encoding="utf-8"))
     tpl = build(ref_page(n), mapping, view, selection_keys())
     out = ROOT / "lib" / "sheets" / "templates" / f"page{n}.json"
+    out.parent.mkdir(parents=True, exist_ok=True)
     out.write_text(json.dumps(tpl, indent=1), encoding="utf-8")
     review = ROOT / "fixtures" / "review"
     review.mkdir(parents=True, exist_ok=True)
