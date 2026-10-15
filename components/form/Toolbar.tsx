@@ -48,7 +48,7 @@ export function Toolbar({ getValues, reset, notify, onDownload }: {
       <input ref={fileRef} type="file" accept="application/json,.json" hidden data-testid="load-input"
         onChange={(e) => { const f = e.target.files?.[0]; if (f) void load(f); e.target.value = ''; }} />
       <button type="button" className={btn} onClick={() => { if (confirm('Clear all fields for a new patient?')) reset(emptyForm()); }}>New patient</button>
-      <button type="button" className={btn} onClick={() => reset(sampleForm())}>Load sample</button>
+      <button type="button" className={btn} onClick={() => { if (confirm('Replace all fields with the sample patient?')) reset(sampleForm()); }}>Load sample</button>
     </div>
   );
 }

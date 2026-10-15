@@ -33,6 +33,16 @@ test('save → new → load round-trip', async ({ page }) => {
   expect(JSON.parse(fs.readFileSync(file!, 'utf8')).patient.lastName).toBe('ROUNDTRIP');
 });
 
+test('load sample asks first; dismissing keeps the form', async ({ page }) => {
+  await page.getByLabel('Last name').fill('KEEP');
+  page.once('dialog', (d) => d.dismiss());
+  await page.getByRole('button', { name: 'Load sample' }).click();
+  await expect(page.getByLabel('Last name')).toHaveValue('KEEP');
+  page.once('dialog', (d) => d.accept());
+  await page.getByRole('button', { name: 'Load sample' }).click();
+  await expect(page.getByLabel('Last name')).toHaveValue('DELA CRUZ');
+});
+
 test('invalid file shows error and keeps form', async ({ page }) => {
   await page.getByLabel('Last name').fill('KEEP');
   await page.getByTestId('load-input').setInputFiles({ name: 'x.json', mimeType: 'application/json', buffer: Buffer.from('nope') });
