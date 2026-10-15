@@ -5,8 +5,17 @@ import { PNG } from 'pngjs';
 import pixelmatch from 'pixelmatch';
 
 const MAX_RATIO: Record<number, number> = { 1: 0.015, 2: 0.015, 3: 0.015, 4: 0.015, 5: 0.015, 6: 0.015 };
+const MAX_INK_RATIO: Record<number, number> = { 1: 0.1, 2: 0.1, 3: 0.1, 4: 0.1, 5: 0.1, 6: 0.1 };
 const ref = (n: number) => path.join('tests', 'fidelity', 'reference', `page${n}.png`);
 const out = path.join('tests', 'fidelity', 'output');
+const inkCount = (a: PNG, b: PNG) => {
+  let n = 0;
+  for (let i = 0; i < a.data.length; i += 4) {
+    const dark = (d: Buffer, j: number) => d[j] < 240 || d[j + 1] < 240 || d[j + 2] < 240;
+    if (dark(a.data, i) || dark(b.data, i)) n++;
+  }
+  return n;
+};
 
 for (const n of [1, 2, 3, 4, 5, 6]) {
   test(`page ${n} matches reference`, async ({ page }) => {
@@ -28,7 +37,9 @@ for (const n of [1, 2, 3, 4, 5, 6]) {
     fs.writeFileSync(path.join(out, `page${n}.actual.png`), PNG.sync.write(b));
     fs.writeFileSync(path.join(out, `page${n}.diff.png`), PNG.sync.write(diff));
     const ratio = bad / (w * h);
-    console.log(`page ${n}: mismatch ${(ratio * 100).toFixed(3)}%`);
+    const inkRatio = bad / Math.max(inkCount(a, b), 1);
+    console.log(`page ${n}: mismatch ${(ratio * 100).toFixed(3)}% ink-mismatch ${(inkRatio * 100).toFixed(3)}%`);
     expect(ratio).toBeLessThan(MAX_RATIO[n]);
+    expect(inkRatio).toBeLessThan(MAX_INK_RATIO[n]);
   });
 }
