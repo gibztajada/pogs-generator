@@ -49,6 +49,7 @@ describe('coerceForm', () => {
 
 describe('parseFormFile', () => {
   test('throws on non-JSON', () => expect(() => parseFormFile('nope')).toThrow('Not a valid JSON file'));
+  test.each(['[]', '5', 'null', '"x"'])('throws on non-object root %s', (t) => expect(() => parseFormFile(t)).toThrow('Not a POGS form file'));
 });
 
 describe('draft', () => {

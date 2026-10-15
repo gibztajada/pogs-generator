@@ -67,6 +67,7 @@ export function serializeForm(form: PogsForm): string {
 export function parseFormFile(text: string): { form: PogsForm; skipped: string[] } {
   let raw: unknown;
   try { raw = JSON.parse(text); } catch { throw new Error('Not a valid JSON file'); }
+  if (!isObj(raw)) throw new Error('Not a POGS form file');
   return coerceForm(raw);
 }
 
