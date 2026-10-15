@@ -109,3 +109,15 @@ def test_table_consumes_region_before_auto_field_can_claim():
     assert t["texts"] == []
     num = [f for f in t["fields"] if f["k"] == "p.num"]
     assert len(num) == 1 and abs(num[0]["y"] - 200) < 0.5
+
+
+def test_explicit_near_field_claims_span_inside_table_region():
+    p = page_with([(50, 100, "Anchor:", True), (60, 500, "INSIDEVAL", False)])
+    m = {"page": 1,
+         "fields": [{"key": "p.v", "near": "Anchor:"}],
+         "tables": [{"key": "p.ob", "region": [40, 490, 300, 20], "columns": {"order": 60},
+                     "firstBaseline": 500, "pitch": 10, "rows": 1, "size": 8}]}
+    t = build(p, m, {"p.v": "INSIDEVAL"})
+    assert [x["t"] for x in t["texts"]] == ["Anchor:"]
+    keys = [f["k"] for f in t["fields"]]
+    assert "p.v" in keys and "p.ob.0.order" in keys

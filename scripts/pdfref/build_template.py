@@ -85,17 +85,7 @@ def build(page, mapping, view, exclude_keys=frozenset()):
         c = chars[k]
         tpl["fields"].append({"k": sp["key"], "x": r2(c["origin"][0]), "y": r2(c["origin"][1]), "s": r2(hit["size"]), "b": span_bold(hit)})
 
-    for t in mapping.get("tables", []):
-        for s in spans:
-            if not s["used"] and inside(center(s["bbox"]), t["region"]):
-                s["used"] = True
-        for r in range(t["rows"]):
-            y = t["firstBaseline"] + r * t["pitch"]
-            for col, x in t["columns"].items():
-                tpl["fields"].append({"k": f"{t['key']}.{r}.{col}", "x": r2(x), "y": r2(y), "s": r2(t["size"]), "b": bool(t.get("bold", False))})
-
-    fields = mapping.get("fields", [])
-    for f in sorted(fields, key=lambda f: 0 if ("box" in f or "at" in f or "near" in f) else 1):
+    def place_field(f):
         key = f["key"]
         val = view.get(key, "")
         if "box" in f:
@@ -131,6 +121,27 @@ def build(page, mapping, view, exclude_keys=frozenset()):
             for s in cands:
                 s["used"] = True
                 tpl["fields"].append(field_from_span(key, s, f.get("align"), f.get("size"), f.get("bold")))
+
+    def is_explicit(f):
+        return "box" in f or "at" in f or "near" in f
+
+    fields = mapping.get("fields", [])
+    for f in fields:
+        if is_explicit(f):
+            place_field(f)
+
+    for t in mapping.get("tables", []):
+        for s in spans:
+            if not s["used"] and inside(center(s["bbox"]), t["region"]):
+                s["used"] = True
+        for r in range(t["rows"]):
+            y = t["firstBaseline"] + r * t["pitch"]
+            for col, x in t["columns"].items():
+                tpl["fields"].append({"k": f"{t['key']}.{r}.{col}", "x": r2(x), "y": r2(y), "s": r2(t["size"]), "b": bool(t.get("bold", False))})
+
+    for f in fields:
+        if not is_explicit(f):
+            place_field(f)
 
     for m in mapping.get("marks", []):
         if "at" in m:
