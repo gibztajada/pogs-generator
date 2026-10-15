@@ -1,0 +1,39 @@
+{
+  "page": 2,
+  "fields": [
+    { "key": "page2.hpi", "box": [29.22, 179.68, 546.12, 69.66], "size": 8.58 },
+    { "key": "page2.pastHistory", "box": [29.22, 278.68, 546.12, 65.04], "size": 8.58 },
+    { "key": "page2.familyHistory", "box": [29.22, 373.06, 546.12, 36.66], "size": 8.58 },
+    { "key": "page2.personalSocialHistory", "box": [29.22, 439.05, 546.12, 41.94], "size": 8.58 },
+    { "key": "page2.occupation", "box": [29.22, 513.67, 241.21, 50.48], "size": 8.58 },
+    { "key": "page2.alcohol", "near": "Alcohol:" },
+    { "key": "page2.tobacco", "near": "Tobacco/Cigarette:" },
+    { "key": "page2.drugAllergies", "near": "Drug/Allergies:" },
+    { "key": "page2.drugTherapy", "near": "Drug Therapy:" },
+    { "key": "page2.otherAllergies", "near": "Other Allergies:" },
+    { "key": "footer.surname" }, { "key": "footer.givenName" }, { "key": "footer.mi" },
+    { "key": "footer.age", "near": "Age:" },
+    { "key": "footer.hospNo", "align": "r" },
+    { "key": "footer.ward", "near": "Ward/Rm:" }
+  ],
+  "splits": [ { "label": "Others:", "key": "page2.antenatalRisksOther" } ],
+  "checks": [
+    { "key": "page2.antenatalRisks", "value": "Anemia", "label": "Anemia" },
+    { "key": "page2.antenatalRisks", "value": "HTN/Preclampsia/CHVD", "label": "HTN/Preclampsia/CHVD" },
+    { "key": "page2.antenatalRisks", "value": "Fetal Wastage", "label": "Fetal Wastage" },
+    { "key": "page2.antenatalRisks", "value": "Previous CS/Surgery", "label": "Previous CS/Surgery" },
+    { "key": "page2.antenatalRisks", "value": "Cardiac", "label": "Cardiac" },
+    { "key": "page2.antenatalRisks", "value": "Premature labor", "label": "Premature labor" },
+    { "key": "page2.antenatalRisks", "value": "UTI", "label": "UTI" },
+    { "key": "page2.antenatalRisks", "value": "Renal", "label": "Renal" },
+    { "key": "page2.antenatalRisks", "value": "IUGR", "label": "IUGR" },
+    { "key": "page2.antenatalRisks", "value": "Infections LC Tracts", "label": "Infections LC Tracts" },
+    { "key": "page2.antenatalRisks", "value": "Diabetes Mellitus", "label": "Diabetes Mellitus" },
+    { "key": "page2.antenatalRisks", "value": "Infertility", "label": "Infertility" },
+    { "key": "page2.antenatalRisks", "value": "Nutritional (1/2-21 lbs/wk)", "label": "Nutritional (1/2-21 lbs/wk)" },
+    { "key": "page2.antenatalRisks", "value": "Respiratory", "label": "Respiratory" },
+    { "key": "page2.antenatalRisks", "value": "Others", "label": "Others:" },
+    { "key": "footer.sex", "value": "M", "label": "M", "near": "Sex:" },
+    { "key": "footer.sex", "value": "F", "label": "F", "near": "Sex:" }
+  ]
+}
