@@ -17,3 +17,6 @@ next-env.d.ts
 playwright-report/
 test-results/
 coverage/
+
+# SDD scratch
+.superpowers/
