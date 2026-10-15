@@ -1,1 +1,1984 @@
-{ "page": 6, "width": 595, "height": 842, "paths": [], "texts": [], "fields": [], "checks": [], "marks": [], "images": [] }
+{
+ "page": 6,
+ "width": 595.0,
+ "height": 842.0,
+ "paths": [
+  {
+   "d": "M18.0 54.0L577.58 54.0L577.58 165.68L18.0 165.68L18.0 54.0",
+   "fill": "#ffffff"
+  },
+  {
+   "d": "M18.0 165.68L26.19 165.68L26.19 635.22L18.0 635.22L18.0 165.68",
+   "fill": "#ffffff"
+  },
+  {
+   "d": "M571.15 165.68L577.58 165.68L577.58 190.24L571.15 190.24L571.15 165.68",
+   "fill": "#ffffff"
+  },
+  {
+   "d": "M26.19 190.24L577.58 190.24L577.58 635.22L26.19 635.22L26.19 190.24",
+   "fill": "#ffffff"
+  },
+  {
+   "d": "M25.6 165.1L571.15 165.1L571.15 190.24L25.6 190.24L25.6 165.1",
+   "fill": "#d9d9d9"
+  },
+  {
+   "d": "M25.6 61.02L25.6 598.38M25.02 61.6L577.58 61.6M25.02 597.8L577.58 597.8M577.0 61.02L577.0 598.38",
+   "stroke": "#000000",
+   "sw": 1.17
+  },
+  {
+   "d": "M58.05 165.1L58.05 524.71M87.88 177.38L87.88 524.71M115.36 177.38L115.36 524.71M146.93 177.38L146.93 524.71M182.02 177.38L182.02 524.71M57.76 177.67L215.64 177.67M215.35 165.1L215.35 524.71M26.19 585.81L215.64 585.81M242.83 165.1L242.83 524.71M272.65 177.38L272.65 190.24M26.19 561.25L272.94 561.25M305.39 177.38L305.39 190.24M338.14 79.14L338.14 153.4M338.14 165.1L338.14 524.71M242.54 585.81L338.43 585.81M373.22 177.38L373.22 190.24M402.46 177.38L402.46 190.24M432.86 177.38L432.86 190.24M402.17 548.97L433.16 548.97M460.93 177.38L460.93 190.24M242.54 177.67L498.65 177.67M498.35 165.1L498.35 524.71M531.1 165.1L531.1 524.71M26.19 67.16L571.15 67.16M26.19 79.44L571.15 79.44M26.19 103.99L571.15 103.99M337.85 128.55L571.15 128.55M26.19 153.11L571.15 153.11M570.86 66.86L570.86 153.4M26.19 165.39L571.15 165.39M26.19 189.95L571.15 189.95M26.19 215.68L571.15 215.68M26.19 241.41L571.15 241.41M26.19 267.13L571.15 267.13M26.19 292.86L571.15 292.86M26.19 318.59L571.15 318.59M26.19 344.32L571.15 344.32M26.19 370.05L571.15 370.05M26.19 395.77L571.15 395.77M26.19 421.5L571.15 421.5M26.19 447.23L571.15 447.23M26.19 472.96L571.15 472.96M26.19 498.69L571.15 498.69M26.19 524.41L571.15 524.41M570.86 165.1L570.86 524.71M460.64 561.25L576.42 561.25M460.64 585.81L576.42 585.81",
+   "stroke": "#000000",
+   "sw": 0.58
+  }
+ ],
+ "texts": [
+  {
+   "t": "ANTEPARTUM MONITORING",
+   "x": 246.04,
+   "y": 75.75,
+   "s": 7.6,
+   "b": true
+  },
+  {
+   "t": "NAME:",
+   "x": 27.94,
+   "y": 88.03,
+   "s": 7.6,
+   "b": true
+  },
+  {
+   "t": "DATE/TIME OF ADMISSION:",
+   "x": 340.19,
+   "y": 88.03,
+   "s": 7.6,
+   "b": true
+  },
+  {
+   "t": "ADMITTING DIAGNOSIS:",
+   "x": 27.94,
+   "y": 112.59,
+   "s": 7.6,
+   "b": true
+  },
+  {
+   "t": "ATTENDING PHYSICIANS:",
+   "x": 340.19,
+   "y": 112.59,
+   "s": 7.6,
+   "b": true
+  },
+  {
+   "t": "HOSPITAL NUMBER:",
+   "x": 340.19,
+   "y": 137.14,
+   "s": 7.6,
+   "b": true
+  },
+  {
+   "t": "DATE/",
+   "x": 30.86,
+   "y": 176.19,
+   "s": 6.84,
+   "b": true
+  },
+  {
+   "t": "TIME",
+   "x": 33.79,
+   "y": 184.04,
+   "s": 6.84,
+   "b": true
+  },
+  {
+   "t": "VITAL SIGNS",
+   "x": 115.06,
+   "y": 173.85,
+   "s": 6.84,
+   "b": true
+  },
+  {
+   "t": "FHT",
+   "x": 222.07,
+   "y": 179.69,
+   "s": 6.84,
+   "b": true
+  },
+  {
+   "t": "UTERINE CONTRACTIONS",
+   "x": 246.63,
+   "y": 173.85,
+   "s": 6.84,
+   "b": true
+  },
+  {
+   "t": "INTERNAL EXAMINATION",
+   "x": 375.85,
+   "y": 173.85,
+   "s": 6.84,
+   "b": true
+  },
+  {
+   "t": "NST/",
+   "x": 506.83,
+   "y": 176.19,
+   "s": 6.84,
+   "b": true
+  },
+  {
+   "t": "CTG",
+   "x": 508.14,
+   "y": 184.04,
+   "s": 6.84,
+   "b": true
+  },
+  {
+   "t": "REMARKS",
+   "x": 533.15,
+   "y": 179.69,
+   "s": 6.84,
+   "b": true
+  },
+  {
+   "t": "BP",
+   "x": 68.29,
+   "y": 186.13,
+   "s": 6.84,
+   "b": false
+  },
+  {
+   "t": "HR",
+   "x": 96.35,
+   "y": 186.13,
+   "s": 6.84,
+   "b": false
+  },
+  {
+   "t": "RR",
+   "x": 126.17,
+   "y": 186.13,
+   "s": 6.84,
+   "b": false
+  },
+  {
+   "t": "Temp",
+   "x": 156.0,
+   "y": 186.13,
+   "s": 6.84,
+   "b": false
+  },
+  {
+   "t": "UO",
+   "x": 193.42,
+   "y": 186.13,
+   "s": 6.84,
+   "b": false
+  },
+  {
+   "t": "INTV",
+   "x": 249.55,
+   "y": 186.13,
+   "s": 6.84,
+   "b": false
+  },
+  {
+   "t": "DUR",
+   "x": 281.13,
+   "y": 186.13,
+   "s": 6.84,
+   "b": false
+  },
+  {
+   "t": "INT",
+   "x": 316.21,
+   "y": 186.13,
+   "s": 6.84,
+   "b": false
+  },
+  {
+   "t": "DIL",
+   "x": 350.13,
+   "y": 186.13,
+   "s": 6.84,
+   "b": false
+  },
+  {
+   "t": "EFF",
+   "x": 381.12,
+   "y": 186.13,
+   "s": 6.84,
+   "b": false
+  },
+  {
+   "t": "PRES",
+   "x": 408.01,
+   "y": 186.13,
+   "s": 6.84,
+   "b": false
+  },
+  {
+   "t": "STN",
+   "x": 439.59,
+   "y": 186.13,
+   "s": 6.84,
+   "b": false
+  },
+  {
+   "t": "MEM",
+   "x": 471.16,
+   "y": 186.13,
+   "s": 6.84,
+   "b": false
+  },
+  {
+   "t": "Surname",
+   "x": 27.94,
+   "y": 545.28,
+   "s": 7.6,
+   "b": false
+  },
+  {
+   "t": "Age:",
+   "x": 375.27,
+   "y": 545.28,
+   "s": 7.6,
+   "b": false
+  },
+  {
+   "t": "Hospital No:",
+   "x": 462.98,
+   "y": 545.28,
+   "s": 7.6,
+   "b": false
+  },
+  {
+   "t": "Sex:",
+   "x": 375.27,
+   "y": 557.56,
+   "s": 7.6,
+   "b": false
+  },
+  {
+   "t": "Given Name",
+   "x": 27.94,
+   "y": 569.84,
+   "s": 7.6,
+   "b": false
+  },
+  {
+   "t": "M",
+   "x": 404.51,
+   "y": 569.84,
+   "s": 7.6,
+   "b": false
+  },
+  {
+   "t": "Ward/Rm:",
+   "x": 462.98,
+   "y": 569.84,
+   "s": 7.6,
+   "b": false
+  },
+  {
+   "t": "M.I.",
+   "x": 217.39,
+   "y": 582.12,
+   "s": 7.6,
+   "b": false
+  },
+  {
+   "t": "F",
+   "x": 404.51,
+   "y": 582.12,
+   "s": 7.6,
+   "b": false
+  },
+  {
+   "t": "MSD-OB.GYNE-F-1 Rev. 4",
+   "x": 483.74,
+   "y": 606.68,
+   "s": 7.6,
+   "b": false
+  },
+  {
+   "t": "September 1, 2025",
+   "x": 510.59,
+   "y": 618.96,
+   "s": 7.6,
+   "b": false
+  },
+  {
+   "t": "Page 6 of 6",
+   "x": 536.36,
+   "y": 631.24,
+   "s": 7.6,
+   "b": false
+  }
+ ],
+ "fields": [
+  {
+   "k": "patient.lastName",
+   "x": 27.94,
+   "y": 100.43,
+   "s": 8.36,
+   "b": true
+  },
+  {
+   "k": "patient.firstName",
+   "x": 117.4,
+   "y": 100.43,
+   "s": 8.36,
+   "b": true
+  },
+  {
+   "k": "patient.middleName",
+   "x": 244.87,
+   "y": 100.43,
+   "s": 8.36,
+   "b": true
+  },
+  {
+   "k": "page1.admittingImpression",
+   "x": 28.19,
+   "y": 114.29,
+   "w": 308.95,
+   "h": 37.82,
+   "s": 7.6,
+   "b": false,
+   "ml": true
+  },
+  {
+   "k": "patient.hospNo",
+   "x": 568.82,
+   "y": 150.26,
+   "s": 9.12,
+   "b": true,
+   "al": "r"
+  },
+  {
+   "k": "footer.surname",
+   "x": 27.94,
+   "y": 557.56,
+   "s": 7.6,
+   "b": false
+  },
+  {
+   "k": "footer.givenName",
+   "x": 27.94,
+   "y": 582.12,
+   "s": 7.6,
+   "b": false
+  },
+  {
+   "k": "footer.age",
+   "x": 422.36,
+   "y": 545.28,
+   "s": 7.6,
+   "b": false
+  },
+  {
+   "k": "footer.hospNo",
+   "x": 574.65,
+   "y": 557.56,
+   "s": 7.6,
+   "b": false,
+   "al": "r"
+  },
+  {
+   "k": "footer.ward",
+   "x": 462.98,
+   "y": 582.12,
+   "s": 7.6,
+   "b": false
+  },
+  {
+   "k": "page6.monitoring.0.dateTime",
+   "x": 27.94,
+   "y": 205.68,
+   "s": 8.36,
+   "b": false
+  },
+  {
+   "k": "page6.monitoring.0.bp",
+   "x": 60.1,
+   "y": 205.68,
+   "s": 8.36,
+   "b": false
+  },
+  {
+   "k": "page6.monitoring.0.hr",
+   "x": 89.88,
+   "y": 205.68,
+   "s": 8.36,
+   "b": false
+  },
+  {
+   "k": "page6.monitoring.0.rr",
+   "x": 117.36,
+   "y": 205.68,
+   "s": 8.36,
+   "b": false
+  },
+  {
+   "k": "page6.monitoring.0.temp",
+   "x": 148.93,
+   "y": 205.68,
+   "s": 8.36,
+   "b": false
+  },
+  {
+   "k": "page6.monitoring.0.uo",
+   "x": 184.06,
+   "y": 205.68,
+   "s": 8.36,
+   "b": false
+  },
+  {
+   "k": "page6.monitoring.0.fht",
+   "x": 217.39,
+   "y": 205.68,
+   "s": 8.36,
+   "b": false
+  },
+  {
+   "k": "page6.monitoring.0.intv",
+   "x": 244.87,
+   "y": 205.68,
+   "s": 8.36,
+   "b": false
+  },
+  {
+   "k": "page6.monitoring.0.dur",
+   "x": 274.65,
+   "y": 205.68,
+   "s": 8.36,
+   "b": false
+  },
+  {
+   "k": "page6.monitoring.0.int",
+   "x": 307.39,
+   "y": 205.68,
+   "s": 8.36,
+   "b": false
+  },
+  {
+   "k": "page6.monitoring.0.dil",
+   "x": 340.19,
+   "y": 205.68,
+   "s": 8.36,
+   "b": false
+  },
+  {
+   "k": "page6.monitoring.0.eff",
+   "x": 375.22,
+   "y": 205.68,
+   "s": 8.36,
+   "b": false
+  },
+  {
+   "k": "page6.monitoring.0.pres",
+   "x": 404.46,
+   "y": 205.68,
+   "s": 8.36,
+   "b": false
+  },
+  {
+   "k": "page6.monitoring.0.stn",
+   "x": 434.86,
+   "y": 205.68,
+   "s": 8.36,
+   "b": false
+  },
+  {
+   "k": "page6.monitoring.0.mem",
+   "x": 462.93,
+   "y": 205.68,
+   "s": 8.36,
+   "b": false
+  },
+  {
+   "k": "page6.monitoring.0.nstCtg",
+   "x": 500.4,
+   "y": 205.68,
+   "s": 8.36,
+   "b": false
+  },
+  {
+   "k": "page6.monitoring.0.remarks",
+   "x": 533.1,
+   "y": 205.68,
+   "s": 8.36,
+   "b": false
+  },
+  {
+   "k": "page6.monitoring.1.dateTime",
+   "x": 27.94,
+   "y": 231.41,
+   "s": 8.36,
+   "b": false
+  },
+  {
+   "k": "page6.monitoring.1.bp",
+   "x": 60.1,
+   "y": 231.41,
+   "s": 8.36,
+   "b": false
+  },
+  {
+   "k": "page6.monitoring.1.hr",
+   "x": 89.88,
+   "y": 231.41,
+   "s": 8.36,
+   "b": false
+  },
+  {
+   "k": "page6.monitoring.1.rr",
+   "x": 117.36,
+   "y": 231.41,
+   "s": 8.36,
+   "b": false
+  },
+  {
+   "k": "page6.monitoring.1.temp",
+   "x": 148.93,
+   "y": 231.41,
+   "s": 8.36,
+   "b": false
+  },
+  {
+   "k": "page6.monitoring.1.uo",
+   "x": 184.06,
+   "y": 231.41,
+   "s": 8.36,
+   "b": false
+  },
+  {
+   "k": "page6.monitoring.1.fht",
+   "x": 217.39,
+   "y": 231.41,
+   "s": 8.36,
+   "b": false
+  },
+  {
+   "k": "page6.monitoring.1.intv",
+   "x": 244.87,
+   "y": 231.41,
+   "s": 8.36,
+   "b": false
+  },
+  {
+   "k": "page6.monitoring.1.dur",
+   "x": 274.65,
+   "y": 231.41,
+   "s": 8.36,
+   "b": false
+  },
+  {
+   "k": "page6.monitoring.1.int",
+   "x": 307.39,
+   "y": 231.41,
+   "s": 8.36,
+   "b": false
+  },
+  {
+   "k": "page6.monitoring.1.dil",
+   "x": 340.19,
+   "y": 231.41,
+   "s": 8.36,
+   "b": false
+  },
+  {
+   "k": "page6.monitoring.1.eff",
+   "x": 375.22,
+   "y": 231.41,
+   "s": 8.36,
+   "b": false
+  },
+  {
+   "k": "page6.monitoring.1.pres",
+   "x": 404.46,
+   "y": 231.41,
+   "s": 8.36,
+   "b": false
+  },
+  {
+   "k": "page6.monitoring.1.stn",
+   "x": 434.86,
+   "y": 231.41,
+   "s": 8.36,
+   "b": false
+  },
+  {
+   "k": "page6.monitoring.1.mem",
+   "x": 462.93,
+   "y": 231.41,
+   "s": 8.36,
+   "b": false
+  },
+  {
+   "k": "page6.monitoring.1.nstCtg",
+   "x": 500.4,
+   "y": 231.41,
+   "s": 8.36,
+   "b": false
+  },
+  {
+   "k": "page6.monitoring.1.remarks",
+   "x": 533.1,
+   "y": 231.41,
+   "s": 8.36,
+   "b": false
+  },
+  {
+   "k": "page6.monitoring.2.dateTime",
+   "x": 27.94,
+   "y": 257.14,
+   "s": 8.36,
+   "b": false
+  },
+  {
+   "k": "page6.monitoring.2.bp",
+   "x": 60.1,
+   "y": 257.14,
+   "s": 8.36,
+   "b": false
+  },
+  {
+   "k": "page6.monitoring.2.hr",
+   "x": 89.88,
+   "y": 257.14,
+   "s": 8.36,
+   "b": false
+  },
+  {
+   "k": "page6.monitoring.2.rr",
+   "x": 117.36,
+   "y": 257.14,
+   "s": 8.36,
+   "b": false
+  },
+  {
+   "k": "page6.monitoring.2.temp",
+   "x": 148.93,
+   "y": 257.14,
+   "s": 8.36,
+   "b": false
+  },
+  {
+   "k": "page6.monitoring.2.uo",
+   "x": 184.06,
+   "y": 257.14,
+   "s": 8.36,
+   "b": false
+  },
+  {
+   "k": "page6.monitoring.2.fht",
+   "x": 217.39,
+   "y": 257.14,
+   "s": 8.36,
+   "b": false
+  },
+  {
+   "k": "page6.monitoring.2.intv",
+   "x": 244.87,
+   "y": 257.14,
+   "s": 8.36,
+   "b": false
+  },
+  {
+   "k": "page6.monitoring.2.dur",
+   "x": 274.65,
+   "y": 257.14,
+   "s": 8.36,
+   "b": false
+  },
+  {
+   "k": "page6.monitoring.2.int",
+   "x": 307.39,
+   "y": 257.14,
+   "s": 8.36,
+   "b": false
+  },
+  {
+   "k": "page6.monitoring.2.dil",
+   "x": 340.19,
+   "y": 257.14,
+   "s": 8.36,
+   "b": false
+  },
+  {
+   "k": "page6.monitoring.2.eff",
+   "x": 375.22,
+   "y": 257.14,
+   "s": 8.36,
+   "b": false
+  },
+  {
+   "k": "page6.monitoring.2.pres",
+   "x": 404.46,
+   "y": 257.14,
+   "s": 8.36,
+   "b": false
+  },
+  {
+   "k": "page6.monitoring.2.stn",
+   "x": 434.86,
+   "y": 257.14,
+   "s": 8.36,
+   "b": false
+  },
+  {
+   "k": "page6.monitoring.2.mem",
+   "x": 462.93,
+   "y": 257.14,
+   "s": 8.36,
+   "b": false
+  },
+  {
+   "k": "page6.monitoring.2.nstCtg",
+   "x": 500.4,
+   "y": 257.14,
+   "s": 8.36,
+   "b": false
+  },
+  {
+   "k": "page6.monitoring.2.remarks",
+   "x": 533.1,
+   "y": 257.14,
+   "s": 8.36,
+   "b": false
+  },
+  {
+   "k": "page6.monitoring.3.dateTime",
+   "x": 27.94,
+   "y": 282.87,
+   "s": 8.36,
+   "b": false
+  },
+  {
+   "k": "page6.monitoring.3.bp",
+   "x": 60.1,
+   "y": 282.87,
+   "s": 8.36,
+   "b": false
+  },
+  {
+   "k": "page6.monitoring.3.hr",
+   "x": 89.88,
+   "y": 282.87,
+   "s": 8.36,
+   "b": false
+  },
+  {
+   "k": "page6.monitoring.3.rr",
+   "x": 117.36,
+   "y": 282.87,
+   "s": 8.36,
+   "b": false
+  },
+  {
+   "k": "page6.monitoring.3.temp",
+   "x": 148.93,
+   "y": 282.87,
+   "s": 8.36,
+   "b": false
+  },
+  {
+   "k": "page6.monitoring.3.uo",
+   "x": 184.06,
+   "y": 282.87,
+   "s": 8.36,
+   "b": false
+  },
+  {
+   "k": "page6.monitoring.3.fht",
+   "x": 217.39,
+   "y": 282.87,
+   "s": 8.36,
+   "b": false
+  },
+  {
+   "k": "page6.monitoring.3.intv",
+   "x": 244.87,
+   "y": 282.87,
+   "s": 8.36,
+   "b": false
+  },
+  {
+   "k": "page6.monitoring.3.dur",
+   "x": 274.65,
+   "y": 282.87,
+   "s": 8.36,
+   "b": false
+  },
+  {
+   "k": "page6.monitoring.3.int",
+   "x": 307.39,
+   "y": 282.87,
+   "s": 8.36,
+   "b": false
+  },
+  {
+   "k": "page6.monitoring.3.dil",
+   "x": 340.19,
+   "y": 282.87,
+   "s": 8.36,
+   "b": false
+  },
+  {
+   "k": "page6.monitoring.3.eff",
+   "x": 375.22,
+   "y": 282.87,
+   "s": 8.36,
+   "b": false
+  },
+  {
+   "k": "page6.monitoring.3.pres",
+   "x": 404.46,
+   "y": 282.87,
+   "s": 8.36,
+   "b": false
+  },
+  {
+   "k": "page6.monitoring.3.stn",
+   "x": 434.86,
+   "y": 282.87,
+   "s": 8.36,
+   "b": false
+  },
+  {
+   "k": "page6.monitoring.3.mem",
+   "x": 462.93,
+   "y": 282.87,
+   "s": 8.36,
+   "b": false
+  },
+  {
+   "k": "page6.monitoring.3.nstCtg",
+   "x": 500.4,
+   "y": 282.87,
+   "s": 8.36,
+   "b": false
+  },
+  {
+   "k": "page6.monitoring.3.remarks",
+   "x": 533.1,
+   "y": 282.87,
+   "s": 8.36,
+   "b": false
+  },
+  {
+   "k": "page6.monitoring.4.dateTime",
+   "x": 27.94,
+   "y": 308.6,
+   "s": 8.36,
+   "b": false
+  },
+  {
+   "k": "page6.monitoring.4.bp",
+   "x": 60.1,
+   "y": 308.6,
+   "s": 8.36,
+   "b": false
+  },
+  {
+   "k": "page6.monitoring.4.hr",
+   "x": 89.88,
+   "y": 308.6,
+   "s": 8.36,
+   "b": false
+  },
+  {
+   "k": "page6.monitoring.4.rr",
+   "x": 117.36,
+   "y": 308.6,
+   "s": 8.36,
+   "b": false
+  },
+  {
+   "k": "page6.monitoring.4.temp",
+   "x": 148.93,
+   "y": 308.6,
+   "s": 8.36,
+   "b": false
+  },
+  {
+   "k": "page6.monitoring.4.uo",
+   "x": 184.06,
+   "y": 308.6,
+   "s": 8.36,
+   "b": false
+  },
+  {
+   "k": "page6.monitoring.4.fht",
+   "x": 217.39,
+   "y": 308.6,
+   "s": 8.36,
+   "b": false
+  },
+  {
+   "k": "page6.monitoring.4.intv",
+   "x": 244.87,
+   "y": 308.6,
+   "s": 8.36,
+   "b": false
+  },
+  {
+   "k": "page6.monitoring.4.dur",
+   "x": 274.65,
+   "y": 308.6,
+   "s": 8.36,
+   "b": false
+  },
+  {
+   "k": "page6.monitoring.4.int",
+   "x": 307.39,
+   "y": 308.6,
+   "s": 8.36,
+   "b": false
+  },
+  {
+   "k": "page6.monitoring.4.dil",
+   "x": 340.19,
+   "y": 308.6,
+   "s": 8.36,
+   "b": false
+  },
+  {
+   "k": "page6.monitoring.4.eff",
+   "x": 375.22,
+   "y": 308.6,
+   "s": 8.36,
+   "b": false
+  },
+  {
+   "k": "page6.monitoring.4.pres",
+   "x": 404.46,
+   "y": 308.6,
+   "s": 8.36,
+   "b": false
+  },
+  {
+   "k": "page6.monitoring.4.stn",
+   "x": 434.86,
+   "y": 308.6,
+   "s": 8.36,
+   "b": false
+  },
+  {
+   "k": "page6.monitoring.4.mem",
+   "x": 462.93,
+   "y": 308.6,
+   "s": 8.36,
+   "b": false
+  },
+  {
+   "k": "page6.monitoring.4.nstCtg",
+   "x": 500.4,
+   "y": 308.6,
+   "s": 8.36,
+   "b": false
+  },
+  {
+   "k": "page6.monitoring.4.remarks",
+   "x": 533.1,
+   "y": 308.6,
+   "s": 8.36,
+   "b": false
+  },
+  {
+   "k": "page6.monitoring.5.dateTime",
+   "x": 27.94,
+   "y": 334.33,
+   "s": 8.36,
+   "b": false
+  },
+  {
+   "k": "page6.monitoring.5.bp",
+   "x": 60.1,
+   "y": 334.33,
+   "s": 8.36,
+   "b": false
+  },
+  {
+   "k": "page6.monitoring.5.hr",
+   "x": 89.88,
+   "y": 334.33,
+   "s": 8.36,
+   "b": false
+  },
+  {
+   "k": "page6.monitoring.5.rr",
+   "x": 117.36,
+   "y": 334.33,
+   "s": 8.36,
+   "b": false
+  },
+  {
+   "k": "page6.monitoring.5.temp",
+   "x": 148.93,
+   "y": 334.33,
+   "s": 8.36,
+   "b": false
+  },
+  {
+   "k": "page6.monitoring.5.uo",
+   "x": 184.06,
+   "y": 334.33,
+   "s": 8.36,
+   "b": false
+  },
+  {
+   "k": "page6.monitoring.5.fht",
+   "x": 217.39,
+   "y": 334.33,
+   "s": 8.36,
+   "b": false
+  },
+  {
+   "k": "page6.monitoring.5.intv",
+   "x": 244.87,
+   "y": 334.33,
+   "s": 8.36,
+   "b": false
+  },
+  {
+   "k": "page6.monitoring.5.dur",
+   "x": 274.65,
+   "y": 334.33,
+   "s": 8.36,
+   "b": false
+  },
+  {
+   "k": "page6.monitoring.5.int",
+   "x": 307.39,
+   "y": 334.33,
+   "s": 8.36,
+   "b": false
+  },
+  {
+   "k": "page6.monitoring.5.dil",
+   "x": 340.19,
+   "y": 334.33,
+   "s": 8.36,
+   "b": false
+  },
+  {
+   "k": "page6.monitoring.5.eff",
+   "x": 375.22,
+   "y": 334.33,
+   "s": 8.36,
+   "b": false
+  },
+  {
+   "k": "page6.monitoring.5.pres",
+   "x": 404.46,
+   "y": 334.33,
+   "s": 8.36,
+   "b": false
+  },
+  {
+   "k": "page6.monitoring.5.stn",
+   "x": 434.86,
+   "y": 334.33,
+   "s": 8.36,
+   "b": false
+  },
+  {
+   "k": "page6.monitoring.5.mem",
+   "x": 462.93,
+   "y": 334.33,
+   "s": 8.36,
+   "b": false
+  },
+  {
+   "k": "page6.monitoring.5.nstCtg",
+   "x": 500.4,
+   "y": 334.33,
+   "s": 8.36,
+   "b": false
+  },
+  {
+   "k": "page6.monitoring.5.remarks",
+   "x": 533.1,
+   "y": 334.33,
+   "s": 8.36,
+   "b": false
+  },
+  {
+   "k": "page6.monitoring.6.dateTime",
+   "x": 27.94,
+   "y": 360.06,
+   "s": 8.36,
+   "b": false
+  },
+  {
+   "k": "page6.monitoring.6.bp",
+   "x": 60.1,
+   "y": 360.06,
+   "s": 8.36,
+   "b": false
+  },
+  {
+   "k": "page6.monitoring.6.hr",
+   "x": 89.88,
+   "y": 360.06,
+   "s": 8.36,
+   "b": false
+  },
+  {
+   "k": "page6.monitoring.6.rr",
+   "x": 117.36,
+   "y": 360.06,
+   "s": 8.36,
+   "b": false
+  },
+  {
+   "k": "page6.monitoring.6.temp",
+   "x": 148.93,
+   "y": 360.06,
+   "s": 8.36,
+   "b": false
+  },
+  {
+   "k": "page6.monitoring.6.uo",
+   "x": 184.06,
+   "y": 360.06,
+   "s": 8.36,
+   "b": false
+  },
+  {
+   "k": "page6.monitoring.6.fht",
+   "x": 217.39,
+   "y": 360.06,
+   "s": 8.36,
+   "b": false
+  },
+  {
+   "k": "page6.monitoring.6.intv",
+   "x": 244.87,
+   "y": 360.06,
+   "s": 8.36,
+   "b": false
+  },
+  {
+   "k": "page6.monitoring.6.dur",
+   "x": 274.65,
+   "y": 360.06,
+   "s": 8.36,
+   "b": false
+  },
+  {
+   "k": "page6.monitoring.6.int",
+   "x": 307.39,
+   "y": 360.06,
+   "s": 8.36,
+   "b": false
+  },
+  {
+   "k": "page6.monitoring.6.dil",
+   "x": 340.19,
+   "y": 360.06,
+   "s": 8.36,
+   "b": false
+  },
+  {
+   "k": "page6.monitoring.6.eff",
+   "x": 375.22,
+   "y": 360.06,
+   "s": 8.36,
+   "b": false
+  },
+  {
+   "k": "page6.monitoring.6.pres",
+   "x": 404.46,
+   "y": 360.06,
+   "s": 8.36,
+   "b": false
+  },
+  {
+   "k": "page6.monitoring.6.stn",
+   "x": 434.86,
+   "y": 360.06,
+   "s": 8.36,
+   "b": false
+  },
+  {
+   "k": "page6.monitoring.6.mem",
+   "x": 462.93,
+   "y": 360.06,
+   "s": 8.36,
+   "b": false
+  },
+  {
+   "k": "page6.monitoring.6.nstCtg",
+   "x": 500.4,
+   "y": 360.06,
+   "s": 8.36,
+   "b": false
+  },
+  {
+   "k": "page6.monitoring.6.remarks",
+   "x": 533.1,
+   "y": 360.06,
+   "s": 8.36,
+   "b": false
+  },
+  {
+   "k": "page6.monitoring.7.dateTime",
+   "x": 27.94,
+   "y": 385.79,
+   "s": 8.36,
+   "b": false
+  },
+  {
+   "k": "page6.monitoring.7.bp",
+   "x": 60.1,
+   "y": 385.79,
+   "s": 8.36,
+   "b": false
+  },
+  {
+   "k": "page6.monitoring.7.hr",
+   "x": 89.88,
+   "y": 385.79,
+   "s": 8.36,
+   "b": false
+  },
+  {
+   "k": "page6.monitoring.7.rr",
+   "x": 117.36,
+   "y": 385.79,
+   "s": 8.36,
+   "b": false
+  },
+  {
+   "k": "page6.monitoring.7.temp",
+   "x": 148.93,
+   "y": 385.79,
+   "s": 8.36,
+   "b": false
+  },
+  {
+   "k": "page6.monitoring.7.uo",
+   "x": 184.06,
+   "y": 385.79,
+   "s": 8.36,
+   "b": false
+  },
+  {
+   "k": "page6.monitoring.7.fht",
+   "x": 217.39,
+   "y": 385.79,
+   "s": 8.36,
+   "b": false
+  },
+  {
+   "k": "page6.monitoring.7.intv",
+   "x": 244.87,
+   "y": 385.79,
+   "s": 8.36,
+   "b": false
+  },
+  {
+   "k": "page6.monitoring.7.dur",
+   "x": 274.65,
+   "y": 385.79,
+   "s": 8.36,
+   "b": false
+  },
+  {
+   "k": "page6.monitoring.7.int",
+   "x": 307.39,
+   "y": 385.79,
+   "s": 8.36,
+   "b": false
+  },
+  {
+   "k": "page6.monitoring.7.dil",
+   "x": 340.19,
+   "y": 385.79,
+   "s": 8.36,
+   "b": false
+  },
+  {
+   "k": "page6.monitoring.7.eff",
+   "x": 375.22,
+   "y": 385.79,
+   "s": 8.36,
+   "b": false
+  },
+  {
+   "k": "page6.monitoring.7.pres",
+   "x": 404.46,
+   "y": 385.79,
+   "s": 8.36,
+   "b": false
+  },
+  {
+   "k": "page6.monitoring.7.stn",
+   "x": 434.86,
+   "y": 385.79,
+   "s": 8.36,
+   "b": false
+  },
+  {
+   "k": "page6.monitoring.7.mem",
+   "x": 462.93,
+   "y": 385.79,
+   "s": 8.36,
+   "b": false
+  },
+  {
+   "k": "page6.monitoring.7.nstCtg",
+   "x": 500.4,
+   "y": 385.79,
+   "s": 8.36,
+   "b": false
+  },
+  {
+   "k": "page6.monitoring.7.remarks",
+   "x": 533.1,
+   "y": 385.79,
+   "s": 8.36,
+   "b": false
+  },
+  {
+   "k": "page6.monitoring.8.dateTime",
+   "x": 27.94,
+   "y": 411.52,
+   "s": 8.36,
+   "b": false
+  },
+  {
+   "k": "page6.monitoring.8.bp",
+   "x": 60.1,
+   "y": 411.52,
+   "s": 8.36,
+   "b": false
+  },
+  {
+   "k": "page6.monitoring.8.hr",
+   "x": 89.88,
+   "y": 411.52,
+   "s": 8.36,
+   "b": false
+  },
+  {
+   "k": "page6.monitoring.8.rr",
+   "x": 117.36,
+   "y": 411.52,
+   "s": 8.36,
+   "b": false
+  },
+  {
+   "k": "page6.monitoring.8.temp",
+   "x": 148.93,
+   "y": 411.52,
+   "s": 8.36,
+   "b": false
+  },
+  {
+   "k": "page6.monitoring.8.uo",
+   "x": 184.06,
+   "y": 411.52,
+   "s": 8.36,
+   "b": false
+  },
+  {
+   "k": "page6.monitoring.8.fht",
+   "x": 217.39,
+   "y": 411.52,
+   "s": 8.36,
+   "b": false
+  },
+  {
+   "k": "page6.monitoring.8.intv",
+   "x": 244.87,
+   "y": 411.52,
+   "s": 8.36,
+   "b": false
+  },
+  {
+   "k": "page6.monitoring.8.dur",
+   "x": 274.65,
+   "y": 411.52,
+   "s": 8.36,
+   "b": false
+  },
+  {
+   "k": "page6.monitoring.8.int",
+   "x": 307.39,
+   "y": 411.52,
+   "s": 8.36,
+   "b": false
+  },
+  {
+   "k": "page6.monitoring.8.dil",
+   "x": 340.19,
+   "y": 411.52,
+   "s": 8.36,
+   "b": false
+  },
+  {
+   "k": "page6.monitoring.8.eff",
+   "x": 375.22,
+   "y": 411.52,
+   "s": 8.36,
+   "b": false
+  },
+  {
+   "k": "page6.monitoring.8.pres",
+   "x": 404.46,
+   "y": 411.52,
+   "s": 8.36,
+   "b": false
+  },
+  {
+   "k": "page6.monitoring.8.stn",
+   "x": 434.86,
+   "y": 411.52,
+   "s": 8.36,
+   "b": false
+  },
+  {
+   "k": "page6.monitoring.8.mem",
+   "x": 462.93,
+   "y": 411.52,
+   "s": 8.36,
+   "b": false
+  },
+  {
+   "k": "page6.monitoring.8.nstCtg",
+   "x": 500.4,
+   "y": 411.52,
+   "s": 8.36,
+   "b": false
+  },
+  {
+   "k": "page6.monitoring.8.remarks",
+   "x": 533.1,
+   "y": 411.52,
+   "s": 8.36,
+   "b": false
+  },
+  {
+   "k": "page6.monitoring.9.dateTime",
+   "x": 27.94,
+   "y": 437.25,
+   "s": 8.36,
+   "b": false
+  },
+  {
+   "k": "page6.monitoring.9.bp",
+   "x": 60.1,
+   "y": 437.25,
+   "s": 8.36,
+   "b": false
+  },
+  {
+   "k": "page6.monitoring.9.hr",
+   "x": 89.88,
+   "y": 437.25,
+   "s": 8.36,
+   "b": false
+  },
+  {
+   "k": "page6.monitoring.9.rr",
+   "x": 117.36,
+   "y": 437.25,
+   "s": 8.36,
+   "b": false
+  },
+  {
+   "k": "page6.monitoring.9.temp",
+   "x": 148.93,
+   "y": 437.25,
+   "s": 8.36,
+   "b": false
+  },
+  {
+   "k": "page6.monitoring.9.uo",
+   "x": 184.06,
+   "y": 437.25,
+   "s": 8.36,
+   "b": false
+  },
+  {
+   "k": "page6.monitoring.9.fht",
+   "x": 217.39,
+   "y": 437.25,
+   "s": 8.36,
+   "b": false
+  },
+  {
+   "k": "page6.monitoring.9.intv",
+   "x": 244.87,
+   "y": 437.25,
+   "s": 8.36,
+   "b": false
+  },
+  {
+   "k": "page6.monitoring.9.dur",
+   "x": 274.65,
+   "y": 437.25,
+   "s": 8.36,
+   "b": false
+  },
+  {
+   "k": "page6.monitoring.9.int",
+   "x": 307.39,
+   "y": 437.25,
+   "s": 8.36,
+   "b": false
+  },
+  {
+   "k": "page6.monitoring.9.dil",
+   "x": 340.19,
+   "y": 437.25,
+   "s": 8.36,
+   "b": false
+  },
+  {
+   "k": "page6.monitoring.9.eff",
+   "x": 375.22,
+   "y": 437.25,
+   "s": 8.36,
+   "b": false
+  },
+  {
+   "k": "page6.monitoring.9.pres",
+   "x": 404.46,
+   "y": 437.25,
+   "s": 8.36,
+   "b": false
+  },
+  {
+   "k": "page6.monitoring.9.stn",
+   "x": 434.86,
+   "y": 437.25,
+   "s": 8.36,
+   "b": false
+  },
+  {
+   "k": "page6.monitoring.9.mem",
+   "x": 462.93,
+   "y": 437.25,
+   "s": 8.36,
+   "b": false
+  },
+  {
+   "k": "page6.monitoring.9.nstCtg",
+   "x": 500.4,
+   "y": 437.25,
+   "s": 8.36,
+   "b": false
+  },
+  {
+   "k": "page6.monitoring.9.remarks",
+   "x": 533.1,
+   "y": 437.25,
+   "s": 8.36,
+   "b": false
+  },
+  {
+   "k": "page6.monitoring.10.dateTime",
+   "x": 27.94,
+   "y": 462.98,
+   "s": 8.36,
+   "b": false
+  },
+  {
+   "k": "page6.monitoring.10.bp",
+   "x": 60.1,
+   "y": 462.98,
+   "s": 8.36,
+   "b": false
+  },
+  {
+   "k": "page6.monitoring.10.hr",
+   "x": 89.88,
+   "y": 462.98,
+   "s": 8.36,
+   "b": false
+  },
+  {
+   "k": "page6.monitoring.10.rr",
+   "x": 117.36,
+   "y": 462.98,
+   "s": 8.36,
+   "b": false
+  },
+  {
+   "k": "page6.monitoring.10.temp",
+   "x": 148.93,
+   "y": 462.98,
+   "s": 8.36,
+   "b": false
+  },
+  {
+   "k": "page6.monitoring.10.uo",
+   "x": 184.06,
+   "y": 462.98,
+   "s": 8.36,
+   "b": false
+  },
+  {
+   "k": "page6.monitoring.10.fht",
+   "x": 217.39,
+   "y": 462.98,
+   "s": 8.36,
+   "b": false
+  },
+  {
+   "k": "page6.monitoring.10.intv",
+   "x": 244.87,
+   "y": 462.98,
+   "s": 8.36,
+   "b": false
+  },
+  {
+   "k": "page6.monitoring.10.dur",
+   "x": 274.65,
+   "y": 462.98,
+   "s": 8.36,
+   "b": false
+  },
+  {
+   "k": "page6.monitoring.10.int",
+   "x": 307.39,
+   "y": 462.98,
+   "s": 8.36,
+   "b": false
+  },
+  {
+   "k": "page6.monitoring.10.dil",
+   "x": 340.19,
+   "y": 462.98,
+   "s": 8.36,
+   "b": false
+  },
+  {
+   "k": "page6.monitoring.10.eff",
+   "x": 375.22,
+   "y": 462.98,
+   "s": 8.36,
+   "b": false
+  },
+  {
+   "k": "page6.monitoring.10.pres",
+   "x": 404.46,
+   "y": 462.98,
+   "s": 8.36,
+   "b": false
+  },
+  {
+   "k": "page6.monitoring.10.stn",
+   "x": 434.86,
+   "y": 462.98,
+   "s": 8.36,
+   "b": false
+  },
+  {
+   "k": "page6.monitoring.10.mem",
+   "x": 462.93,
+   "y": 462.98,
+   "s": 8.36,
+   "b": false
+  },
+  {
+   "k": "page6.monitoring.10.nstCtg",
+   "x": 500.4,
+   "y": 462.98,
+   "s": 8.36,
+   "b": false
+  },
+  {
+   "k": "page6.monitoring.10.remarks",
+   "x": 533.1,
+   "y": 462.98,
+   "s": 8.36,
+   "b": false
+  },
+  {
+   "k": "page6.monitoring.11.dateTime",
+   "x": 27.94,
+   "y": 488.71,
+   "s": 8.36,
+   "b": false
+  },
+  {
+   "k": "page6.monitoring.11.bp",
+   "x": 60.1,
+   "y": 488.71,
+   "s": 8.36,
+   "b": false
+  },
+  {
+   "k": "page6.monitoring.11.hr",
+   "x": 89.88,
+   "y": 488.71,
+   "s": 8.36,
+   "b": false
+  },
+  {
+   "k": "page6.monitoring.11.rr",
+   "x": 117.36,
+   "y": 488.71,
+   "s": 8.36,
+   "b": false
+  },
+  {
+   "k": "page6.monitoring.11.temp",
+   "x": 148.93,
+   "y": 488.71,
+   "s": 8.36,
+   "b": false
+  },
+  {
+   "k": "page6.monitoring.11.uo",
+   "x": 184.06,
+   "y": 488.71,
+   "s": 8.36,
+   "b": false
+  },
+  {
+   "k": "page6.monitoring.11.fht",
+   "x": 217.39,
+   "y": 488.71,
+   "s": 8.36,
+   "b": false
+  },
+  {
+   "k": "page6.monitoring.11.intv",
+   "x": 244.87,
+   "y": 488.71,
+   "s": 8.36,
+   "b": false
+  },
+  {
+   "k": "page6.monitoring.11.dur",
+   "x": 274.65,
+   "y": 488.71,
+   "s": 8.36,
+   "b": false
+  },
+  {
+   "k": "page6.monitoring.11.int",
+   "x": 307.39,
+   "y": 488.71,
+   "s": 8.36,
+   "b": false
+  },
+  {
+   "k": "page6.monitoring.11.dil",
+   "x": 340.19,
+   "y": 488.71,
+   "s": 8.36,
+   "b": false
+  },
+  {
+   "k": "page6.monitoring.11.eff",
+   "x": 375.22,
+   "y": 488.71,
+   "s": 8.36,
+   "b": false
+  },
+  {
+   "k": "page6.monitoring.11.pres",
+   "x": 404.46,
+   "y": 488.71,
+   "s": 8.36,
+   "b": false
+  },
+  {
+   "k": "page6.monitoring.11.stn",
+   "x": 434.86,
+   "y": 488.71,
+   "s": 8.36,
+   "b": false
+  },
+  {
+   "k": "page6.monitoring.11.mem",
+   "x": 462.93,
+   "y": 488.71,
+   "s": 8.36,
+   "b": false
+  },
+  {
+   "k": "page6.monitoring.11.nstCtg",
+   "x": 500.4,
+   "y": 488.71,
+   "s": 8.36,
+   "b": false
+  },
+  {
+   "k": "page6.monitoring.11.remarks",
+   "x": 533.1,
+   "y": 488.71,
+   "s": 8.36,
+   "b": false
+  },
+  {
+   "k": "page6.monitoring.12.dateTime",
+   "x": 27.94,
+   "y": 514.44,
+   "s": 8.36,
+   "b": false
+  },
+  {
+   "k": "page6.monitoring.12.bp",
+   "x": 60.1,
+   "y": 514.44,
+   "s": 8.36,
+   "b": false
+  },
+  {
+   "k": "page6.monitoring.12.hr",
+   "x": 89.88,
+   "y": 514.44,
+   "s": 8.36,
+   "b": false
+  },
+  {
+   "k": "page6.monitoring.12.rr",
+   "x": 117.36,
+   "y": 514.44,
+   "s": 8.36,
+   "b": false
+  },
+  {
+   "k": "page6.monitoring.12.temp",
+   "x": 148.93,
+   "y": 514.44,
+   "s": 8.36,
+   "b": false
+  },
+  {
+   "k": "page6.monitoring.12.uo",
+   "x": 184.06,
+   "y": 514.44,
+   "s": 8.36,
+   "b": false
+  },
+  {
+   "k": "page6.monitoring.12.fht",
+   "x": 217.39,
+   "y": 514.44,
+   "s": 8.36,
+   "b": false
+  },
+  {
+   "k": "page6.monitoring.12.intv",
+   "x": 244.87,
+   "y": 514.44,
+   "s": 8.36,
+   "b": false
+  },
+  {
+   "k": "page6.monitoring.12.dur",
+   "x": 274.65,
+   "y": 514.44,
+   "s": 8.36,
+   "b": false
+  },
+  {
+   "k": "page6.monitoring.12.int",
+   "x": 307.39,
+   "y": 514.44,
+   "s": 8.36,
+   "b": false
+  },
+  {
+   "k": "page6.monitoring.12.dil",
+   "x": 340.19,
+   "y": 514.44,
+   "s": 8.36,
+   "b": false
+  },
+  {
+   "k": "page6.monitoring.12.eff",
+   "x": 375.22,
+   "y": 514.44,
+   "s": 8.36,
+   "b": false
+  },
+  {
+   "k": "page6.monitoring.12.pres",
+   "x": 404.46,
+   "y": 514.44,
+   "s": 8.36,
+   "b": false
+  },
+  {
+   "k": "page6.monitoring.12.stn",
+   "x": 434.86,
+   "y": 514.44,
+   "s": 8.36,
+   "b": false
+  },
+  {
+   "k": "page6.monitoring.12.mem",
+   "x": 462.93,
+   "y": 514.44,
+   "s": 8.36,
+   "b": false
+  },
+  {
+   "k": "page6.monitoring.12.nstCtg",
+   "x": 500.4,
+   "y": 514.44,
+   "s": 8.36,
+   "b": false
+  },
+  {
+   "k": "page6.monitoring.12.remarks",
+   "x": 533.1,
+   "y": 514.44,
+   "s": 8.36,
+   "b": false
+  },
+  {
+   "k": "patient.admissionDateTime",
+   "x": 340.19,
+   "y": 100.56,
+   "s": 9.12,
+   "b": true
+  },
+  {
+   "k": "page6.attendingPhysicians",
+   "x": 340.19,
+   "y": 124.99,
+   "s": 8.36,
+   "b": true
+  },
+  {
+   "k": "footer.mi",
+   "x": 244.87,
+   "y": 582.12,
+   "s": 7.6,
+   "b": false
+  }
+ ],
+ "checks": [
+  {
+   "k": "footer.sex",
+   "v": "M",
+   "x": 395.73,
+   "y": 565.05,
+   "w": 5.61,
+   "h": 5.61
+  },
+  {
+   "k": "footer.sex",
+   "v": "F",
+   "x": 395.73,
+   "y": 577.33,
+   "w": 5.61,
+   "h": 5.61
+  }
+ ],
+ "marks": [],
+ "images": []
+}

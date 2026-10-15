@@ -1,0 +1,27 @@
+{
+  "page": 6,
+  "fields": [
+    { "key": "patient.lastName", "near": "NAME:" }, { "key": "patient.firstName", "near": "NAME:" }, { "key": "patient.middleName", "near": "NAME:" },
+    { "key": "patient.admissionDateTime" },
+    { "key": "page1.admittingImpression", "box": [28.19, 114.29, 308.95, 37.82], "size": 7.6 },
+    { "key": "page6.attendingPhysicians" },
+    { "key": "patient.hospNo", "near": "HOSPITAL NUMBER:", "align": "r" },
+    { "key": "footer.surname", "near": "Surname" }, { "key": "footer.givenName", "near": "Given Name" }, { "key": "footer.mi" },
+    { "key": "footer.age", "near": "Age:" }, { "key": "footer.hospNo", "near": "Hospital No:", "align": "r" }, { "key": "footer.ward", "near": "Ward/Rm:" }
+  ],
+  "tables": [
+    { "key": "page6.monitoring", "region": [26.19, 189.95, 544.96, 334.46],
+      "columns": {
+        "dateTime": 27.94, "bp": 60.1, "hr": 89.88, "rr": 117.36,
+        "temp": 148.93, "uo": 184.06, "fht": 217.39, "intv": 244.87,
+        "dur": 274.65, "int": 307.39, "dil": 340.19, "eff": 375.22,
+        "pres": 404.46, "stn": 434.86, "mem": 462.93, "nstCtg": 500.4,
+        "remarks": 533.1
+      },
+      "firstBaseline": 205.68, "pitch": 25.73, "rows": 13, "size": 8.36 }
+  ],
+  "checks": [
+    { "key": "footer.sex", "value": "M", "label": "M", "near": "Sex:" },
+    { "key": "footer.sex", "value": "F", "label": "F", "near": "Sex:" }
+  ]
+}
