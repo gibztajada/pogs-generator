@@ -5,7 +5,13 @@ export type TplField = { k: string; x: number; y: number; s: number; b?: boolean
 export type TplCheck = { k: string; v?: string; x: number; y: number; w: number; h: number; ow?: boolean };
 export type TplMark = { k: string; v: string; x: number; y: number; s: number; b?: boolean };
 export type TplImage = { src: string; x: number; y: number; w: number; h: number };
-export type TplChart = { hourX: [number, number]; dil: { y3: number; y10: number }; stn: { y0: number; yMinus5: number }; color: string };
+/** Labor chart, all coordinates in reference (untransformed) space. dil plots v in [vMin, vMax]; stn plots v in [vBottom, vTop].
+ *  Markers: an `outer`-pt square filled `outline` under an `inner`-pt square filled `color`, both centred on the point. */
+export type TplChart = {
+  dil: { hourX: [number, number]; vMin: number; yMin: number; vMax: number; yMax: number };
+  stn: { hourX: [number, number]; vTop: number; yTop: number; vBottom: number; yBottom: number };
+  color: string; outline: string; inner: number; outer: number;
+};
 export type Template = {
   page: number; width: number; height: number;
   transform?: { k: number; ox: number; oy: number };
