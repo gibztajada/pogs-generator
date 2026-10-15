@@ -1,4 +1,4 @@
-import type { ReactNode } from 'react';
+import { useId, type ReactNode } from 'react';
 import glyphs from './templates/glyphs.json';
 import type { SheetAssets, Template, TplField } from './template';
 import { asText, getPath, isChecked } from './view';
@@ -33,6 +33,8 @@ function Field({ f, view, clipId }: { f: TplField; view: unknown; clipId: string
 export function TemplatePage({ template: t, view, assets, fluid, children }: {
   template: Template; view: unknown; assets: SheetAssets; fluid?: boolean; children?: ReactNode;
 }) {
+  // Unique per rendered sheet: the same page is mounted twice (preview + print), and url(#id) must not collide.
+  const uid = useId().replace(/[^a-zA-Z0-9_-]/g, '');
   const tr = t.transform
     ? `translate(${t.transform.ox} ${t.transform.oy}) scale(${t.transform.k}) translate(${-t.transform.ox} ${-t.transform.oy})`
     : undefined;
@@ -61,7 +63,7 @@ export function TemplatePage({ template: t, view, assets, fluid, children }: {
         {t.marks.map((m, i) => (getPath(view, m.k) === m.v
           ? <text key={i} x={m.x} y={m.y} fontSize={m.s} fontWeight={m.b ? 700 : 400}>X</text>
           : null))}
-        {t.fields.map((f, i) => <Field key={i} f={f} view={view} clipId={`p${t.page}f${i}`} />)}
+        {t.fields.map((f, i) => <Field key={i} f={f} view={view} clipId={`c${uid}p${t.page}f${i}`} />)}
         {children}
       </g>
     </svg>

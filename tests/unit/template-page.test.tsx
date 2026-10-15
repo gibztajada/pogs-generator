@@ -38,3 +38,13 @@ test('multiline field shrinks below its base size', () => {
   const sizes = [...html.matchAll(/font-size="([\d.]+)"/g)].map((m) => Number(m[1]));
   expect(Math.min(...sizes)).toBeLessThan(8);
 });
+
+test('clip reference matches its clipPath id, and two sheets of one page have distinct ids', () => {
+  const html = renderToStaticMarkup(<><TemplatePage template={tpl} view={view} assets={{}} /><TemplatePage template={tpl} view={view} assets={{}} /></>);
+  const ids = [...html.matchAll(/<clipPath id="([^"]+)"/g)].map((m) => m[1]);
+  const refs = [...html.matchAll(/clip-path="url\(#([^)]+)\)"/g)].map((m) => m[1]);
+  expect(ids).toHaveLength(2);
+  expect(new Set(ids).size).toBe(2);
+  expect(refs).toEqual(ids);
+  for (const id of ids) expect(id).toMatch(/^[a-zA-Z0-9_-]+$/);
+});
