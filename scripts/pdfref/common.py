@@ -103,6 +103,6 @@ def is_checkbox(d):
     fill = d.get("fill")
     if d.get("type") not in ("f", "fs") or fill is None or sum(fill[:3]) > 0.3:
         return False
-    if not (3 <= r.width <= 10 and abs(r.width - r.height) < 0.6):
+    if not (3 <= r.width <= 10 and abs(r.width - r.height) < 0.1):
         return False
     return any(it[0] == "c" for it in d["items"])

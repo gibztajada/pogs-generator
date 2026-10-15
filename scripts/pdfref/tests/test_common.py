@@ -43,3 +43,19 @@ def test_checkbox_detection_and_path():
     assert len([d for d in drs if is_checkbox(d)]) == 1
     line = next(d for d in drs if not is_checkbox(d))
     assert path_d(line["items"]).startswith("M20.0 120.0L500.0 120.0")
+
+
+def test_near_square_glyph_is_not_checkbox():
+    # Chart axis glyphs (e.g. "-3") are black, curved and almost square (w-h ~0.2-0.45);
+    # real checkboxes are square to within 0.02 pt.
+    doc = fitz.open()
+    _DOCS.append(doc)
+    page = doc.new_page(width=595, height=842)
+    shp = page.new_shape()
+    shp.draw_bezier((49.07, 200.11), (50, 200.11), (51, 203.34), (52.11, 203.34))
+    shp.draw_line((52.11, 203.34), (49.07, 203.34))
+    shp.finish(fill=(0, 0, 0), color=None, closePath=True)
+    shp.commit()
+    d = page.get_drawings()[0]
+    assert 0.1 < abs(d["rect"].width - d["rect"].height) < 0.6  # passed the old 0.6 tolerance
+    assert not is_checkbox(d)

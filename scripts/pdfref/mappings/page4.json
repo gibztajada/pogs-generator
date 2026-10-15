@@ -1,0 +1,51 @@
+{
+  "page": 4,
+  "fitWidth": { "frame": [23.63, 62.63, 359.78, 478.69], "targetRight": 578.3 },
+  "drop": {
+    "fills": [],
+    "regions": [[66.47, 182.04, 3.5, 3.5], [64.78, 227.57, 3.5, 3.5], [289.19, 255.05, 3.5, 3.5]]
+  },
+  "chart": {
+    "dil": { "hourX": [68.15, 322.01], "vMin": 2, "yMin": 183.62, "vMax": 10, "yMax": 111.21 },
+    "stn": { "hourX": [66.46, 291.01], "vTop": 0, "yTop": 188.12, "vBottom": -5, "yBottom": 256.78 },
+    "color": "#4285f4", "outline": "#000000", "inner": 1.5, "outer": 2.25
+  },
+  "fields": [
+    { "key": "page4.onsetDate", "at": [89.91, 69.85], "size": 4.88, "bold": true },
+    { "key": "page4.onsetTime", "at": [139.43, 69.85], "size": 4.88, "bold": true },
+    { "key": "page4.fullDilatation" },
+    { "key": "page4.delivery", "at": [89.91, 91.23], "size": 5.36, "bold": true },
+    { "key": "page4.placenta", "at": [89.91, 99.11], "size": 5.36, "bold": true },
+    { "key": "page4.totalDuration", "at": [247.1, 69.85], "size": 4.88, "bold": true },
+    { "key": "page4.firstStage", "at": [247.1, 83.36], "size": 4.88, "bold": true },
+    { "key": "page4.secondStage", "at": [247.1, 91.23], "size": 4.88, "bold": true },
+    { "key": "page4.thirdStage", "at": [247.1, 99.11], "size": 4.88, "bold": true },
+    { "key": "page4.promHours", "near": "PROM" },
+    { "key": "footer.surname" }, { "key": "footer.givenName" }, { "key": "footer.mi" },
+    { "key": "footer.age", "near": "Age:" }, { "key": "footer.hospNo", "align": "r" }, { "key": "footer.ward", "near": "Ward/Rm:" }
+  ],
+  "labelTexts": ["Intact"],
+  "checks": [
+    { "key": "page4.membranesStatus", "value": "Ruptured", "label": "Ruptured" },
+    { "key": "page4.membranesStatus", "value": "Intact", "label": "Intact" },
+    { "key": "page4.ruptureType", "value": "PROM", "label": "PROM" },
+    { "key": "page4.ruptureType", "value": "EROM", "label": "EROM" },
+    { "key": "page4.ruptureType", "value": "Cord Prolapse", "label": "Cord Prolapse" },
+    { "key": "page4.ruptureType", "value": "Amnionitis", "label": "Amnionitis" },
+    { "key": "page4.ruptureType", "value": "Amniotomy", "label": "Amniotomy" },
+    { "key": "page4.ruptureType", "value": "Spontaneous", "label": "Spontaneous" },
+    { "key": "page4.fluid", "value": "Clear", "label": "Clear" },
+    { "key": "page4.fluid", "value": "Meconium Stained", "label": "Meconuim Stained" },
+    { "key": "page4.meconium", "value": "Thick", "label": "Thick" },
+    { "key": "page4.meconium", "value": "Thin", "label": "Thin" },
+    { "key": "page4.progress", "value": "Normal", "label": "NORMAL", "near": "PROGRESS OF LABOR:" },
+    { "key": "page4.progress", "value": "Abnormal", "label": "ABNORMAL" },
+    { "key": "page4.abnormalType", "value": "Precipitate", "label": "Precipitate" },
+    { "key": "page4.abnormalType", "value": "Prolonged", "label": "Prolonged" },
+    { "key": "page4.abnormalType", "value": "Protracted", "label": "Protracted" },
+    { "key": "page4.fetal", "value": "Normal", "label": "NORMAL", "near": "FETAL" },
+    { "key": "page4.fetal", "value": "Distress", "label": "DISTRESS" },
+    { "key": "footer.sex", "value": "M", "label": "M", "near": "Sex:" },
+    { "key": "footer.sex", "value": "F", "label": "F", "near": "Sex:" }
+  ]
+}
