@@ -3,13 +3,13 @@ import { useEffect, useRef, useState } from 'react';
 import { useForm, useWatch } from 'react-hook-form';
 import type { PogsForm } from '@/lib/schema';
 import { emptyForm } from '@/lib/defaults';
-import { loadDraft, saveDraft, safeStorage } from '@/lib/storage';
+import { loadDraft, saveDraft, safeStorage, serializeForm } from '@/lib/storage';
 import { seedObHistory } from '@/lib/derive';
 import { AllSheets } from '@/lib/sheets/Sheet';
 import { APP_ASSETS } from '@/lib/sheets/assets';
 import { FormEditor } from './form/FormEditor';
 import { Preview } from './form/Preview';
-import { Toolbar } from './form/Toolbar';
+import { Toolbar, downloadBlob } from './form/Toolbar';
 import { Toast, type ToastMsg } from './Toast';
 
 export function PogsApp() {
@@ -20,8 +20,17 @@ export function PogsApp() {
   const [autosave, setAutosave] = useState(true);
   const [toast, setToast] = useState<ToastMsg | null>(null);
   const loaded = useRef(false);
-  // Temporary: replaced by the server PDF download in Task 16.
-  const downloadPdf = async () => window.print();
+  async function downloadPdf() {
+    const values = getValues();
+    if (!values.patient.lastName.trim()) { setToast({ text: 'Enter the patient last name first (Page 1).' }); return; }
+    try {
+      const res = await fetch('/api/pdf', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: serializeForm(values) });
+      if (!res.ok) throw new Error(String(res.status));
+      downloadBlob(await res.blob(), `${values.patient.lastName.trim()} POGS.pdf`);
+    } catch {
+      setToast({ text: 'Server PDF failed — use Print instead.', action: { label: 'Print', run: () => window.print() } });
+    }
+  }
 
   useEffect(() => {
     // Storage exists only on the client; probing it after mount avoids a hydration mismatch.
