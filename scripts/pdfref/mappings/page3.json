@@ -1,0 +1,51 @@
+{
+  "page": 3,
+  "fields": [
+    { "key": "page3.examDate" }, { "key": "page3.examTime", "near": "Time:" }, { "key": "page3.examiner" },
+    { "key": "page3.bp", "near": "BP:" }, { "key": "page3.hr", "near": "HR:" }, { "key": "page3.rr", "near": "RR:" },
+    { "key": "page3.temp", "near": "Temp." }, { "key": "page3.wt", "near": "Wt." }, { "key": "page3.ht", "near": "Ht." },
+    { "key": "page3.bmi", "at": [428.16, 99.24], "size": 7.33, "bold": true },
+    { "key": "page3.ps", "at": [472.13, 99.24], "size": 7.33, "bold": true },
+    { "key": "page3.gcs", "at": [514.98, 99.24], "size": 7.33, "bold": true },
+    { "key": "page3.heent" }, { "key": "page3.chestLungs" }, { "key": "page3.cardiovascular" },
+    { "key": "page3.abdomen", "near": "Abdomen:" }, { "key": "page3.fh" }, { "key": "page3.efw" }, { "key": "page3.fht" },
+    { "key": "page3.l1" }, { "key": "page3.l2" }, { "key": "page3.l3" }, { "key": "page3.l4" },
+    { "key": "page3.genitourinary" }, { "key": "page3.musculoskeletal" }, { "key": "page3.extremities" }, { "key": "page3.cns" },
+    { "key": "page3.externalGenitals" }, { "key": "page3.uterus", "near": "Uterus:" }, { "key": "page3.vagina" },
+    { "key": "page3.dilatation", "near": "Dilatation:" }, { "key": "page3.effacement" }, { "key": "page3.station", "near": "Station:" },
+    { "key": "page1.admittingImpression", "box": [70.31, 533.49, 461.27, 20.21], "size": 7.33 },
+    { "key": "page3.planOfCare", "box": [70.31, 590.4, 461.27, 23.6], "size": 7.33 },
+    { "key": "page3.referredFromTo" }, { "key": "page3.historyBy", "near": "History by:" }, { "key": "page3.doneOn" },
+    { "key": "footer.surname" }, { "key": "footer.givenName" }, { "key": "footer.mi" },
+    { "key": "footer.age", "near": "Age:" }, { "key": "footer.hospNo", "align": "r" }, { "key": "footer.ward", "near": "Ward/Rm:" }
+  ],
+  "labelTexts": ["Clear"],
+  "splits": [ { "label": "Breast:", "key": "page3.breast" } ],
+  "marks": [
+    { "key": "page3.position", "value": "Anterior", "at": [355.66, 383.37], "size": 7.33 },
+    { "key": "page3.position", "value": "Midposition", "near": "Midposition:" },
+    { "key": "page3.position", "value": "Posterior", "at": [507.0, 383.37], "size": 7.33 },
+    { "key": "page3.membranes", "value": "Intact", "near": "Membranes" },
+    { "key": "page3.membranes", "value": "Ruptured", "at": [399.92, 395.21], "size": 7.33 }
+  ],
+  "checks": [
+    { "key": "page3.generalStatus", "value": "Conscious", "label": "Conscious" },
+    { "key": "page3.generalStatus", "value": "Coherent", "label": "Coherent" },
+    { "key": "page3.generalStatus", "value": "Unconscious", "label": "Unconscious" },
+    { "key": "page3.generalStatus", "value": "Distressed", "label": "Distressed" },
+    { "key": "page3.generalStatus", "value": "Anxious", "label": "Anxious" },
+    { "key": "page3.generalStatus", "value": "Cooperative", "label": "Cooperative" },
+    { "key": "page3.generalStatus", "value": "Pale/Flushed", "label": "Pale/Flushed" },
+    { "key": "page3.generalStatus", "value": "Others", "label": "Others" },
+    { "key": "page3.amnioticFluid", "value": "Meconium Stained", "label": "Meconium Stained" },
+    { "key": "page3.amnioticFluid", "value": "Clear", "label": "Clear" },
+    { "key": "page3.pelvimetry", "value": "Contracted", "label": "Contracted" },
+    { "key": "page3.pelvimetry", "value": "Border Line", "label": "Border Line" },
+    { "key": "page3.pelvimetry", "value": "Adequate", "label": "Adequate" },
+    { "key": "page3.pelvimetryPlanes", "value": "Inlet", "label": "Inlet" },
+    { "key": "page3.pelvimetryPlanes", "value": "Midplane", "label": "Midplane" },
+    { "key": "page3.pelvimetryPlanes", "value": "Outlet", "label": "Outlet" },
+    { "key": "footer.sex", "value": "M", "label": "M", "near": "Sex:" },
+    { "key": "footer.sex", "value": "F", "label": "F", "near": "Sex:" }
+  ]
+}
