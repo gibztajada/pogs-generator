@@ -11,7 +11,7 @@ function Field({ f, view, clipId }: { f: TplField; view: unknown; clipId: string
   if (!text.trim()) return null;
   const weight = f.b ? 700 : 400;
   if (f.ml && f.w && f.h) {
-    const { size, lines } = fitText(text, f.w, f.h, f.s);
+    const { size, lines } = fitText(text, f.w, f.h, f.s, 3, f.b);
     return (
       <g clipPath={`url(#${clipId})`}>
         <clipPath id={clipId}><rect x={f.x} y={f.y} width={f.w} height={f.h} /></clipPath>
@@ -22,7 +22,7 @@ function Field({ f, view, clipId }: { f: TplField; view: unknown; clipId: string
     );
   }
   const anchor = f.al === 'r' ? 'end' : f.al === 'c' ? 'middle' : undefined;
-  const squeeze = f.w && estimateWidth(text, f.s) > f.w ? { textLength: f.w, lengthAdjust: 'spacingAndGlyphs' as const } : {};
+  const squeeze = f.w && estimateWidth(text, f.s, f.b) > f.w ? { textLength: f.w, lengthAdjust: 'spacingAndGlyphs' as const } : {};
   return (
     <text x={f.x} y={f.y} fontSize={f.s} fontWeight={weight} textAnchor={anchor} style={{ whiteSpace: 'pre' }} {...squeeze}>
       {text}

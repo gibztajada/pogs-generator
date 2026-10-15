@@ -3,9 +3,16 @@ import { fitText, wrap } from '@/lib/sheets/fit';
 
 describe('wrap', () => {
   test('keeps paragraphs and wraps words', () => {
-    expect(wrap('aaa bbb ccc\nddd', 30, 8)).toEqual(['aaa bbb', 'ccc', 'ddd']); // 30 / (8*0.52) → 7 chars/line
+    expect(wrap('aaa bbb ccc\nddd', 30, 8)).toEqual(['aaa bbb', 'ccc', 'ddd']); // 'aaa bbb' = 3614/1000 em × 8 = 28.9pt ≤ 30
   });
   test('empty paragraph preserved', () => expect(wrap('a\n\nb', 100, 8)).toEqual(['a', '', 'b']));
+  test('narrow chars fit more per line than wide chars', () => {
+    const narrow = wrap(Array(40).fill('iiii').join(' '), 100, 8)[0].length;
+    const wide = wrap(Array(40).fill('WWWW').join(' '), 100, 8)[0].length;
+    expect(narrow).toBeGreaterThan(wide);
+  });
+  test('single over-long word stays on its own line', () =>
+    expect(wrap('a ' + 'W'.repeat(50) + ' b', 30, 8)).toEqual(['a', 'W'.repeat(50), 'b']));
 });
 
 describe('fitText', () => {
