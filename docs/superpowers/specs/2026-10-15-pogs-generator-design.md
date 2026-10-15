@@ -1,7 +1,7 @@
 # POGS Generator — Design Spec
 
 Date: 2026-10-15
-Status: Draft for review
+Status: Revised after reference-PDF analysis (A4, extraction-driven templates)
 
 ## 1. Purpose
 
@@ -9,7 +9,7 @@ A Next.js web app where a VSMMC clerk/resident fills in one OB patient's data in
 
 **Success criteria**
 
-1. Generated pages visually match the reference files `SOSTINO POGS 2 - Page 1.pdf`, `page 2.pdf`, `Sheet3.pdf` … `Sheet6.pdf` in layout, borders, column widths, label positions, font family, font weight, font size, checkbox glyphs, header and footer — verified by pixel-diff (§8.1).
+1. Generated pages visually match the reference files `SOSTINO POGS 2 - Page 1.pdf`, `page 2.pdf`, `Sheet3.pdf` … `Sheet6.pdf` in layout, borders, rule weights, column widths, label positions, font family, font weight, font size, checkbox glyphs, header and footer — verified by pixel-diff (§8.1). Page 4 is the agreed exception (§5.6).
 2. One patient's data entered once flows to every place it appears on all 6 pages.
 3. Work survives a page refresh and can be saved/resumed as a file.
 
@@ -17,112 +17,109 @@ A Next.js web app where a VSMMC clerk/resident fills in one OB patient's data in
 
 | Topic | Decision |
 |---|---|
-| Framework | Next.js (App Router), TypeScript |
+| Framework | Next.js, TypeScript |
 | Input style | Structured form (fields, checkbox groups, editable tables) |
 | Persistence | localStorage autosave + `.json` export/import per patient |
 | Hosting | Vercel, with server features |
-| PDF approach | HTML/CSS replica components; server renders via headless Chrome. Browser Print as fallback |
+| PDF approach | Sheets rendered as SVG from extracted templates; server renders PDF via headless Chrome. Browser Print as fallback |
 | Fidelity | Exact replication of reference layout, font weights and font sizes |
-| Paper | US Letter, 8.5 × 11 in, portrait |
+| Paper | **A4**, 595 × 842 pt, portrait (measured from the references) |
+| Page 4 | Bordered form scaled up to full frame width; labor side table not printed |
 
-## 3. Architecture
+## 3. Reference analysis (facts the design relies on)
 
-**Stack:** Next.js + TypeScript; Tailwind for the app UI only; plain CSS (pt units) for sheet components; React Hook Form + Zod; `puppeteer-core` + `@sparticuz/chromium` in an API route; Vitest; Playwright.
+- All six references are A4 (595 × 842 pt), exported from Google Sheets.
+- All text is `ArialMT` / `Arial-BoldMT`. Each page has its own scale, so sizes differ per page: body text 7.53 pt (p1), 8.58 (p2), 7.33 (p3), 4.88 (p4), 8.62 (p5), 7.6 (p6); plus per-page variants (e.g. p1 title 15.06 bold, p1 final diagnosis 3.77, p6 values 8.36/9.12 bold).
+- The p1 header is two embedded PNGs: hospital text block (568×152 px at 109.5,60.4–350.5,116.6) and seal (201×168 px at 35.9,60.4–109.5,116.6).
+- Checkboxes are filled vector paths (~6.3 pt square on p2); unchecked = rounded ring, checked = ring + check strokes.
+- Rules: outer frame ~1.98 pt, inner rules ~0.66 pt.
+- Labor chart (p4) is vector drawings.
+
+## 4. Architecture
+
+**Stack:** Next.js + TypeScript; Tailwind for app UI only; React Hook Form; Zod; `puppeteer-core` + `@sparticuz/chromium`; Vitest; Playwright (local Chrome channel); Python 3 + PyMuPDF for reference tooling (dev-time only).
+
+**Extraction-driven templates.** A dev-time Python builder reads each reference PDF and writes `lib/sheets/templates/pageN.json`: every vector path (frame, rules, chart grid), every static label (text, baseline x/y, size, weight), images, checkbox slots, and field slots. Field slots replace the patient values found in the reference, located by matching against a git-ignored fixture of the reference patient's data and a committed per-page mapping (`scripts/pdfref/mappings/pageN.json`) that names the field key for each slot. Committed templates therefore contain form structure only — no patient data. A generic `<TemplatePage>` renders a template plus form values as one SVG at 595 × 842 user units = pt.
 
 ```
 app/
-  page.tsx                 split view: form (left) | live preview (right)
-  api/pdf/route.ts         POST PogsForm JSON → 6-page PDF
+  page.tsx                   split view: form | live preview
+  dev/sheet/[page]/page.tsx  dev-only: renders one sheet from fixture (fidelity tests)
+pages/api/pdf.ts             POST form JSON → 6-page A4 PDF
 lib/
-  schema.ts                Zod schema + `PogsForm` type (single source of truth)
-  defaults.ts              emptyForm(), sampleForm() (fictitious data)
-  derive.ts                footer fields, BMI, OB-history rows, labor chart points
-  storage.ts               autosave, export/import, schemaVersion migration
-  typography.ts            named text styles extracted from reference PDFs
-components/
-  form/                    one section component per sheet page + Toolbar
-  sheets/Page1..Page6.tsx  pure print replicas: (form) → markup
-  sheets/primitives.tsx    Checkbox, Blank, RuledTable, SheetFrame, PatientFooter, FormCode
-  sheets/LaborChart.tsx    inline SVG dilatation/station chart
-  sheets/sheet.css         page geometry, borders, fonts
-public/
-  fonts/                   Arimo (Arial-metric), Tinos (Times-metric)
-  vsmmc-seal.png           extracted from reference Page 1 PDF
-scripts/
-  extract-typography.py    pdfplumber dump of font/size/weight/position per text span
-  rasterize-references.*   reference PDFs → PNGs for pixel-diff
-tests/
-  unit/  api/  e2e/  fidelity/
+  schema.ts  options.ts      Zod schema + PogsForm type; checkbox option lists
+  defaults.ts                emptyForm(), sampleForm() (fictitious)
+  derive.ts                  buildView (footer, BMI), seedObHistory, laborPoints
+  storage.ts                 coerceForm, draft autosave, JSON export/import
+  sheets/                    template types, TemplatePage, fit, view helpers, LaborChart, Sheet(s), templates/*.json
+  pdf/                       renderSheetsHtml, htmlToPdf
+components/form/             config-driven form, toolbar, preview
+public/fonts/  public/sheet-assets/   Arimo woff2; header.png, seal.png
+scripts/pdfref/              extract assets/glyphs, dump, rasterize, build_template, mappings/
+scripts/dump-view.ts         fixture → flat view JSON for the builder
+tests/unit  tests/fidelity  tests/api  tests/e2e
 ```
 
-Sheet components are pure and shared by the live preview and the PDF route, so preview equals output.
-
-## 4. Data model (`PogsForm`)
-
-All fields optional strings unless noted; numbers stored as strings to keep entry free-form (clinical notes are messy). Includes `schemaVersion: 1`.
-
-- **patient** — lastName, firstName, middleName, age, civilStatus (`M|S|W|Sep`), hospNo, caseNo, room, address, admissionDateTime. Sex is fixed **F** on all footers.
-- **page1** — admittingImpression, finalDiagnosis, bloodType, rh, vdrl, hbsag, antibodies, chiefComplaint; obScore {G, P, Ft, Pr, Ab, L}; obHistory[] {order, outcome, year, gestation, sex, birthWeight, status, complications}; desiredFamilySize (`1|2|3|4|more`); contraception[] (`None, Pills, IUD, Rhythm, Condom`); education (`None|Primary|Secondary|College`); socioEconomic (`Dependent/Unemployed|Employed|Self-Employed`); income (`Below|Minimum|Above`); lmp, edc, pmp, aog, ultrasoundDate, quickeningDate, adjustedEdc, aogByUltrasound; menarche, interval, duration, amount, dysmenorrhea; coitarche, sexualPartners, stis, papsmear; antenatalVisits (`None|1|2|3|4|5|>5`); provider[] (`MD, MW, Others`); immunizations[] (`TT, Td, Tdap, Hep B, Others`); totalWeightGain, usualBp, hb, hct, urineChon, fbs, ogtt; supplements[] (`Vitamins, Fe, Ca, Others`), supplementsOther.
-- **page2** — antenatalRisks[] (Anemia, HTN/Preeclampsia/CHVD, Fetal Wastage, Previous CS/Surgery, Cardiac, Premature labor, UTI, Renal, IUGR, Infections LC Tracts, Diabetes Mellitus, Infertility, Nutritional, Respiratory, Others), antenatalRisksOther; hpi, pastHistory, familyHistory, personalSocialHistory, occupation, alcohol, tobacco, drugAllergies, drugTherapy, otherAllergies.
-- **page3** — examDate, examTime, examiner; bp, hr, rr, temp, wt, ht, bmi (derived, overridable), ps, gcs; generalStatus[] (Conscious, Coherent, Unconscious, Distressed, Anxious, Cooperative, Pale/Flushed, Others); heent, breast, chestLungs, cardiovascular, abdomen, fh, efw, fht, l1–l4, genitourinary, musculoskeletal, extremities, cns; externalGenitals, uterus, vagina, dilatation, effacement, position (`Anterior|Midposition|Posterior`), membranes (`Intact|Ruptured`), amnioticFluid (`Meconium Stained|Clear`), station; pelvimetry (`Contracted|Border Line|Adequate`), pelvimetryPlanes[] (Inlet, Midplane, Outlet); planOfCare, referredFromTo, historyBy, doneOn. Admitting impression comes from page1.
-- **page4** — onsetDate, onsetTime, fullDilatation, delivery, placenta, totalDuration, firstStage, secondStage, thirdStage; laborTable[11] {hour 0–10, dilatation, station}; membranesStatus (`Ruptured|Intact`), ruptureType[] (PROM + hours, EROM, Cord Prolapse, Amnionitis, Amniotomy, Spontaneous), fluid (`Clear|Meconium Stained`), meconium (`Thick|Thin`); progress (`Normal|Abnormal`), abnormalType (`Precipitate|Prolonged|Protracted`); fetal (`Normal|Distress`).
-- **page5** — fetusDate, fetusTime, attendedBy; vaginalMethod[] (Spontaneous, Assisted vaginal delivery, Vacuum, Forceps, Breech delivery, Breech Spontaneous/Partial/Total, VBAC, Anesthesia Local/TIVA/Regional/Inhalational); episiotomy (`Median|Mediolateral`); primaryCs {checked, incision (`Low Transverse|Low Vertical|Classical`), tubalLigation, indication}; repeatCs {same}; csHysterectomy (`Total|Sub-Total`); placentaDate, placentaTime, placentaBy, placentaMethod (`Spontaneous|Controlled Cord Traction|Manual Extraction`); postpartumBp, bloodLoss; perinealRepair (`1st..4th`); anesthesia (`Local Infiltration|Regional|General`); complications; postpartumCondition (`Good|Fair|Poor`); babySex, babyWeight, babyLength, apgar1, apgar5, pediatricAging, resuscitations, sga, aga, lga, abnormalities.
-- **page6** — attendingPhysicians; monitoring[] (max 13) {dateTime, bp, hr, rr, temp, uo, fht, intv, dur, int, dil, eff, pres, stn, mem, nstCtg, remarks}.
-
-**Derived (`derive.ts`)**: footer block (surname, given name, M.I., age, sex F, hosp no, ward/rm) for pages 2–6; full-name line for page 6; BMI = wt(kg)/(ht(m))² to 1 decimal when both numeric; OB-history row count = max(G, existing rows); labor chart points from non-empty laborTable cells.
+The PDF endpoint is a Pages Router API route so `react-dom/server` can be used without App Router restrictions.
 
 ## 5. Sheet rendering (fidelity)
 
-1. **Measurement.** Rasterize each reference PDF at high DPI; take exact page margins, frame borders, rule positions, row heights and column widths. The references were exported from Google Sheets, so each page is rebuilt on a fixed grid (CSS Grid / absolutely sized tables in pt) on a fixed 612 × 792 pt page — never fluid.
-2. **Typography.** `scripts/extract-typography.py` (pdfplumber) records font family, weight, italic and point size for every text span on all 6 pages. Results become named styles in `lib/typography.ts` (e.g. `title`, `headerSerif`, `headerSerifItalic`, `label`, `labelBold`, `value`, `valueBold`, `valueSmall`, `tableHeader`, `formCode`). Every sheet element uses a named style; no ad-hoc sizes. Fonts: Arimo for Arial/Helvetica, Tinos for Times, bundled locally and embedded in the PDF.
-3. **Glyphs.** Unchecked = hollow square (☐), checked = filled check-square, matching reference glyphs and size. Underlined blanks keep fixed length whether filled or empty.
-4. **Header.** VSMMC block reproduced exactly: seal (extracted from Page 1 PDF), "Republic of the Philippines / Department of Health / VICENTE SOTTO MEMORIAL MEDICAL CENTER / (Formerly Southern Islands Medical Center)", italic underlined "PhilHealth Center of Excellence", and the "POGS OBSTETRICAL SHEET" title cell.
-5. **Footer.** Bottom-right of every page, outside the frame: `MSD-OB.GYNE-F-1 Rev. 4` / `September 1, 2025` / `Page N of 6`. Patient identity block inside the frame on pages 2–6 as in references.
-6. **Page 4.** The hours-in-labor side table (outside the frame in the reference) is the chart's data source; it is a form input and is **not printed**. The chart is an inline SVG matching the reference axes (dilatation 3–10 upper panel, station 0 to −5 lower panel, hours 0–10, "STATION" legend).
-7. **Overflow.** Fixed boxes never reflow the page; long text (e.g. final diagnosis) is shrunk-to-fit within its box, mirroring the reference's small text.
-8. **Pagination.** One sheet per Letter page via `break-after: page`; exactly 6 pages.
+1. **Geometry** comes from the reference vector data, not hand measurement; coordinates are kept in pt.
+2. **Typography.** Labels keep their extracted size and weight exactly. Field slots take the size/weight of the reference value they replace. Font: Arimo (metric-compatible with Arial), bundled and embedded in PDFs.
+3. **Glyphs.** Checkbox glyph paths are extracted from the reference (p2 has both states) and normalized; slots reuse the reference box position and size.
+4. **Header.** Both header PNGs extracted from the p1 PDF and placed at their exact rectangles.
+5. **Footer.** Form code, revision date and "Page N of 6" are static labels from the references; patient identity blocks on p2–p6 are field slots fed by `buildView().footer`.
+6. **Page 4.** Template is scaled about the frame's top-left so the frame spans the same width as the other pages' frames (right edge 578.3 pt). The side table outside the frame is dropped. The chart's data series are drawn by `LaborChart` from the labor table; static axes/grid come from the reference. Its fidelity reference is the original page rasterized with the same transform and cropped to the frame.
+7. **Overflow.** Multiline boxes wrap and shrink-to-fit deterministically (character-width estimate, min 3 pt). Single-line slots with a width compress via `textLength` when too long.
+8. **Pagination.** One SVG per A4 page, `break-after: page`; exactly 6 pages.
 
-## 6. Form UI
+## 6. Data model (`PogsForm`)
 
-- Desktop: left form with tabs **Page 1–6**; right live preview of the active page at true proportions with zoom. Narrow screens: preview behind a toggle.
-- Checkbox groups mirror the sheet: single-choice groups behave as radios (deselectable); multi-choice allow many.
-- Editable grids: OB history (rows G1…Gn seeded from G), labor table (fixed 0–10), monitoring (add/remove, max 13).
-- Textareas for HPI, histories, diagnoses, plan.
-- Toolbar: **Download PDF**, **Print**, **Save .json**, **Load .json**, **New patient** (confirm), **Load sample** (fictitious data).
-- Validation is light: types enforced, only patient last name required for Download; blanks warn, never block.
+Strings unless noted (free-form clinical entry); multi-select = string[]; `schemaVersion: 1`.
 
-## 7. PDF route and error handling
+- **patient** — lastName, firstName, middleName, age, civilStatus (`M|S|W|Sep`), hospNo, caseNo, room, address, admissionDateTime. Sex fixed **F** on footers.
+- **page1** — admittingImpression, finalDiagnosis, bloodType, rh, vdrl, hbsag, antibodies, chiefComplaint; obScore {g, p, ft, pr, ab, l}; obHistory[] (max 13) {order, outcome, year, gestation, sex, birthWeight, status, complications}; desiredFamilySize; contraception[]; education; socioEconomic; income; lmp, edc, pmp, aog, ultrasoundDate, quickeningDate, adjustedEdc, aogByUltrasound; menarche, interval, duration, amount, dysmenorrhea; coitarche, sexualPartners, stis, papsmear; antenatalVisits; provider[]; immunizations[]; totalWeightGain, usualBp, hb, hct, urineChon, fbs, ogtt; supplements[], supplementsOther.
+- **page2** — antenatalRisks[], antenatalRisksOther; hpi, pastHistory, familyHistory, personalSocialHistory, occupation, alcohol, tobacco, drugAllergies, drugTherapy, otherAllergies.
+- **page3** — examDate, examTime, examiner; bp, hr, rr, temp, wt, ht, bmi (derived when blank), ps, gcs; generalStatus[]; heent, breast, chestLungs, cardiovascular, abdomen, fh, efw, fht, l1–l4, genitourinary, musculoskeletal, extremities, cns; externalGenitals, uterus, vagina, dilatation, effacement, position, membranes, amnioticFluid, station; pelvimetry, pelvimetryPlanes[]; planOfCare, referredFromTo, historyBy, doneOn. Admitting impression is read from page1.
+- **page4** — onsetDate, onsetTime, fullDilatation, delivery, placenta, totalDuration, firstStage, secondStage, thirdStage; laborTable (exactly 11 rows, hours 0–10) {dilatation, station}; membranesStatus, ruptureType[], promHours, fluid, meconium; progress, abnormalType; fetal.
+- **page5** — fetusDate, fetusTime, attendedBy; vaginalMethod[]; episiotomy; primaryCs {checked: boolean, incision, tubalLigation: boolean, indication}; repeatCs {same}; csHysterectomy {checked: boolean, type}; placentaDate, placentaTime, placentaBy, placentaMethod; postpartumBp, bloodLoss; perinealRepair; anesthesia; complications; postpartumCondition; babySex, babyWeight, babyLength, apgar1, apgar5, pediatricAging, resuscitations, sga, aga, lga, abnormalities.
+- **page6** — attendingPhysicians; monitoring[] (max 13) {dateTime, bp, hr, rr, temp, uo, fht, intv, dur, int, dil, eff, pres, stn, mem, nstCtg, remarks}.
 
-`POST /api/pdf` (Node runtime, `maxDuration` raised for cold start):
+Option lists live in `lib/options.ts`. Derived view adds `footer` {surname, givenName, mi, age, sex: 'F', hospNo, ward} and BMI = wt / (ht in m)² to 1 decimal when blank and both numeric.
 
-1. Parse body with Zod → 400 with field list on failure.
-2. `renderToStaticMarkup(<Sheets form={...} />)` into a self-contained HTML document with inlined CSS, base64 fonts and seal (no network fetches).
-3. Launch Chromium (`@sparticuz/chromium` on Vercel; local Chrome in dev), `page.pdf({ format: 'Letter', printBackground: true, preferCSSPageSize: true })`.
-4. Respond `application/pdf`, `Content-Disposition: attachment; filename="<LASTNAME> POGS.pdf"`.
-5. No persistence; request bodies and patient fields are never logged.
+## 7. Form UI
+
+- Desktop: left form with tabs **Page 1–6**; right live preview of the active page (SVG, scales to panel width). Narrow screens: preview behind a toggle.
+- Config-driven fields: text, textarea, single-choice (radio-like, deselectable), multi-choice, boolean, editable tables (OB history seeded G1…Gn from G; labor table fixed 0–10; monitoring add/remove, max 13).
+- Toolbar: **Download PDF**, **Print**, **Save .json**, **Load .json**, **New patient** (confirm), **Load sample** (fictitious).
+- Validation is light: only patient last name required for Download.
+
+## 8. PDF route and error handling
+
+`POST /api/pdf`: coerce body against the schema → 400 with skipped paths if any field has the wrong shape, 400 if last name blank → `renderSheetsHtml` (self-contained HTML, base64 fonts and header images) → Chromium `page.pdf({ format: 'A4', printBackground: true, preferCSSPageSize: true })` → `application/pdf`, `attachment; filename="<LASTNAME> POGS.pdf"`. No persistence; bodies never logged. `maxDuration` 60 s via `vercel.json`.
 
 | Failure | Behavior |
 |---|---|
 | Server PDF error/timeout | Toast "Server PDF failed — use Print instead" with one-click browser print |
-| Bad/old `.json` on Load | Zod parse; load valid fields, list skipped ones; `schemaVersion` migration hook |
+| Bad/old `.json` on Load | Valid fields loaded, skipped paths listed |
 | localStorage unavailable | Autosave disabled, small banner |
 
-Browser **Print** uses the same sheet components with `@page { size: letter; margin: 0 }` and hides app chrome — fully on-device.
+Browser **Print** renders all six SVG sheets with `@page { size: A4; margin: 0 }` and hides app chrome — fully on-device.
 
-## 8. Testing
+## 9. Testing
 
-1. **Fidelity (acceptance).** Reference PDFs rasterized to PNG. Playwright renders each sheet with the SOSTINO fixture at identical DPI and pixel-diffs (pixelmatch); per-page mismatch threshold (target ≤ 2% of pixels, tuned once per page then locked). Diff images saved under `tests/fidelity/output/`. Iterate page by page until all six pass.
-2. **Typography check.** Run `extract-typography.py` on a generated PDF and compare span font/weight/size against the reference dump for matching labels.
-3. **Unit (Vitest).** `derive.ts` (BMI, footer mapping, OB rows, chart points), schema parsing, JSON round-trip, migration.
-4. **API.** POST sample → 200, `application/pdf`, 6 pages, Letter size, text contains key values.
-5. **E2E.** Fill fields → preview updates; Save/Load round-trip; New patient clears.
+1. **Fidelity (acceptance).** References rasterized at 192 dpi; Playwright screenshots each dev-route sheet at device scale 2 (same pixel grid) and pixelmatch-diffs; per-page max mismatch ratio 1.5% (tunable once per page, then locked). Diff images in `tests/fidelity/output/`.
+2. **Unit (Vitest).** derive, storage/coercion, fit, view helpers, TemplatePage rendering, PHI guard (no fixture identity value appears in any committed template).
+3. **Python (pytest).** Builder and extraction on synthetic PDFs.
+4. **API (Playwright request).** Sample → 200, 6 A4 pages; missing last name → 400.
+5. **E2E.** Typing updates preview; Save/Load round-trip; autosave survives reload.
 
-## 9. Privacy
+## 10. Privacy
 
-- SOSTINO data is real patient information. It is used only as a **local, git-ignored** fixture (`fixtures/`, reference PDFs, rasterized PNGs, fidelity outputs are all in `.gitignore`).
-- Committed "Load sample" uses fictitious data with the same shape.
-- Server PDF path transmits patient data to Vercel per request; nothing is stored or logged. Browser Print path keeps data on-device.
+- SOSTINO data is real patient information: reference PDFs, `fixtures/`, rasterized references and fidelity outputs are git-ignored. Builder output is checked by the PHI guard test.
+- Committed "Load sample" uses fictitious data.
+- Server PDF path transmits patient data to Vercel per request; nothing stored or logged. Browser Print keeps data on-device.
 
-## 10. Out of scope
+## 11. Out of scope
 
-User accounts, database, batch/multi-patient output, access-code gate, editing directly on the preview, text-paste import.
+User accounts, database, batch output, access-code gate, editing on the preview, text-paste import.
