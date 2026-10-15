@@ -1,0 +1,6 @@
+*.pdf
+fixtures/
+tests/fidelity/
+.superpowers/
+ruvector.db
+test-results/
