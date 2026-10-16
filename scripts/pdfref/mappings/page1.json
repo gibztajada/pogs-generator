@@ -11,7 +11,7 @@
     { "key": "patient.address" },
     { "key": "patient.admissionDateTime" },
     { "key": "page1.admittingImpression", "box": [37.67, 221.1, 282.0, 33.21], "size": 7.53 },
-    { "key": "page1.finalDiagnosis", "box": [322.7, 207.64, 240.58, 46.67], "size": 3.77 },
+    { "key": "page1.finalDiagnosis", "box": [322.7, 207.64, 240.58, 46.67], "size": 7.53 },
     { "key": "page1.bloodType", "near": "Blood Type:" },
     { "key": "page1.rh", "near": "Rh:" },
     { "key": "page1.vdrl", "at": [413.65, 275.99], "size": 7.53, "bold": true },
