@@ -42,3 +42,7 @@ __pycache__/
 
 # Local tooling DB
 ruvector.db
+
+# Passcode gate test cookie
+tests/.auth/
+!.env.example
