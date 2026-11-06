@@ -67,6 +67,18 @@ test('network failure is recoverable', async ({ page }) => {
   await expect(key(page)).toBeVisible();
 });
 
+test.describe('unlocked', () => {
+  test.use({ storageState: 'tests/.auth/state.json' });
+
+  test('log out locks the app again', async ({ page }) => {
+    await page.goto('/');
+    await page.getByRole('button', { name: 'Log out' }).click();
+    await expect(page).toHaveURL(/\/unlock/);
+    await page.goto('/');
+    await expect(page).toHaveURL(/\/unlock/);
+  });
+});
+
 test('keyboard catch', async ({ page }) => {
   await page.goto('/unlock');
   await box(page).pressSequentially(CODE);
