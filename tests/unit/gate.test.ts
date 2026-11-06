@@ -34,7 +34,7 @@ describe('safeNext', () => {
     expect(safeNext('/')).toBe('/');
     expect(safeNext('/dev/sheet/1?x=1')).toBe('/dev/sheet/1?x=1');
   });
-  test.each(['//evil.com', '/\\evil.com', 'https://evil.com', 'javascript:alert(1)', '', null, undefined])(
+  test.each(['//evil.com', '/\\evil.com', 'https://evil.com', 'javascript:alert(1)', '/\t/evil.com', '/\n/evil.com', '/\r/evil.com', '', null, undefined])(
     'falls back to / for %s',
     (v) => expect(safeNext(v)).toBe('/'),
   );

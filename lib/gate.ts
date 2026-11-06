@@ -28,7 +28,10 @@ export async function isValidGateCookie(value: string | undefined, passcode: str
 /** Only same-origin relative paths survive; anything that could leave the site becomes '/'. */
 export function safeNext(next: string | null | undefined): string {
   if (!next || !next.startsWith('/') || next.startsWith('//') || next.includes('\\')) return '/';
-  return next;
+  // Browsers drop tabs/newlines while parsing, so '/\t/evil.com' becomes '//evil.com': resolve it the same way.
+  const base = 'http://gate.invalid';
+  const u = new URL(next, base);
+  return u.origin === base ? u.pathname + u.search + u.hash : '/';
 }
 
 export type GateDecision = 'allow' | 'redirect' | 'deny';
