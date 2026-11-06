@@ -65,7 +65,7 @@ The POGS Generator is used by a few trusted colleagues. Before anyone can use th
 - **`POST /api/unlock`** (App Router route handler, `app/api/unlock/route.ts`): body `{ passcode: string }`.
   - Wrong code: wait about 600 ms, then respond `401 { ok: false }`. The delay slows guessing.
   - Right code (constant-time comparison): set the cookie and respond `200 { ok: true }`.
-- **Cookie `pogs_gate`:** the value is `HMAC-SHA256(key = APP_PASSCODE, message = "pogs-gate-v1")` encoded as base64url. Changing the passcode therefore invalidates all existing cookies. The cookie is `HttpOnly`, `Secure` in production, `SameSite=Lax`, `Path=/`, and **lasts 30 days**. (The user wasn't asked about the 30 days, so it's flagged here for review.)
+- **Cookie `pogs_gate`:** the value is `HMAC-SHA256(key = APP_PASSCODE, message = "pogs-gate-v1")` encoded as base64url. Changing the passcode therefore invalidates all existing cookies. The cookie is `HttpOnly`, `Secure` in production, `SameSite=Lax`, `Path=/`, and **lasts 1 day** (`Max-Age=86400`; decided by the user).
 - **`proxy.ts`:** checks the cookie on every request except `/unlock`, `/api/unlock`, `_next/static`, `_next/image`, `favicon.ico`, `fonts/*` and other `public/` static files.
   - A missing or invalid cookie on a page request redirects to `/unlock?next=<path>`.
   - A missing or invalid cookie on an `/api/*` request returns `401 JSON`. This includes `POST /api/pdf`.
